@@ -1,4 +1,6 @@
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
+const RAW_API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").trim().replace(/\/$/, "");
+// without a scheme the browser would treat the host as a path on this site
+export const API_URL = /^https?:\/\//.test(RAW_API_URL) ? RAW_API_URL : `https://${RAW_API_URL}`;
 
 export const BUCKETS = ["overpriced", "fair", "underpriced", "heavily_underpriced"] as const;
 export type Bucket = (typeof BUCKETS)[number];

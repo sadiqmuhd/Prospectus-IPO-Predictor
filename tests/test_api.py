@@ -69,3 +69,13 @@ def test_analyze_saved_prospectus():
     assert 0 <= pop["probability"] <= 1 and len(pop["reasons"]) > 0
     probs = a["predictions"]["bucket"]["probabilities"]
     assert math.isclose(sum(probs.values()), 1, rel_tol=1e-6)
+
+
+@pytest.mark.skipif(not HAVE_MODELS or not (TEXTS / "ABNB_20201210.txt.gz").exists(), reason="needs pipeline outputs")
+def test_analyze_after_data_ends():
+    # past the last IPO in the dataset, recent-IPO activity is unknown; the features must be missing, not absent
+    text = gzip.open(TEXTS / "ABNB_20201210.txt.gz", "rt", encoding="utf-8").read().encode()
+    r = client.post("/analyze", files={"file": ("airbnb.txt", text, "text/plain")},
+                    data={"ipo_date": "2026-05-14", "range_low": "44", "range_high": "50"})
+    assert r.status_code == 200, r.text
+    assert r.json()["features"]["ipo_count_30d"] is None

@@ -14,3 +14,6 @@ data/raw/kaggle/
 
 # generated deploy folder (its own git repo on Hugging Face)
 deploy/space/
+
+# prospectuses downloaded for manual testing of the web app
+test_prospectuses/

@@ -35,6 +35,9 @@ TARGETS = ("pop", "pop10", "bucket")
 SEC_URL = re.compile(r"^https://(www\.)?sec\.gov/Archives/edgar/data/(\d+)/[\w\-./]+$")
 REG_FORMS = ("S-1", "S-1/A", "F-1", "F-1/A", "SB-2", "SB-2/A")
 MIN_TEXT_CHARS = 5000
+# "Prospectus dated May 13, 2026" / "The date of this prospectus is July 29, 2026": the pricing date
+PROSPECTUS_DATE = re.compile(r"(?i)(preliminary\s+)?(?:date\s+of\s+this\s+prospectus\s+is|prospectus\s+dated)\s+"
+                             r"([A-Z][a-z]+\.?\s+\d{1,2},\s*\d{4})")
 NIGERIA = re.compile(r"Nigerian Exchange|Nigerian Stock Exchange|\bNGX\b|Securities and Exchange Commission,? Nigeria|"
                      r"\bNaira\b|₦", re.I)
 
@@ -116,6 +119,17 @@ def needs_finbert() -> bool:
     return any(f.removeprefix("rel_").startswith("fb_") for b in models().values() for f in b["features"])
 
 
+def first_trade_from_text(text: str) -> date | None:
+    """The day after the final prospectus's pricing date (trading starts the next business day)."""
+    for m in PROSPECTUS_DATE.finditer(text):
+        if m.group(1):  # a preliminary prospectus mentioned in passing
+            continue
+        priced = pd.to_datetime(m.group(2).replace(".", ""), errors="coerce")
+        if pd.notna(priced):
+            return (priced + pd.offsets.BDay(1)).date()
+    return None
+
+
 def document_from_url(url: str) -> Document:
     m = SEC_URL.match(url.strip())
     if not m:
@@ -168,7 +182,8 @@ def initial_range(cik: int) -> tuple[float, float, str] | None:
 
 def build_row(doc: Document, overrides: dict) -> tuple[pd.DataFrame, dict]:
     facts, sections = parse("upload", doc.text)
-    ipo_day = pd.Timestamp(overrides.get("ipo_date") or doc.filing_date or date.today())
+    ipo_day = pd.Timestamp(overrides.get("ipo_date") or first_trade_from_text(doc.text) or doc.filing_date
+                           or date.today())
     offer = overrides.get("offer_price") or facts["doc_offer_price"]
     shares = overrides.get("shares_offered") or facts["doc_shares"]
     if not offer:
@@ -205,6 +220,9 @@ def build_row(doc: Document, overrides: dict) -> tuple[pd.DataFrame, dict]:
     hist = tone_history()
     ref_day = min(ipo_day, hist["ipo_date"].max() + pd.Timedelta(days=1))
     df = add_relative(df.assign(ipo_date=ref_day), hist)
+    # any feature that could not be computed is missing, not absent: the models impute it
+    wanted = {f for b in models().values() for f in b["features"]}
+    df = df.reindex(columns=[*df.columns, *sorted(wanted - set(df.columns))])
     info = {
         "offer_price": offer, "shares_offered": shares, "price_range": [lo, hi] if mid else None,
         "price_range_source": rng_note or ("entered" if mid else None), "ipo_date_used": str(ipo_day.date()),
@@ -261,6 +279,9 @@ def analyze(doc: Document, overrides: dict | None = None) -> dict:
         notes.append("This looks like a Nigerian (NGX) prospectus. The models were trained on US IPOs, so treat "
                      "the prediction as indicative only. NGX caps daily moves at 10%, so a large first-day pop "
                      "shows up over several sessions, not on day one. Prices are read in the document's currency.")
+    if not overrides.get("ipo_date") and not first_trade_from_text(doc.text) and not doc.filing_date:
+        notes.append("No pricing date was found in the document, so market conditions are as of today. Enter the "
+                     "IPO date for a past deal.")
     if info["price_range"] is None:
         notes.append("No filing price range was found, so the strongest single predictor (price revision) is "
                      "missing. Enter the initial range for a better estimate.")

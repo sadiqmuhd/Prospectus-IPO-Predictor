@@ -44,7 +44,7 @@ def load_prices(refresh: bool = False) -> pd.DataFrame:
 
 def market_features(day: pd.Timestamp, prices: pd.DataFrame, ipos: pd.DataFrame | None = None) -> dict:
     before = prices[prices.index < day]
-    out = {}
+    out = dict.fromkeys(["vix_prev", "sp500_ret_30d", "nasdaq_ret_30d", "ipo_count_30d", "prior_ipo_return_30d"], np.nan)
     if len(before) > LOOKBACK_SESSIONS:
         last, base = before.iloc[-1], before.iloc[-1 - LOOKBACK_SESSIONS]
         out["vix_prev"] = last["vix"]

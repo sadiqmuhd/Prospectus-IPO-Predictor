@@ -12,6 +12,7 @@ Endpoints:
     GET  /health
 """
 import json
+import logging
 import math
 import os
 from datetime import date
@@ -116,3 +117,9 @@ async def analyze_endpoint(
         return clean(analyze(doc, overrides))
     except AnalysisError as e:
         raise HTTPException(422, str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        # an unhandled error would reach the browser without CORS headers, shown only as "Failed to fetch"
+        logging.exception("analysis failed")
+        raise HTTPException(500, f"The analysis failed ({type(e).__name__}). Please try again or report this document.")
