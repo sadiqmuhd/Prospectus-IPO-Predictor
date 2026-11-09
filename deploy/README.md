@@ -1,10 +1,10 @@
 # Deploying the prospectus bot
 
-Two pieces, two free hosts:
+Two pieces, two hosts:
 
 | Piece | Folder | Host |
 |---|---|---|
-| API (FastAPI, models) | `api/` | Render, free web service (512 MB RAM; Docker, built from this GitHub repo) |
+| API (FastAPI, models) | `api/` | Railway (Docker, built from this GitHub repo; settings in `railway.json`) |
 | Website (Next.js) | `web/` | Vercel (free Hobby tier) |
 
 Both need your own accounts; nothing here signs in for you.
@@ -12,7 +12,7 @@ Both need your own accounts; nothing here signs in for you.
 The saved models do not use FinBERT scores (the no-text versions won on the validation years), so the API image
 leaves out PyTorch and FinBERT and runs in about 320 MB. If a retrained model does use FinBERT, the API loads it
 automatically, but the image must then be built with `--build-arg FINBERT=1` and needs about 1.5 GB of memory
-(a paid instance).
+(on Railway, add the service variable `FINBERT=1`; Railway passes it to the Docker build).
 
 ## 0. Run locally first
 
@@ -32,17 +32,15 @@ npm run dev
 
 Open http://localhost:3000.
 
-## 1. API on Render
+## 1. API on Railway
 
-1. Sign up at https://render.com with your GitHub account (no card needed for the free plan).
-2. **New → Blueprint**, pick this repository. Render reads `render.yaml` and proposes the `prospectus-bot-api`
-   web service on the free plan.
-3. It asks for `ALLOWED_ORIGINS`: enter your Vercel URL if you have it, or `http://localhost:3000` for now and
-   change it in step 2.4 below (service → **Environment**).
-4. **Apply**. The first build takes about 5 to 10 minutes. When the service shows **Live**, open
-   `https://<service>.onrender.com/health`, then `/docs` to try the API.
+1. At https://railway.com/new choose **Deploy from GitHub repo** and pick this repository. Railway reads
+   `railway.json`: it builds `api/Dockerfile` from the project root and checks `/health` before going live.
+2. In the service's **Variables**, add `ALLOWED_ORIGINS` (your Vercel URL, or `http://localhost:3000` until you
+   have it) and optionally `ALLOWED_ORIGIN_REGEX` = `https://.*\.vercel\.app` for preview deployments.
+3. In **Settings → Networking**, click **Generate Domain** to get a public `https://<name>.up.railway.app` URL.
+4. The first build takes about 5 minutes. When the deployment is **Active**, open `/health`, then `/docs`.
 
-Free services sleep after 15 minutes without traffic; the first request after that takes about a minute to wake.
 Pushing changes to `api/`, `src/`, `models/` or `data/` on GitHub redeploys automatically.
 
 ### Alternative: Hugging Face Spaces (Docker Spaces need a paid plan)
@@ -61,10 +59,10 @@ Set `ALLOWED_ORIGINS` under the Space's Settings → Variables.
 
 1. Push the project to GitHub (or just the `web/` folder).
 2. At https://vercel.com/new, import the repository and set **Root Directory** to `web`.
-3. Add the environment variable `NEXT_PUBLIC_API_URL` = `https://<service>.onrender.com` (no trailing slash).
-4. Deploy. Then put the Vercel URL into the Render service's `ALLOWED_ORIGINS` (Environment tab) if you have not yet.
+3. Add the environment variable `NEXT_PUBLIC_API_URL` = `https://<name>.up.railway.app` (no trailing slash).
+4. Deploy. Then put the Vercel URL into the Railway service's `ALLOWED_ORIGINS` (Variables tab) if you have not yet.
 
 ## Updating
 
-After rerunning the pipeline (new data or models): rerun `api/build_examples.py`, then commit and push. Render
+After rerunning the pipeline (new data or models): rerun `api/build_examples.py`, then commit and push. Railway
 rebuilds the API; Vercel rebuilds the website when `web/` changes.

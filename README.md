@@ -23,7 +23,7 @@ the models to any prospectus.
 | `models/` | Chosen models, used by the API |
 | `api/` | FastAPI backend of the prospectus bot |
 | `web/` | Next.js frontend of the prospectus bot |
-| `deploy/` | How to put the API on Render and the site on Vercel |
+| `deploy/` | How to put the API on Railway and the site on Vercel |
 | `tests/` | API tests |
 
 ## Run it

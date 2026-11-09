@@ -1,4 +1,4 @@
-# API image. Build context: the project root (Render, see render.yaml) or the folder made by deploy/build_space.py.
+# API image. Build context: the project root (Railway, see railway.json) or the folder made by deploy/build_space.py.
 #   docker build -f api/Dockerfile .                       # without FinBERT: the saved models do not use it
 #   docker build -f api/Dockerfile --build-arg FINBERT=1 . # with FinBERT (needs about 1 GB more memory)
 FROM python:3.11-slim
@@ -21,6 +21,6 @@ AutoTokenizer.from_pretrained('ProsusAI/finbert'); M.from_pretrained('ProsusAI/f
     fi
 
 COPY --chown=user . .
-# Render sets PORT; Hugging Face Spaces expects 7860
+# Railway sets PORT; Hugging Face Spaces expects 7860
 EXPOSE 7860
 CMD uvicorn api.app.main:app --host 0.0.0.0 --port ${PORT:-7860}
