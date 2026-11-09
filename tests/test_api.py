@@ -79,3 +79,9 @@ def test_analyze_after_data_ends():
                     data={"ipo_date": "2026-05-14", "range_low": "44", "range_high": "50"})
     assert r.status_code == 200, r.text
     assert r.json()["features"]["ipo_count_30d"] is None
+
+
+def test_repairs_lost_pdf_ligatures():
+    from api.app.analyze import repair_ligatures
+    assert repair_ligatures("is of ering shares; suf icient cash") == "is offering shares; sufficient cash"
+    assert repair_ligatures("one of each, if any") == "one of each, if any"

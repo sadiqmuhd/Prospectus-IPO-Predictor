@@ -5,7 +5,6 @@ trained. The app runs from the project root (relative data paths in src/data ass
 """
 from __future__ import annotations
 
-import io
 import re
 import sys
 from dataclasses import dataclass
@@ -28,7 +27,7 @@ from explain import FEATURE_GROUP, GROUP_LABELS, contributions  # noqa: E402
 from fetch_price_ranges import find_range  # noqa: E402
 from market import load_prices, market_features  # noqa: E402
 from parse_prospectuses import parse  # noqa: E402
-from text_lm import lm_features  # noqa: E402
+from text_lm import lexicon, lm_features  # noqa: E402
 
 MODELS = ROOT / "models"
 TARGETS = ("pop", "pop10", "bucket")
@@ -38,6 +37,8 @@ MIN_TEXT_CHARS = 5000
 # "Prospectus dated May 13, 2026" / "The date of this prospectus is July 29, 2026": the pricing date
 PROSPECTUS_DATE = re.compile(r"(?i)(preliminary\s+)?(?:date\s+of\s+this\s+prospectus\s+is|prospectus\s+dated)\s+"
                              r"([A-Z][a-z]+\.?\s+\d{1,2},\s*\d{4})")
+# a PDF ligature glyph (ff, fi, fl, ffi, ffl) whose text mapping is lost reads "of ering" for "offering"
+LIGATURE_GAP = re.compile(r"\b([A-Za-z]*f) ([a-z]+)\b")
 NIGERIA = re.compile(r"Nigerian Exchange|Nigerian Stock Exchange|\bNGX\b|Securities and Exchange Commission,? Nigeria|"
                      r"\bNaira\b|₦", re.I)
 
@@ -146,12 +147,40 @@ def document_from_url(url: str) -> Document:
                     filing_date=pd.to_datetime(filed.group(1)).date() if filed else None)
 
 
+def repair_ligatures(text: str) -> str:
+    """Rejoin words split by a lost ligature, only where the fragment is not a word and the repair is one."""
+    vocab = lexicon()[1]
+
+    def fix(m: re.Match) -> str:
+        left, right = m.groups()
+        if right.upper() in vocab:  # "of each", "if any": two real words
+            return m.group(0)
+        for missing in ("f", "i", "l", "fi", "fl"):
+            if (left + missing + right).upper() in vocab:
+                return left + missing + right
+        return m.group(0)
+
+    return LIGATURE_GAP.sub(fix, text)
+
+
 def document_from_upload(name: str, data: bytes) -> Document:
     lower = name.lower()
     if lower.endswith(".pdf"):
-        import pdfplumber
-        with pdfplumber.open(io.BytesIO(data)) as pdf:
-            text = "\n".join(page.extract_text() or "" for page in pdf.pages)
+        # pdfium, not pdfplumber: a 200-page prospectus takes 9 s and 35 MB instead of 4 min and 2.3 GB
+        import pypdfium2 as pdfium
+        try:
+            pdf = pdfium.PdfDocument(data)
+        except pdfium.PdfiumError:
+            raise AnalysisError("This file could not be read as a PDF.")
+        parts = []
+        for i in range(len(pdf)):
+            page = pdf[i]
+            textpage = page.get_textpage()
+            parts.append(textpage.get_text_range())
+            textpage.close()
+            page.close()
+        pdf.close()
+        text = repair_ligatures("\n".join(parts).replace("\r\n", "\n"))
         if len(text) < MIN_TEXT_CHARS:
             raise AnalysisError("This PDF has almost no text layer; it looks scanned. OCR is not enabled yet.")
     elif lower.endswith((".htm", ".html", ".txt")):
