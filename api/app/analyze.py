@@ -67,9 +67,20 @@ def ranks() -> pd.DataFrame:
     return load_underwriter_ranks()
 
 
-@lru_cache(maxsize=1)
 def prices() -> pd.DataFrame:
-    return load_prices()
+    return _prices(date.today())
+
+
+@lru_cache(maxsize=1)
+def _prices(today: date) -> pd.DataFrame:
+    """Index prices, refetched at most once a day when the cache is behind (a long-running server stays current)."""
+    p = load_prices()
+    if p.index.max() < pd.Timestamp(today) - pd.Timedelta(days=4):
+        try:
+            p = load_prices(refresh=True)
+        except Exception:  # Yahoo unreachable: the cached prices still give a usable, older market row
+            pass
+    return p
 
 
 @lru_cache(maxsize=1)
@@ -98,6 +109,11 @@ def tone_history() -> pd.DataFrame:
 def finbert():
     from text_finbert import FinBert
     return FinBert()
+
+
+def needs_finbert() -> bool:
+    """FinBERT (and PyTorch) only load when a saved model uses its scores, directly or as relative tone."""
+    return any(f.removeprefix("rel_").startswith("fb_") for b in models().values() for f in b["features"])
 
 
 def document_from_url(url: str) -> Document:
@@ -181,7 +197,7 @@ def build_row(doc: Document, overrides: dict) -> tuple[pd.DataFrame, dict]:
         "log_risk_chars": np.log(facts["risk_factors_chars"]) if facts["risk_factors_chars"] else np.nan,
         **market_row(ipo_day),
         **lm_features(doc.text, sections),
-        **finbert().features(sections),
+        **(finbert().features(sections) if needs_finbert() else {}),
     }
     df = derive(pd.DataFrame([row]))
     df["log_proceeds"] = np.log(df["proceeds"].where(df["proceeds"] > 0))

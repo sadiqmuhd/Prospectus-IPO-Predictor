@@ -1,0 +1,24 @@
+# Render Blueprint for the API (free web service). The website is deployed separately on Vercel; see deploy/README.md.
+services:
+  - type: web
+    name: prospectus-bot-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    # rebuild only when the API, its models or its data change, not for website edits
+    buildFilter:
+      paths:
+        - api/**
+        - src/**
+        - models/**
+        - data/**
+        - results/**
+        - render.yaml
+        - .dockerignore
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false  # set to the Vercel URL when Render asks
+      - key: ALLOWED_ORIGIN_REGEX
+        value: https://.*\.vercel\.app

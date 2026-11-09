@@ -61,7 +61,7 @@ Delivered as a web app with a separate backend and frontend:
 
 | Part | Stack | Hosting |
 |---|---|---|
-| `api/` | FastAPI (Python). Reuses `src/data` parsing and the trained models | Hugging Face Spaces (Docker, free CPU, 16 GB RAM: fits FinBERT) |
+| `api/` | FastAPI (Python). Reuses `src/data` parsing and the trained models | Render (Docker, free web service; FinBERT left out of the image because the saved models do not use it) |
 | `web/` | Next.js (React, TypeScript) | Vercel |
 
 API endpoints:

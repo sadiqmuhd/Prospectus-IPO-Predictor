@@ -1,7 +1,4 @@
 # runtime dependencies of the API server (the research pipeline uses ../requirements.txt)
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.15.0+cpu
-transformers
 fastapi
 uvicorn[standard]
 python-multipart

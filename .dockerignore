@@ -1,0 +1,14 @@
+# API image: only code, models and the small data files the server reads
+.git
+.venv
+.claude
+**/__pycache__
+logs
+web
+reports
+deploy/space
+tests
+data/interim
+data/raw/edgar
+data/raw/kaggle
+data/raw/nigeria

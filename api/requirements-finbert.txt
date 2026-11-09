@@ -1,0 +1,4 @@
+# only needed when a saved model uses FinBERT scores (build the image with --build-arg FINBERT=1)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0+cpu
+transformers

@@ -12,7 +12,7 @@ OUT = ROOT / "deploy" / "space"
 
 FILES = [
     "api/__init__.py", "api/app/__init__.py", "api/app/analyze.py", "api/app/main.py", "api/app/examples.json",
-    "api/requirements.txt", "api/Dockerfile",
+    "api/requirements.txt", "api/requirements-finbert.txt", "api/Dockerfile",
     "src/data/build_us_dataset.py", "src/data/edgar.py", "src/data/fetch_price_ranges.py",
     "src/data/parse_prospectuses.py",
     "src/features/build_features.py", "src/features/market.py", "src/features/text_lm.py",
