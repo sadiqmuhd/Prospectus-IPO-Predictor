@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 logs/
+.claude/
 
 # large caches that src/pipeline.py rebuilds
 data/raw/edgar/prospectus_text/
