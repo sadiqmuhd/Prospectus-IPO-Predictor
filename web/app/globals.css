@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --surface: #fcfcfb;
+  --surface-2: #f4f3f0;
+  --border: #e4e3df;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --text-3: #7a7973;
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  /* diverging pair: toward the outcome (blue) / against it (red), neutral midpoint gray */
+  --toward: #2a78d6;
+  --against: #e34948;
+  --neutral: #f0efec;
+  /* ordinal ramp for the return buckets, lowest to highest */
+  --b1: #86b6ef;
+  --b2: #3987e5;
+  --b3: #256abf;
+  --b4: #0d366b;
+  --warning-bg: #fff6e0;
+  --warning-ink: #6b4a00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --border: #383835;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #93928a;
+    --accent: #3987e5;
+    --accent-ink: #86b6ef;
+    --toward: #3987e5;
+    --against: #e66767;
+    --neutral: #383835;
+    --b1: #184f95;
+    --b2: #256abf;
+    --b3: #3987e5;
+    --b4: #86b6ef;
+    --warning-bg: #3a2f12;
+    --warning-ink: #f5d9a0;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+  --border: #383835;
+  --text: #f0efec;
+  --text-2: #c3c2b7;
+  --text-3: #93928a;
+  --accent: #3987e5;
+  --accent-ink: #86b6ef;
+  --toward: #3987e5;
+  --against: #e66767;
+  --neutral: #383835;
+  --b1: #184f95;
+  --b2: #256abf;
+  --b3: #3987e5;
+  --b4: #86b6ef;
+  --warning-bg: #3a2f12;
+  --warning-ink: #f5d9a0;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-ink-3: var(--text-3);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}

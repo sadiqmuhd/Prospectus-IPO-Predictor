@@ -1,0 +1,3 @@
+start_date,end_date,daily_limit_pct,confidence,sources,notes
+1996-01-01,2011-12-31,5,medium,https://krave.substack.com/p/why-nigerias-stock-exchange-keeps | https://proshare.co/articles/the-stock-market-080307,5% limit; consistent with Dangote Sugar (2007) and eTranzact (2009) both closing exactly +5% on listing day. End year from a single commentary source.
+2012-01-01,,10,high,https://ngxgroup.com/exchange/trade/equities/trading-market-structure/ | https://guardian.ng/business-services/new-stock-price-movement-rules-take-effect-on-august-17/,10% limit; consistent with every 2019-2025 listing closing exactly +10% on day 1. Aug 2026 pricing-method change kept the limits unchanged.

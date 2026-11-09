@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+logs/
+
+# large caches that src/pipeline.py rebuilds
+data/raw/edgar/prospectus_text/
+data/raw/nigeria/ngx_daily_list/
+data/raw/market/
+# over GitHub's 100 MB limit; rebuilt by the parse step
+data/interim/prospectus_sections.jsonl.gz
+
+# Kaggle data is downloaded manually (see data/README.md), not redistributed
+data/raw/kaggle/
+
+# generated deploy folder (its own git repo on Hugging Face)
+deploy/space/

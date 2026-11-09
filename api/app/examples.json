@@ -1,0 +1,3446 @@
+{
+ "snow": {
+  "source": "EDGAR prospectus (SNOW)",
+  "market": "US",
+  "deal": {
+   "offer_price": 120.0,
+   "shares_offered": 28000000.0,
+   "price_range": [
+    75.0,
+    85.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2020-09-16",
+   "underwriters": "LLC",
+   "lead_underwriter_rank": null,
+   "syndicate_size": 23,
+   "exchange": "New York Stock Exchange",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties described below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are not the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial condition, or results of operations. In such case, the trading price of our Class A common stock could decline, and you may lose some or all of your original investment.\nRisks Related to Our Business and Industry\nWe have a limited operating history, which makes it difficult to forecast our future results of operations.\nWe were founded in 2012 and first offered our platform for sale in 2014. Our revenue was $96.7 million and $264.7 million for the fiscal years ended \nJanuary 31, 2019 and 2020\n, respectively, and $104.0 million and $242.0 million for the six months ended July 31, 2019 and 2020, respectively. However, you should not rely on the revenue growth of any prior quarterly or annual period as an indication of our future performance. As a result of our limited operating history, our ability to accurately forecast our future results of operations ",
+   "document_chars": 694949
+  },
+  "features": {
+   "log_proceeds": 21.935206810921525,
+   "log_offer_price": 4.787491742782046,
+   "price_revision": 0.5,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.125,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": null,
+   "n_syndicate": 23.0,
+   "vix_prev": 25.59000015258789,
+   "sp500_ret_30d": 0.008405310848331293,
+   "nasdaq_ret_30d": 0.015520088466941306,
+   "ipo_count_30d": 34.0,
+   "prior_ipo_return_30d": 0.1120192414339473,
+   "log_doc_chars": 13.451593740559426,
+   "log_risk_chars": 11.655760940070452,
+   "lm_doc_negative": 0.01519817328640858,
+   "lm_doc_positive": 0.005614211496564438,
+   "lm_doc_uncertainty": 0.013029998324115971,
+   "lm_doc_litigious": 0.010767554885201943,
+   "lm_doc_strong_modal": 0.004734372381431205,
+   "lm_doc_weak_modal": 0.007468158203452321,
+   "lm_doc_constraining": 0.006514999162057986,
+   "lm_doc_fog": 20.47687549378726,
+   "lm_risk_factors_negative": 0.03898828603065447,
+   "lm_risk_factors_positive": 0.007459642170289644,
+   "lm_risk_factors_uncertainty": 0.031703479223730985,
+   "lm_risk_factors_litigious": 0.020397459059385746,
+   "lm_risk_factors_strong_modal": 0.005594731627717233,
+   "lm_risk_factors_weak_modal": 0.022262369601958158,
+   "lm_risk_factors_constraining": 0.01002389416632671,
+   "lm_risk_factors_fog": 23.09467694656325,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.0,
+   "lm_use_of_proceeds_uncertainty": 0.017391304347826087,
+   "lm_use_of_proceeds_litigious": 0.0,
+   "lm_use_of_proceeds_strong_modal": 0.008695652173913044,
+   "lm_use_of_proceeds_weak_modal": 0.008695652173913044,
+   "lm_use_of_proceeds_constraining": 0.004347826086956522,
+   "lm_use_of_proceeds_fog": 22.282608695652176,
+   "lm_summary_negative": 0.01623686723973257,
+   "lm_summary_positive": 0.01623686723973257,
+   "lm_summary_uncertainty": 0.004775549188156638,
+   "lm_summary_litigious": 0.0,
+   "lm_summary_strong_modal": 0.0014326647564469914,
+   "lm_summary_weak_modal": 0.0,
+   "lm_summary_constraining": 0.0071633237822349575,
+   "lm_summary_fog": 17.13540752761789,
+   "lm_doc_net_tone": -0.009583961789844142,
+   "fb_summary_pos": 0.2947929915098939,
+   "fb_summary_neg": 0.18906804182915948,
+   "fb_summary_net": 0.10572494968073443,
+   "fb_risk_factors_pos": 0.11172968102619052,
+   "fb_risk_factors_neg": 0.4439468411146663,
+   "fb_risk_factors_net": -0.3322171600884758,
+   "fb_use_of_proceeds_pos": 0.1558564391452819,
+   "fb_use_of_proceeds_neg": 0.014841006079223007,
+   "fb_use_of_proceeds_net": 0.1410154330660589,
+   "rel_lm_doc_negative": -0.0028429325703847597,
+   "rel_lm_doc_uncertainty": -0.0028002758746366006,
+   "rel_lm_doc_weak_modal": -0.0022533715104928317,
+   "rel_lm_doc_litigious": -0.0014966971998767956,
+   "rel_lm_doc_net_tone": 0.001390403590913471,
+   "rel_lm_doc_fog": -1.5543865172857565,
+   "rel_lm_risk_factors_negative": 0.0020267192677632037,
+   "rel_lm_risk_factors_uncertainty": 0.0010242643144374418,
+   "rel_lm_risk_factors_weak_modal": -0.0014351093896384816,
+   "rel_fb_risk_factors_net": -0.07110476517118514,
+   "rel_fb_summary_net": -0.1426258759747725,
+   "rel_fb_use_of_proceeds_net": 0.005709175496700802,
+   "rel_log_doc_chars": -0.25917127236294135,
+   "rel_log_risk_chars": -0.5623193245839975
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.5,
+      "contribution": 0.16374224854333286
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.09955766529500823
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.787491742782046,
+      "contribution": 0.02760763020159613
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.025544323076354677
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 23.0,
+      "contribution": 0.021556174900286638
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.01743659078388257
+     }
+    ],
+    "probability": 0.8618369772721437
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.5,
+      "contribution": 0.14371523953281823
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.11489831763280986
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03290055102033066
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.030101260793168664
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.787491742782046,
+      "contribution": 0.018815976950588804
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.014306997240507501
+     }
+    ],
+    "probability": 0.7568180743388493
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.5,
+      "contribution": 0.19605320940668772
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.12236003694728209
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.06216474276290055
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.023658825925248296
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.787491742782046,
+      "contribution": 0.019501518625843768
+     },
+     {
+      "feature": "lead_uw_rank",
+      "label": "Lead underwriter prestige",
+      "group": "Underwriter",
+      "value": null,
+      "contribution": 0.01857187161158624
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.05528914958825021,
+     "fair": 0.1323850988811052,
+     "underpriced": 0.2744362687139256,
+     "heavily_underpriced": 0.5378894828167188
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Snowflake Inc.",
+  "ticker": "SNOW",
+  "ipo_date": "2020-09-16",
+  "actual": {
+   "first_day_return": 1.116083272298177,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "abnb": {
+  "source": "EDGAR prospectus (ABNB)",
+  "market": "US",
+  "deal": {
+   "offer_price": 68.0,
+   "shares_offered": 51323531.0,
+   "price_range": [
+    44.0,
+    50.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2020-12-10",
+   "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/Allen & Company LLC/BofA Securities, Inc/Barclays Capital Inc/Citigroup Global Markets Inc/BNP Paribas Securities Corp/Mizuho Securities USA LLC/Credit Suisse Securities (USA) LLC/Deutsche Bank Securities Inc/Jefferies LLC/Wells Fargo Securities, LLC/Canaccord Genuity LLC/Cowen and Company, LLC/D.A. Davidson & Co/JMP Securities LLC/KeyBanc Capital Markets Inc/Needham & Company, LLC/Oppenheimer & Co. Inc/Piper Sandler & Co/Raymond James & Associates, Inc/Robert W. Baird & Co. Incorporated/Stifel, Nicolaus & Company, Incorporated/Wedbush Securities Inc/William Blair & Company, L.L.C/Academy Securities, Inc/Blaylock Van, LLC/CastleOak Securities, L.P/C.L. King & Associates, Inc/Guzman & Company/Loop Capital Markets LLC/MFR Securities, Inc/Mischler Financial Group, Inc/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Telsey Advisory Group LLC/Tigress Financial Partners LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 37,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described\nbelow, together with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects\ncould be harmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial\nalso may impair our business operations. \n\nRisks Related to Our Business \n\nThe \nCOVID-19\n pandemic and the impact of actions to mitigate the COVID-19 pandemic have materially\nadversely impacted and will continue to materially adversely impact our business, results of operations, and financial condition.\n\nIn March 2020, the World Health Organization declared the outbreak of \nCOVID-19\n a pandemic. In an attempt to\nlimit the spread of the virus, governments have imposed various restrictions, including emergency declarations at the federal, state, and local levels, school and business closings, quarantines, \u0093shelter at home\u0094 orders, restrictions on\ntravel, limitations on social or public gatherings, and other social distancing measures, which have had and may continue to have a material adverse impact on our business and operations and on travel behavior and demand. \n\nT",
+   "document_chars": 1354909
+  },
+  "features": {
+   "log_proceeds": 21.973167604106305,
+   "log_offer_price": 4.219507705176107,
+   "price_revision": 0.44680851063829796,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.1276595744680851,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 37.0,
+   "vix_prev": 22.270000457763672,
+   "sp500_ret_30d": 0.03445150495968874,
+   "nasdaq_ret_30d": 0.05337046685882041,
+   "ipo_count_30d": 11.0,
+   "prior_ipo_return_30d": 0.802875620749229,
+   "log_doc_chars": 14.119244851369107,
+   "log_risk_chars": 12.691294266515897,
+   "lm_doc_negative": 0.018244309576011777,
+   "lm_doc_positive": 0.006328577632317583,
+   "lm_doc_uncertainty": 0.013811657292957538,
+   "lm_doc_litigious": 0.01123785919311959,
+   "lm_doc_strong_modal": 0.004702742207111309,
+   "lm_doc_weak_modal": 0.008017963627890227,
+   "lm_doc_constraining": 0.00802325950875409,
+   "lm_doc_fog": 21.216570281047538,
+   "lm_risk_factors_negative": 0.039214868275588746,
+   "lm_risk_factors_positive": 0.005715358461442189,
+   "lm_risk_factors_uncertainty": 0.02567739513151582,
+   "lm_risk_factors_litigious": 0.02121357501929455,
+   "lm_risk_factors_strong_modal": 0.0037754740201497673,
+   "lm_risk_factors_weak_modal": 0.019315408522976158,
+   "lm_risk_factors_constraining": 0.01226507582236499,
+   "lm_risk_factors_fog": 24.426841748336326,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.005235602094240838,
+   "lm_use_of_proceeds_uncertainty": 0.020942408376963352,
+   "lm_use_of_proceeds_litigious": 0.005235602094240838,
+   "lm_use_of_proceeds_strong_modal": 0.013089005235602094,
+   "lm_use_of_proceeds_weak_modal": 0.002617801047120419,
+   "lm_use_of_proceeds_constraining": 0.007853403141361256,
+   "lm_use_of_proceeds_fog": 23.20453752181501,
+   "lm_summary_negative": 0.017198196693938888,
+   "lm_summary_positive": 0.011354149273668393,
+   "lm_summary_uncertainty": 0.01435965937552179,
+   "lm_summary_litigious": 0.0020036734012355987,
+   "lm_summary_strong_modal": 0.004007346802471197,
+   "lm_summary_weak_modal": 0.004174319585907497,
+   "lm_summary_constraining": 0.002504591751544498,
+   "lm_summary_fog": 15.314203936531397,
+   "lm_doc_net_tone": -0.011915731943694195,
+   "fb_summary_pos": 0.24113421933725476,
+   "fb_summary_neg": 0.0695409164763987,
+   "fb_summary_net": 0.17159330286085606,
+   "fb_risk_factors_pos": 0.07527952530654147,
+   "fb_risk_factors_neg": 0.3830784883466549,
+   "fb_risk_factors_net": -0.30779896304011345,
+   "fb_use_of_proceeds_pos": 0.16362613905221224,
+   "fb_use_of_proceeds_neg": 0.03914802692209681,
+   "fb_use_of_proceeds_net": 0.12447811213011542,
+   "rel_lm_doc_negative": 0.0005319866504530056,
+   "rel_lm_doc_uncertainty": -0.0016611554670341536,
+   "rel_lm_doc_weak_modal": -0.0014366601140292177,
+   "rel_lm_doc_litigious": -0.0009667705321473336,
+   "rel_lm_doc_net_tone": -0.0010854682907407865,
+   "rel_lm_doc_fog": -0.823604364395969,
+   "rel_lm_risk_factors_negative": 0.0022745265687129507,
+   "rel_lm_risk_factors_uncertainty": -0.004980698360518444,
+   "rel_lm_risk_factors_weak_modal": -0.004504074546376316,
+   "rel_fb_risk_factors_net": -0.034924454463180155,
+   "rel_fb_summary_net": -0.08432268488104455,
+   "rel_fb_use_of_proceeds_net": -0.009400542456811933,
+   "rel_log_doc_chars": 0.4067431748000043,
+   "rel_log_risk_chars": 0.47978985027437027
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.44680851063829796,
+      "contribution": 0.15939663827109868
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.09499070419710122
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02664692132781409
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.219507705176107,
+      "contribution": 0.025444135677183465
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.802875620749229,
+      "contribution": 0.025346467561967075
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.05337046685882041,
+      "contribution": 0.022072354332599662
+     }
+    ],
+    "probability": 0.9010576095610856
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.44680851063829796,
+      "contribution": 0.14413160112021794
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.11067491409430283
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.802875620749229,
+      "contribution": 0.03446237209590465
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03273885503652343
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.028273085760317642
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.219507705176107,
+      "contribution": 0.01753894837115525
+     }
+    ],
+    "probability": 0.8373260103697151
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.44680851063829796,
+      "contribution": 0.19769644115890178
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.14244412230126227
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.802875620749229,
+      "contribution": 0.07174986209122947
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.060513714005415234
+     },
+     {
+      "feature": "vix_prev",
+      "label": "VIX before the IPO",
+      "group": "Market conditions",
+      "value": 22.270000457763672,
+      "contribution": 0.03072232749484723
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.05337046685882041,
+      "contribution": 0.02583481931704288
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.030320310662187152,
+     "fair": 0.060686635711568,
+     "underpriced": 0.21845515143970093,
+     "heavily_underpriced": 0.6905379021865439
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Airbnb, Inc.",
+  "ticker": "ABNB",
+  "ipo_date": "2020-12-10",
+  "actual": {
+   "first_day_return": 1.1280883340274586,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "bmbl": {
+  "source": "EDGAR prospectus (BMBL)",
+  "market": "US",
+  "deal": {
+   "offer_price": 43.0,
+   "shares_offered": 50000000.0,
+   "price_range": [
+    28.0,
+    30.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2021-02-11",
+   "underwriters": "Goldman Sachs & Co. LLC/Citigroup Global Markets Inc/Morgan Stanley & Co. LLC/J.P. Morgan Securities LLC/Jefferies LLC/RBC Capital Markets, LLC/Evercore Group L.L.C/Blackstone Securities Partners L.P/BMO Capital Markets Corp/Cowen and Company, LLC/Raymond James & Associates, Inc/Stifel, Nicolaus & Company, Incorporated/BTIG, LLC/Nomura Securities International, Inc/SMBC Nikko Securities America, Inc/AmeriVet Securities, Inc/C.L. King & Associates, Inc/Drexel Hamilton, LLC/Loop Capital Markets LLC/R. Seelaus & Co., LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Telsey Advisory Group LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 23,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "An investment in shares of our Class A common stock involves risks. You should carefully consider the following information about\nthese risks, together with the other information contained in this prospectus, before investing in shares of our Class A common stock. \n\nRisks\nRelated to Our Brand, Products and Operations \n\nIf we fail to retain existing users or add new users, or if our users decrease their level of\nengagement with our products or do not convert to paying users, our revenue, financial results and business may be significantly harmed. \n\nThe size of our user base and our users\u0092 level of engagement are critical to our success. Our financial performance has been and will\ncontinue to be significantly determined by our success in adding, retaining and engaging users of our products and converting users into paying subscribers or \nin-app\n purchasers. We expect that the size of our\nuser base will fluctuate or decline in one or more markets from time to time. If people do not perceive our products to be useful, reliable, and/or trustworthy, we may not be able to attract or retain users or otherwise maintain or increase the\nfrequency and duration of their engagement. A number of other online dating companies that achieved early popularity have since experienced slower growth or declines in their user bases or levels of engagement. There is no guarantee that we will not\nexperience a similar erosion of our user base or engagement levels. User engagement can be difficult to me",
+   "document_chars": 1077761
+  },
+  "features": {
+   "log_proceeds": 21.488733679085982,
+   "log_offer_price": 3.7612001156935624,
+   "price_revision": 0.48275862068965525,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.06896551724137931,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 23.0,
+   "vix_prev": 21.989999771118164,
+   "sp500_ret_30d": 0.029021339630409093,
+   "nasdaq_ret_30d": 0.071806515156146,
+   "ipo_count_30d": 24.0,
+   "prior_ipo_return_30d": 0.48580246801575405,
+   "log_doc_chars": 13.890396299005916,
+   "log_risk_chars": 12.255900366489447,
+   "lm_doc_negative": 0.016525118179633043,
+   "lm_doc_positive": 0.005895628021258981,
+   "lm_doc_uncertainty": 0.014682317122025479,
+   "lm_doc_litigious": 0.010742996020618007,
+   "lm_doc_strong_modal": 0.006776967657506076,
+   "lm_doc_weak_modal": 0.007845258125684373,
+   "lm_doc_constraining": 0.007090777982533451,
+   "lm_doc_fog": 21.36724711702633,
+   "lm_risk_factors_negative": 0.03802535023348899,
+   "lm_risk_factors_positive": 0.007624130372629372,
+   "lm_risk_factors_uncertainty": 0.028812859366561836,
+   "lm_risk_factors_litigious": 0.017630801486705424,
+   "lm_risk_factors_strong_modal": 0.005940468248673719,
+   "lm_risk_factors_weak_modal": 0.022205279710283046,
+   "lm_risk_factors_constraining": 0.010546713682137297,
+   "lm_risk_factors_fog": 24.470954620153275,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.002320185614849188,
+   "lm_use_of_proceeds_uncertainty": 0.01160092807424594,
+   "lm_use_of_proceeds_litigious": 0.004640371229698376,
+   "lm_use_of_proceeds_strong_modal": 0.013921113689095127,
+   "lm_use_of_proceeds_weak_modal": 0.0,
+   "lm_use_of_proceeds_constraining": 0.002320185614849188,
+   "lm_use_of_proceeds_fog": 22.542280920935212,
+   "lm_summary_negative": 0.013845327908225255,
+   "lm_summary_positive": 0.004181854143708853,
+   "lm_summary_uncertainty": 0.009239637195897262,
+   "lm_summary_litigious": 0.011613121980164448,
+   "lm_summary_strong_modal": 0.009070102568449605,
+   "lm_summary_weak_modal": 0.006159758130598175,
+   "lm_summary_constraining": 0.009635217993275127,
+   "lm_summary_fog": 20.508156745067044,
+   "lm_doc_net_tone": -0.010629490158374062,
+   "fb_summary_pos": 0.04079229274066165,
+   "fb_summary_neg": 0.09067673166282475,
+   "fb_summary_net": -0.0498844389221631,
+   "fb_risk_factors_pos": 0.0709363606874831,
+   "fb_risk_factors_neg": 0.21165178529918194,
+   "fb_risk_factors_net": -0.14071542461169884,
+   "fb_use_of_proceeds_pos": 0.05133753712289035,
+   "fb_use_of_proceeds_neg": 0.01889884890988469,
+   "fb_use_of_proceeds_net": 0.03243868821300566,
+   "rel_lm_doc_negative": -0.0011872047459257282,
+   "rel_lm_doc_uncertainty": -0.0010146063716946502,
+   "rel_lm_doc_weak_modal": -0.0016959399032385036,
+   "rel_lm_doc_litigious": -0.0014010947604853798,
+   "rel_lm_doc_net_tone": 6.821029078083601e-05,
+   "rel_lm_doc_fog": -0.6698218608536735,
+   "rel_lm_risk_factors_negative": 0.0008555822573805619,
+   "rel_lm_risk_factors_uncertainty": -0.0018241127082131471,
+   "rel_lm_risk_factors_weak_modal": -0.001597374646323993,
+   "rel_fb_risk_factors_net": 0.13243313372367993,
+   "rel_fb_summary_net": -0.31051575811579823,
+   "rel_fb_use_of_proceeds_net": -0.09606382651771936,
+   "rel_log_doc_chars": 0.17639867214008476,
+   "rel_log_risk_chars": 0.04577096074948983
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.48275862068965525,
+      "contribution": 0.15996911987452161
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.0915847701403015
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.7612001156935624,
+      "contribution": 0.027627754891596395
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.071806515156146,
+      "contribution": 0.026575090557025522
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.025718342794466373
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.48580246801575405,
+      "contribution": 0.0189547185172696
+     }
+    ],
+    "probability": 0.8789916522672027
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.48275862068965525,
+      "contribution": 0.1455172525386177
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.11204021243724176
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.032413587546321274
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.48580246801575405,
+      "contribution": 0.03199290642005337
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.027140198795780193
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.7612001156935624,
+      "contribution": 0.017403859623556374
+     }
+    ],
+    "probability": 0.8290805930804823
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.48275862068965525,
+      "contribution": 0.20286829741713389
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.1421768389774789
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.48580246801575405,
+      "contribution": 0.07566209448784197
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.05556135217922326
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.071806515156146,
+      "contribution": 0.0403141587919575
+     },
+     {
+      "feature": "vix_prev",
+      "label": "VIX before the IPO",
+      "group": "Market conditions",
+      "value": 21.989999771118164,
+      "contribution": 0.03029940499821349
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.03222356751965942,
+     "fair": 0.059007336153747224,
+     "underpriced": 0.1832777729881385,
+     "heavily_underpriced": 0.7254913233384549
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Bumble Inc.",
+  "ticker": "BMBL",
+  "ipo_date": "2021-02-11",
+  "actual": {
+   "first_day_return": 0.6351162222928779,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "hood": {
+  "source": "EDGAR prospectus (HOOD)",
+  "market": "US",
+  "deal": {
+   "offer_price": 38.0,
+   "shares_offered": 55000000.0,
+   "price_range": [
+    38.0,
+    42.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2021-07-29",
+   "underwriters": "Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Citigroup Global Markets Inc/Wells Fargo Securities, LLC/Mizuho Securities USA LLC/JMP Securities LLC/KeyBanc Capital Markets Inc/Piper Sandler & Co/Rosenblatt Securities Inc/BMO Capital Markets Corp/BTIG, LLC/Santander Investment Securities Inc/Academy Securities, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 17,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves risks. You should carefully consider the risks and uncertainties described below, together with all of the other information included in this prospectus, including our consolidated financial statements and the related notes appearing at the end of this prospectus, before deciding to invest in our Class A common stock. Our business, financial condition, results of operations and prospects could be materially and adversely affected by any of these risks or uncertainties. In that case, the trading price of our Class A common stock could decline, and you could lose all or part of your investment. The risks and uncertainties described below are not the only ones we face. Additional risks and uncertainties that we are unaware of or that we currently see as immaterial may also adversely affect our business. Some statements in this prospectus, including statements in the following risk factors, constitute forward-looking statements. Please refer to \u201cSpecial Note Regarding Forward-Looking Statements.\u201d\nRisks Related to Our Business \nWe have a limited operating history, which makes it difficult to evaluate our business and prospects and increases the risks associated with an investment in our Class A common stock.\nWe began operations in 2013, publicly launched our first product in 2015, and have since continued to introduce new products and services to our platform, such as buying and selling of select cryptocurrencies in 2018, our cash man",
+   "document_chars": 1269470
+  },
+  "features": {
+   "log_proceeds": 21.46042990292313,
+   "log_offer_price": 3.6375861597263857,
+   "price_revision": -0.050000000000000044,
+   "above_range": 0.0,
+   "below_range": 0.0,
+   "range_width": 0.1,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 17.0,
+   "vix_prev": 18.309999465942383,
+   "sp500_ret_30d": 0.025644436791872227,
+   "nasdaq_ret_30d": 0.01807317926996377,
+   "ipo_count_30d": 39.0,
+   "prior_ipo_return_30d": 0.3642291605922437,
+   "log_doc_chars": 14.05411004849672,
+   "log_risk_chars": 12.763457375076118,
+   "lm_doc_negative": 0.0225494733437791,
+   "lm_doc_positive": 0.006484925197530933,
+   "lm_doc_uncertainty": 0.016092428306168763,
+   "lm_doc_litigious": 0.015138926836884337,
+   "lm_doc_strong_modal": 0.005051884977612231,
+   "lm_doc_weak_modal": 0.00910566023006708,
+   "lm_doc_constraining": 0.00775626048991017,
+   "lm_doc_fog": 22.80124754340061,
+   "lm_risk_factors_negative": 0.04165695189243802,
+   "lm_risk_factors_positive": 0.00701406699308308,
+   "lm_risk_factors_uncertainty": 0.02722079738866869,
+   "lm_risk_factors_litigious": 0.021527939690681588,
+   "lm_risk_factors_strong_modal": 0.004391077951348411,
+   "lm_risk_factors_weak_modal": 0.01962384394186679,
+   "lm_risk_factors_constraining": 0.012221185979637833,
+   "lm_risk_factors_fog": 24.738656726812476,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.002531645569620253,
+   "lm_use_of_proceeds_uncertainty": 0.020253164556962026,
+   "lm_use_of_proceeds_litigious": 0.007594936708860759,
+   "lm_use_of_proceeds_strong_modal": 0.015189873417721518,
+   "lm_use_of_proceeds_weak_modal": 0.0,
+   "lm_use_of_proceeds_constraining": 0.010126582278481013,
+   "lm_use_of_proceeds_fog": 28.188466947960617,
+   "lm_summary_negative": 0.015773809523809523,
+   "lm_summary_positive": 0.01607142857142857,
+   "lm_summary_uncertainty": 0.020535714285714286,
+   "lm_summary_litigious": 0.006101190476190476,
+   "lm_summary_strong_modal": 0.0020833333333333333,
+   "lm_summary_weak_modal": 0.010565476190476191,
+   "lm_summary_constraining": 0.005357142857142857,
+   "lm_summary_fog": 19.59682826199072,
+   "lm_doc_net_tone": -0.016064548146248164,
+   "fb_summary_pos": 0.3538015838712454,
+   "fb_summary_neg": 0.13209185676532798,
+   "fb_summary_net": 0.2217097271059174,
+   "fb_risk_factors_pos": 0.06951247225515544,
+   "fb_risk_factors_neg": 0.4786218104418367,
+   "fb_risk_factors_net": -0.40910933818668127,
+   "fb_use_of_proceeds_pos": 0.14624997484497726,
+   "fb_use_of_proceeds_neg": 0.015935835312120616,
+   "fb_use_of_proceeds_net": 0.13031413953285664,
+   "rel_lm_doc_negative": 0.00516853921567299,
+   "rel_lm_doc_uncertainty": 0.0004306780284139486,
+   "rel_lm_doc_weak_modal": -0.00019556119418243263,
+   "rel_lm_doc_litigious": 0.0034031755944505873,
+   "rel_lm_doc_net_tone": -0.005700686529656419,
+   "rel_lm_doc_fog": 0.8864765136546104,
+   "rel_lm_risk_factors_negative": 0.0034876978128592084,
+   "rel_lm_risk_factors_uncertainty": -0.003524206777105205,
+   "rel_lm_risk_factors_weak_modal": -0.004173827717805601,
+   "rel_fb_risk_factors_net": -0.12733642462990247,
+   "rel_fb_summary_net": -0.01953941266401671,
+   "rel_fb_use_of_proceeds_net": 0.015457961713282287,
+   "rel_log_doc_chars": 0.3684007098129154,
+   "rel_log_risk_chars": 0.6337406963804728
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.050000000000000044,
+      "contribution": -0.12998629155827632
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.03800386024965169
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": 0.1,
+      "contribution": -0.022267896071386697
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.6375861597263857,
+      "contribution": 0.016891608548620964
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.3642291605922437,
+      "contribution": 0.016821432990282888
+     },
+     {
+      "feature": "ipo_count_30d",
+      "label": "IPOs in the past month",
+      "group": "Market conditions",
+      "value": 39.0,
+      "contribution": 0.012125939699520383
+     }
+    ],
+    "probability": 0.38622070087560545
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.050000000000000044,
+      "contribution": -0.08882935417230715
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.038316206018230686
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.3642291605922437,
+      "contribution": 0.03634503828080892
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.025696658248411667
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.0255870147956922
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.6375861597263857,
+      "contribution": 0.017459928267326175
+     }
+    ],
+    "probability": 0.42327929431477485
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.050000000000000044,
+      "contribution": 0.08541018688376911
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.030696933241108015
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.010868211677109326
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.01081056383008282
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": 0.1,
+      "contribution": 0.010038077841175308
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.3642291605922437,
+      "contribution": -0.009181725385278726
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.33049035871880295,
+     "fair": 0.32150176981218764,
+     "underpriced": 0.23043149430886162,
+     "heavily_underpriced": 0.11757637716014771
+    },
+    "predicted": "overpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Robinhood Markets, Inc.",
+  "ticker": "HOOD",
+  "ipo_date": "2021-07-29",
+  "actual": {
+   "first_day_return": -0.08368421855725738,
+   "pop": 0,
+   "bucket": "overpriced"
+  }
+ },
+ "rivn": {
+  "source": "EDGAR prospectus (RIVN)",
+  "market": "US",
+  "deal": {
+   "offer_price": 78.0,
+   "shares_offered": 153000000.0,
+   "price_range": [
+    57.0,
+    62.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2021-11-10",
+   "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/Allen & Company LLC/BofA Securities, Inc/Mizuho Securities USA LLC/Wells Fargo Securities, LLC/Nomura Securities International, Inc/Piper Sandler & Co/RBC Capital Markets, LLC/Robert W. Baird & Co. Incorporated/Wedbush Securities Inc/Academy Securities, Inc/Blaylock Van, LLC/Cabrera Capital Markets LLC/C.L. King & Associates, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Tigress Financial Partners, LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 22,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below,\ntogether with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects could be\nharmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial also may impair\nour business operations. \n\nRisks Related to Our Business \n\nWe\nare a growth stage company with a history of losses and expect to incur significant expenses and continuing losses for the foreseeable future. \n\nWe have incurred net losses since our inception, including net losses of $426 million and $1.0 billion for the years ended December 31, 2019 and 2020,\nrespectively. We believe that we will continue to incur operating and net losses in the future while we grow, including following our initial generation of revenues from the sale of our vehicles, which began with the R1T in September 2021, to be\nfollowed by the R1S and EDV planned for December 2021, but which may occur later than we expect or not at all. We do not expect to be profitable for the foreseeable future as we invest in our business, build capacity and ramp up operations, and we\ncannot ass",
+   "document_chars": 951233
+  },
+  "features": {
+   "log_proceeds": 23.2026573060463,
+   "log_offer_price": 4.356708826689592,
+   "price_revision": 0.31092436974789917,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.08403361344537816,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 22.0,
+   "vix_prev": 17.780000686645508,
+   "sp500_ret_30d": 0.074305421902642,
+   "nasdaq_ret_30d": 0.09666716080612558,
+   "ipo_count_30d": 31.0,
+   "prior_ipo_return_30d": 0.12726682859535376,
+   "log_doc_chars": 13.765514316776263,
+   "log_risk_chars": 12.300909986291009,
+   "lm_doc_negative": 0.01703642632289012,
+   "lm_doc_positive": 0.007300254834357667,
+   "lm_doc_uncertainty": 0.0158896717133863,
+   "lm_doc_litigious": 0.009736171488532454,
+   "lm_doc_strong_modal": 0.00681307150352271,
+   "lm_doc_weak_modal": 0.009016639184530056,
+   "lm_doc_constraining": 0.007022935092190077,
+   "lm_doc_fog": 21.630578504402337,
+   "lm_risk_factors_negative": 0.038932660347162376,
+   "lm_risk_factors_positive": 0.008248184168410685,
+   "lm_risk_factors_uncertainty": 0.03105379785793426,
+   "lm_risk_factors_litigious": 0.01631170749723009,
+   "lm_risk_factors_strong_modal": 0.00646312938569494,
+   "lm_risk_factors_weak_modal": 0.02311338175550905,
+   "lm_risk_factors_constraining": 0.011048873568878494,
+   "lm_risk_factors_fog": 23.880484673403103,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.0033444816053511705,
+   "lm_use_of_proceeds_uncertainty": 0.023411371237458192,
+   "lm_use_of_proceeds_litigious": 0.0,
+   "lm_use_of_proceeds_strong_modal": 0.013377926421404682,
+   "lm_use_of_proceeds_weak_modal": 0.010033444816053512,
+   "lm_use_of_proceeds_constraining": 0.0033444816053511705,
+   "lm_use_of_proceeds_fog": 23.188554440728353,
+   "lm_summary_negative": 0.003134796238244514,
+   "lm_summary_positive": 0.006269592476489028,
+   "lm_summary_uncertainty": 0.009404388714733543,
+   "lm_summary_litigious": 0.0,
+   "lm_summary_strong_modal": 0.01567398119122257,
+   "lm_summary_weak_modal": 0.006269592476489028,
+   "lm_summary_constraining": 0.006269592476489028,
+   "lm_summary_fog": 15.907136271436475,
+   "lm_doc_net_tone": -0.009736171488532454,
+   "fb_summary_pos": 0.09034932112055165,
+   "fb_summary_neg": 0.01929583533533982,
+   "fb_summary_net": 0.07105348578521183,
+   "fb_risk_factors_pos": 0.058149017684627324,
+   "fb_risk_factors_neg": 0.4284011524869129,
+   "fb_risk_factors_net": -0.3702521348022856,
+   "fb_use_of_proceeds_pos": 0.13926982755462328,
+   "fb_use_of_proceeds_neg": 0.014979608822613955,
+   "fb_use_of_proceeds_net": 0.12429021873200932,
+   "rel_lm_doc_negative": -0.0005693017285017428,
+   "rel_lm_doc_uncertainty": 0.00010375045097808788,
+   "rel_lm_doc_weak_modal": -0.0002205152657538071,
+   "rel_lm_doc_litigious": -0.001978215220552028,
+   "rel_lm_doc_net_tone": 0.0007224972351393012,
+   "rel_lm_doc_fog": -0.21485573961636817,
+   "rel_lm_risk_factors_negative": 0.0005502332116790049,
+   "rel_lm_risk_factors_uncertainty": 0.00012671655553612993,
+   "rel_lm_risk_factors_weak_modal": -0.0007188196690395658,
+   "rel_fb_risk_factors_net": -0.09710357646690682,
+   "rel_fb_summary_net": -0.16793235214676577,
+   "rel_fb_use_of_proceeds_net": 0.00960063534335065,
+   "rel_log_doc_chars": 0.08072310893670576,
+   "rel_log_risk_chars": 0.15626603575748277
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.31092436974789917,
+      "contribution": 0.17167677483862814
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.09921679624755682
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09666716080612558,
+      "contribution": 0.0283171615575676
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.356708826689592,
+      "contribution": 0.027724660387537948
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02540076450923181
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.014418043957275388
+     }
+    ],
+    "probability": 0.8676862538569999
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.31092436974789917,
+      "contribution": 0.1536093911298072
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.11438074327491235
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.032042091634494355
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.030841981036835036
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09666716080612558,
+      "contribution": 0.017247651613527596
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 4.356708826689592,
+      "contribution": 0.01658160633466387
+     }
+    ],
+    "probability": 0.7874464531594824
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.31092436974789917,
+      "contribution": 0.18307532088739537
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.12689374356085004
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.062367777638610906
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09666716080612558,
+      "contribution": 0.036390519603867306
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.024843184704970152
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.12726682859535376,
+      "contribution": -0.022770349105376553
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.05094487158646473,
+     "fair": 0.12283410713488872,
+     "underpriced": 0.27946958155580226,
+     "heavily_underpriced": 0.5467514397228441
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Rivian Automotive, Inc. / DE",
+  "ticker": "RIVN",
+  "ipo_date": "2021-11-10",
+  "actual": {
+   "first_day_return": 0.29141029944786667,
+   "pop": 1,
+   "bucket": "underpriced"
+  }
+ },
+ "cava": {
+  "source": "EDGAR prospectus (CAVA)",
+  "market": "US",
+  "deal": {
+   "offer_price": 22.0,
+   "shares_offered": 14444444.0,
+   "price_range": [
+    17.0,
+    19.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2023-06-15",
+   "underwriters": "J.P. Morgan Securities LLC/Jefferies LLC/Citigroup Global Markets Inc/Morgan Stanley & Co. LLC/Piper Sandler & Co/Robert W. Baird & Co. Incorporated/Stifel, Nicolaus & Company, Incorporated/William Blair & Company, L.L.C/Capital One Securities, Inc/Blaylock Van, LLC/Drexel Hamilton, LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 11,
+   "exchange": "New York Stock Exchange",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our common stock involves a high degree of risk. You should carefully consider all of the risks and uncertainties described below and the other information set forth in this prospectus before deciding to invest in shares of our common stock. If any of the following risks actually occurs, our business, results of operations, prospects, and financial condition may be materially adversely affected. In such case, the trading price of our common stock could decline and you may lose all or part of your investment. Some statements in this prospectus, including statements in the following risk factors, constitute forward-looking statements. See \u201cForward-Looking Statements.\u201d\nRisks Related to Our Business and Our Industry\nWe operate in a highly competitive industry. \nThe restaurant industry is highly competitive with respect to, among other things, food quality and presentation, taste preferences, price, brand reputation, digital engagement, service, value, and location. The food manufacturing industry is also highly competitive with respect to, among other things, food quality, taste, functional benefits, nutritional value and ingredients, convenience, brand loyalty and positioning, food variety, product packaging, shelf space, price, and promotional activities. We face significant competition from national, regional, and locally-owned restaurants, including limited service restaurants, particularly within the fast-casual dining and traditional fast-food categories, who o",
+   "document_chars": 789929
+  },
+  "features": {
+   "log_proceeds": 19.576862853672722,
+   "log_offer_price": 3.091042453358316,
+   "price_revision": 0.22222222222222232,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.1111111111111111,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 11.0,
+   "vix_prev": 13.880000114440918,
+   "sp500_ret_30d": 0.057131062420339385,
+   "nasdaq_ret_30d": 0.10200154399293959,
+   "ipo_count_30d": 2.0,
+   "prior_ipo_return_30d": 0.11025639069386028,
+   "log_doc_chars": 13.579698346986625,
+   "log_risk_chars": 11.953545339152768,
+   "lm_doc_negative": 0.017198972434274054,
+   "lm_doc_positive": 0.008362635961156557,
+   "lm_doc_uncertainty": 0.014165467232678048,
+   "lm_doc_litigious": 0.0097472989961193,
+   "lm_doc_strong_modal": 0.004272414232878459,
+   "lm_doc_weak_modal": 0.008672363218977172,
+   "lm_doc_constraining": 0.007369686811084592,
+   "lm_doc_fog": 21.818345469814787,
+   "lm_risk_factors_negative": 0.03943710167244108,
+   "lm_risk_factors_positive": 0.009666794986954105,
+   "lm_risk_factors_uncertainty": 0.03109628298900723,
+   "lm_risk_factors_litigious": 0.013944137901535565,
+   "lm_risk_factors_strong_modal": 0.005218358355789383,
+   "lm_risk_factors_weak_modal": 0.02506522947944737,
+   "lm_risk_factors_constraining": 0.010778904144745284,
+   "lm_risk_factors_fog": 23.64446878500979,
+   "lm_use_of_proceeds_negative": 0.031578947368421054,
+   "lm_use_of_proceeds_positive": 0.0,
+   "lm_use_of_proceeds_uncertainty": 0.02631578947368421,
+   "lm_use_of_proceeds_litigious": 0.0,
+   "lm_use_of_proceeds_strong_modal": 0.015789473684210527,
+   "lm_use_of_proceeds_weak_modal": 0.010526315789473684,
+   "lm_use_of_proceeds_constraining": 0.005263157894736842,
+   "lm_use_of_proceeds_fog": 17.289473684210527,
+   "lm_summary_negative": 0.003542330853701736,
+   "lm_summary_positive": 0.022316684378320937,
+   "lm_summary_uncertainty": 0.00832447750619908,
+   "lm_summary_litigious": 0.002479631597591215,
+   "lm_summary_strong_modal": 0.0028338646829613886,
+   "lm_summary_weak_modal": 0.0010626992561105207,
+   "lm_summary_constraining": 0.0019482819695359546,
+   "lm_summary_fog": 20.77216453694824,
+   "lm_doc_net_tone": -0.008836336473117497,
+   "fb_summary_pos": 0.4395908211590722,
+   "fb_summary_neg": 0.013465120573528111,
+   "fb_summary_net": 0.4261257005855441,
+   "fb_risk_factors_pos": 0.15211872709915042,
+   "fb_risk_factors_neg": 0.32129509819787927,
+   "fb_risk_factors_net": -0.16917637109872885,
+   "fb_use_of_proceeds_pos": 0.14558070184042057,
+   "fb_use_of_proceeds_neg": 0.021245723124593496,
+   "fb_use_of_proceeds_net": 0.12433497871582708,
+   "rel_lm_doc_negative": -0.0004364695419287398,
+   "rel_lm_doc_uncertainty": -0.002518608421905315,
+   "rel_lm_doc_weak_modal": -0.0012618466576610633,
+   "rel_lm_doc_litigious": -0.0030016237908243107,
+   "rel_lm_doc_net_tone": 0.002643508810836309,
+   "rel_lm_doc_fog": -0.14422448449660408,
+   "rel_lm_risk_factors_negative": 0.0026497917498548088,
+   "rel_lm_risk_factors_uncertainty": -0.0001937986341262153,
+   "rel_lm_risk_factors_weak_modal": 0.0014666277459819237,
+   "rel_fb_risk_factors_net": 0.11637482774676755,
+   "rel_fb_summary_net": 0.29168591162306257,
+   "rel_fb_use_of_proceeds_net": 0.0430565713904798,
+   "rel_log_doc_chars": -0.08292345001427925,
+   "rel_log_risk_chars": -0.2027250790318682
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.22222222222222232,
+      "contribution": 0.18441212353632838
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.10200247541949481
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.091042453358316,
+      "contribution": 0.035300898901089284
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.10200154399293959,
+      "contribution": 0.031871879805276004
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.030282913203136745
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 11.0,
+      "contribution": 0.020157723379946837
+     }
+    ],
+    "probability": 0.9309778313961733
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.22222222222222232,
+      "contribution": 0.16218246425869037
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.11665382577351766
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.033622531039150076
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.03180632257415665
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.091042453358316,
+      "contribution": 0.018381421522624994
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.10200154399293959,
+      "contribution": 0.01630774170212724
+     }
+    ],
+    "probability": 0.8147676752230266
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.22222222222222232,
+      "contribution": 0.18603946391666523
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.1270445225786736
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.09385589319882708
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.10200154399293959,
+      "contribution": 0.03984291577623697
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.022691986465041357
+     },
+     {
+      "feature": "sp500_ret_30d",
+      "label": "S&P 500, past month",
+      "group": "Market conditions",
+      "value": 0.057131062420339385,
+      "contribution": 0.018704559013480122
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.051661536900041105,
+     "fair": 0.10336443837456727,
+     "underpriced": 0.3305000304124325,
+     "heavily_underpriced": 0.5144739943129591
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "CAVA GROUP, INC.",
+  "ticker": "CAVA",
+  "ipo_date": "2023-06-15",
+  "actual": {
+   "first_day_return": 0.9899999445134944,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "cart": {
+  "source": "EDGAR prospectus (CART)",
+  "market": "US",
+  "deal": {
+   "offer_price": 30.0,
+   "shares_offered": 22000000.0,
+   "price_range": [
+    26.0,
+    28.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2023-09-19",
+   "underwriters": "Morgan Securities LLC",
+   "lead_underwriter_rank": null,
+   "syndicate_size": 20,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties\ndescribed below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are\nnot the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial\ncondition, or results of operations. In such case, the trading price of our common stock could decline, and you may lose some or all of your original investment. \n\nRisks Related to Our Business and Industry \n\nWe have experienced rapid growth, operational and strategic expansion, and related impacts to margin and profitability in recent periods. Such\nhistorical trends, including growth rates, may not continue in the future. \n\nWe have grown rapidly over the last several years. Our\nGTV increased from $5,144 million for the year ended December 31, 2019 to $28,826 million for the year ended December 31, 2022, a CAGR of 78%, and our revenue increased from $214 million for the year ended December 31,\n2019 to $2,551 million for the year ended December 31, 2022, a CAGR of 128%. Our recent rapid growth has also resulted in increased costs as we expanded our operations ",
+   "document_chars": 1357931
+  },
+  "features": {
+   "log_proceeds": 20.307750392984744,
+   "log_offer_price": 3.4011973816621555,
+   "price_revision": 0.11111111111111116,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.07407407407407407,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": null,
+   "n_syndicate": 20.0,
+   "vix_prev": 14.0,
+   "sp500_ret_30d": 0.01903045160508965,
+   "nasdaq_ret_30d": 0.029534626682318654,
+   "ipo_count_30d": 3.0,
+   "prior_ipo_return_30d": 0.0900980497942585,
+   "log_doc_chars": 14.121472775795178,
+   "log_risk_chars": 12.58232862358768,
+   "lm_doc_negative": 0.016218430179365518,
+   "lm_doc_positive": 0.00995233941147684,
+   "lm_doc_uncertainty": 0.014744994574352646,
+   "lm_doc_litigious": 0.009436370986616736,
+   "lm_doc_strong_modal": 0.0042713674759037425,
+   "lm_doc_weak_modal": 0.008431030447456328,
+   "lm_doc_constraining": 0.00529266580140003,
+   "lm_doc_fog": 20.91666879390593,
+   "lm_risk_factors_negative": 0.03985743570629892,
+   "lm_risk_factors_positive": 0.009946887812150577,
+   "lm_risk_factors_uncertainty": 0.030749161386507642,
+   "lm_risk_factors_litigious": 0.016935333581811405,
+   "lm_risk_factors_strong_modal": 0.004076593365635483,
+   "lm_risk_factors_weak_modal": 0.023504472605292582,
+   "lm_risk_factors_constraining": 0.009667349981364145,
+   "lm_risk_factors_fog": 24.870340401374634,
+   "lm_use_of_proceeds_negative": 0.013493253373313344,
+   "lm_use_of_proceeds_positive": 0.0014992503748125937,
+   "lm_use_of_proceeds_uncertainty": 0.017991004497751123,
+   "lm_use_of_proceeds_litigious": 0.014992503748125937,
+   "lm_use_of_proceeds_strong_modal": 0.010494752623688156,
+   "lm_use_of_proceeds_weak_modal": 0.0074962518740629685,
+   "lm_use_of_proceeds_constraining": 0.01199400299850075,
+   "lm_use_of_proceeds_fog": 27.589542728635685,
+   "lm_summary_negative": 0.006029021050480278,
+   "lm_summary_positive": 0.02145922746781116,
+   "lm_summary_uncertainty": 0.008583690987124463,
+   "lm_summary_litigious": 0.0006131207847946045,
+   "lm_summary_strong_modal": 0.00398528510116493,
+   "lm_summary_weak_modal": 0.00316779072143879,
+   "lm_summary_constraining": 0.0013284283670549765,
+   "lm_summary_fog": 17.1681928530672,
+   "lm_doc_net_tone": -0.006266090767888678,
+   "fb_summary_pos": 0.531125767622143,
+   "fb_summary_neg": 0.04714204851188697,
+   "fb_summary_net": 0.48398371911025606,
+   "fb_risk_factors_pos": 0.10172961954958737,
+   "fb_risk_factors_neg": 0.34283670521108434,
+   "fb_risk_factors_net": -0.24110708566149697,
+   "fb_use_of_proceeds_pos": 0.10555091958779556,
+   "fb_use_of_proceeds_neg": 0.024924052306092702,
+   "fb_use_of_proceeds_net": 0.08062686728170285,
+   "rel_lm_doc_negative": -0.001160058242044272,
+   "rel_lm_doc_uncertainty": -0.0012448984860592878,
+   "rel_lm_doc_weak_modal": -0.0011267891093129194,
+   "rel_lm_doc_litigious": -0.002980361613367951,
+   "rel_lm_doc_net_tone": 0.004380069084863847,
+   "rel_lm_doc_fog": -0.7287910246847638,
+   "rel_lm_risk_factors_negative": 0.0027932155228126768,
+   "rel_lm_risk_factors_uncertainty": -0.00048217744067496904,
+   "rel_lm_risk_factors_weak_modal": -0.00014922306234631602,
+   "rel_fb_risk_factors_net": 0.05189958811388351,
+   "rel_fb_summary_net": 0.2945264949084958,
+   "rel_fb_use_of_proceeds_net": 0.0026432109527035064,
+   "rel_log_doc_chars": 0.5241219589843205,
+   "rel_log_risk_chars": 0.5766844806285008
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.11111111111111116,
+      "contribution": 0.16580773005969673
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.10159856175089313
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4011973816621555,
+      "contribution": 0.03999885595729609
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02805573045411711
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 20.0,
+      "contribution": 0.01611064015492681
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.013982186140171231
+     }
+    ],
+    "probability": 0.8647571853276578
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.11111111111111116,
+      "contribution": 0.14696961833680222
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.12164938510268411
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03389501152593796
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.026840209292719904
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4011973816621555,
+      "contribution": 0.01854832184726068
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.014184794488871387
+     }
+    ],
+    "probability": 0.7837429656885161
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.11111111111111116,
+      "contribution": 0.09794508199865468
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.026584156232721253
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.02141194365378718
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.017344671448356025
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 20.0,
+      "contribution": 0.01380130203147016
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.011421277766943889
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.06311011751738532,
+     "fair": 0.14209976592741339,
+     "underpriced": 0.4781560442622653,
+     "heavily_underpriced": 0.31663407229293594
+    },
+    "predicted": "underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Maplebear Inc.",
+  "ticker": "CART",
+  "ipo_date": "2023-09-19",
+  "actual": {
+   "first_day_return": 0.12333335876464835,
+   "pop": 1,
+   "bucket": "underpriced"
+  }
+ },
+ "kvyo": {
+  "source": "EDGAR prospectus (KVYO)",
+  "market": "US",
+  "deal": {
+   "offer_price": 30.0,
+   "shares_offered": 19200000.0,
+   "price_range": [
+    25.0,
+    27.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2023-09-20",
+   "underwriters": "Goldman Sachs & Co. LLC/Morgan Stanley & Co. LLC/Citigroup Global Markets Inc/Barclays Capital Inc/Mizuho Securities USA LLC/William Blair & Company, L.L.C/Piper Sandler & Co/Truist Securities, Inc/Robert W. Baird & Co. Incorporated/Canaccord Genuity LLC/Needham & Company, LLC/Cowen and Company, LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 12,
+   "exchange": "New York Stock Exchange",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Series A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below, together with all of the other information in this prospectus, before making a decision to invest in our Series A common stock. If any of these risks actually occur, our business, results of operations, financial condition, and prospects could be materially adversely affected. In that event, the trading price of our Series A common stock could decline, and you could lose part or all of your investment. Certain statements contained in the risk factors described below are forward-looking statements. See the section titled \u201cSpecial Note Regarding Forward-Looking Statements\u201d for more information.\nRisks Relating to Our Business and Industry\nOur rapid historical revenue growth is not indicative of our future revenue growth, and we may not be able to sustain our historical revenue growth rate, in the near term and in the future. \nWe have experienced rapid revenue growth in recent periods. Our revenue was $472.7 million and $290.6 million for the years ended December 31, 2022 and 2021, respectively, representing a growth rate of 62.7%. For the six months ended June 30, 2023 and 2022, our revenue was $320.7 million and $208.3 million, respectively, representing an increase of 53.9%. Our rapid revenue growth has been driven by increases in our customer count, growth of existing customers, our expansion into international markets, our sales to",
+   "document_chars": 811835
+  },
+  "features": {
+   "log_proceeds": 20.171618218660164,
+   "log_offer_price": 3.4011973816621555,
+   "price_revision": 0.15384615384615374,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.07692307692307693,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 12.0,
+   "vix_prev": 14.109999656677246,
+   "sp500_ret_30d": 0.01698973960255068,
+   "nasdaq_ret_30d": 0.029148789482605908,
+   "ipo_count_30d": 4.0,
+   "prior_ipo_return_30d": 0.10117648611772179,
+   "log_doc_chars": 13.607052396525054,
+   "log_risk_chars": 12.16500582937688,
+   "lm_doc_negative": 0.017185347416016107,
+   "lm_doc_positive": 0.007939171288282879,
+   "lm_doc_uncertainty": 0.015701720300964356,
+   "lm_doc_litigious": 0.01068564767388463,
+   "lm_doc_strong_modal": 0.0038768589494507046,
+   "lm_doc_weak_modal": 0.009104878307252111,
+   "lm_doc_constraining": 0.007347486665018192,
+   "lm_doc_fog": 21.99831794731498,
+   "lm_risk_factors_negative": 0.040625656099097206,
+   "lm_risk_factors_positive": 0.008013156973896004,
+   "lm_risk_factors_uncertainty": 0.030967877388200712,
+   "lm_risk_factors_litigious": 0.01791587934775002,
+   "lm_risk_factors_strong_modal": 0.004059066414724613,
+   "lm_risk_factors_weak_modal": 0.023374623836517602,
+   "lm_risk_factors_constraining": 0.011547344110854504,
+   "lm_risk_factors_fog": 24.489853803625167,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.006666666666666667,
+   "lm_use_of_proceeds_uncertainty": 0.015555555555555555,
+   "lm_use_of_proceeds_litigious": 0.0044444444444444444,
+   "lm_use_of_proceeds_strong_modal": 0.015555555555555555,
+   "lm_use_of_proceeds_weak_modal": 0.0022222222222222222,
+   "lm_use_of_proceeds_constraining": 0.011111111111111112,
+   "lm_use_of_proceeds_fog": 22.1015873015873,
+   "lm_summary_negative": 0.012674504041146216,
+   "lm_summary_positive": 0.017083027185892725,
+   "lm_summary_uncertainty": 0.012490815576781777,
+   "lm_summary_litigious": 0.0014695077149155032,
+   "lm_summary_strong_modal": 0.0018368846436443791,
+   "lm_summary_weak_modal": 0.0053269654665687,
+   "lm_summary_constraining": 0.006429096252755327,
+   "lm_summary_fog": 20.260211871276642,
+   "lm_doc_net_tone": -0.009246176127733229,
+   "fb_summary_pos": 0.2307017429266125,
+   "fb_summary_neg": 0.17573771957540885,
+   "fb_summary_net": 0.05496402335120365,
+   "fb_risk_factors_pos": 0.09317793103400618,
+   "fb_risk_factors_neg": 0.2950020086718723,
+   "fb_risk_factors_net": -0.20182407763786614,
+   "fb_use_of_proceeds_pos": 0.19763081377515426,
+   "fb_use_of_proceeds_neg": 0.03704189459005228,
+   "fb_use_of_proceeds_net": 0.16058891918510199,
+   "rel_lm_doc_negative": -0.00010338301182581666,
+   "rel_lm_doc_uncertainty": -0.0002540059654386438,
+   "rel_lm_doc_weak_modal": -0.0004020884375192813,
+   "rel_lm_doc_litigious": -0.0016996274625189645,
+   "rel_lm_doc_net_tone": 0.0011548061683308054,
+   "rel_lm_doc_fog": 0.37126887945608544,
+   "rel_lm_risk_factors_negative": 0.003528498547834262,
+   "rel_lm_risk_factors_uncertainty": -0.00025039655465059624,
+   "rel_lm_risk_factors_weak_modal": -0.0002758067770144493,
+   "rel_fb_risk_factors_net": 0.08680645936692599,
+   "rel_fb_summary_net": -0.13994718412868679,
+   "rel_fb_use_of_proceeds_net": 0.08220158641537031,
+   "rel_log_doc_chars": 0.007056835546849882,
+   "rel_log_risk_chars": 0.13513188262472298
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.15384615384615374,
+      "contribution": 0.1699157222280251
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.10263681250540528
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4011973816621555,
+      "contribution": 0.04393180162021688
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02960181311422586
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 12.0,
+      "contribution": 0.020794862967680555
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.0176800594184523
+     }
+    ],
+    "probability": 0.8709619341328652
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.15384615384615374,
+      "contribution": 0.15662666199275013
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.12228463646208954
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03431612602100163
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.027980308394317623
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4011973816621555,
+      "contribution": 0.02028166545075044
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.014911939907154143
+     }
+    ],
+    "probability": 0.7719053178406137
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.15384615384615374,
+      "contribution": 0.0684794574191936
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.02419380904309531
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.01720908635346313
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.01562890663154749
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": 0.07692307692307693,
+      "contribution": -0.015379778030012784
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.01263877592666803
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.06748960511771807,
+     "fair": 0.18298591176148218,
+     "underpriced": 0.3903947522165401,
+     "heavily_underpriced": 0.3591297309042601
+    },
+    "predicted": "underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Klaviyo, Inc.",
+  "ticker": "KVYO",
+  "ipo_date": "2023-09-20",
+  "actual": {
+   "first_day_return": 0.09199994405110679,
+   "pop": 1,
+   "bucket": "fair"
+  }
+ },
+ "birk": {
+  "source": "EDGAR prospectus (BIRK)",
+  "market": "US",
+  "deal": {
+   "offer_price": 46.0,
+   "shares_offered": 32258064.0,
+   "price_range": [
+    44.0,
+    49.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2023-10-11",
+   "underwriters": "Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Morgan Stanley & Co. LLC/BofA Securities, Inc/Citigroup Global Markets Inc/Evercore Group L.L.C/Jefferies LLC/UBS Securities LLC/BNP Paribas Securities Corp/Sanford C. Bernstein & Co., LLC/HSBC Securities (USA) Inc/Robert W. Baird & Co. Incorporated/BMO Capital Markets Corp/Deutsche Bank Securities Inc/Piper Sandler & Co/Stifel, Nicolaus & Company, Incorporated/William Blair & Company, L.L.C/Telsey Advisory Group LLC/Williams Trading LLC/Academy Securities, Inc/Independence Point Securities LLC/Loop Capital Markets LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 22,
+   "exchange": "New York Stock Exchange",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "\u0094 section. \n\nWe face intense competition from both established companies and newer entrants into the market, and our failure to compete effectively could\nhave a negative impact on our revenues and our reputation. \n\nThe footwear, skincare, accessories and sleep system industries are\nvery competitive, and we expect to continue to face intense competitive pressures. Competitive factors that affect our market position include our ability to predict and respond to changing consumer preferences and tastes in a timely manner, our\nability to continue marketing and developing new products that appeal to consumers, our ability to accurately predict customer demand and ensure product availability, the strength and recognition of the BIRKENSTOCK brand, our ability to price our\nproducts competitively, our ability to manage the impact of the rapidly changing retail environment and the expansion of our online presence, and our marketing and content distribution efforts. \n\nOur competitors may have significantly greater financial resources, more developed consumer and customer bases or more comprehensive\nproduct lines and greater distribution capabilities, and may spend substantially more on product advertising, marketing and endorsements. Our competitors may also own more recognized brands, implement more effective marketing campaigns, adopt more\naggressive pricing \n\n34 \n\nTable of Contents\n\npolicies, make more attractive offers to potential employees and distribution partners, have a larger ",
+   "document_chars": 1054021
+  },
+  "features": {
+   "log_proceeds": 21.11792001295036,
+   "log_offer_price": 3.828641396489095,
+   "price_revision": -0.010752688172043001,
+   "above_range": 0.0,
+   "below_range": 0.0,
+   "range_width": 0.10752688172043011,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 22.0,
+   "vix_prev": 17.030000686645508,
+   "sp500_ret_30d": -0.02879573916811151,
+   "nasdaq_ret_30d": -0.025510318996340042,
+   "ipo_count_30d": 13.0,
+   "prior_ipo_return_30d": -0.07364936439132269,
+   "log_doc_chars": 13.868122931983635,
+   "log_risk_chars": 11.841610315599914,
+   "lm_doc_negative": 0.014643092326538126,
+   "lm_doc_positive": 0.008234969233928356,
+   "lm_doc_uncertainty": 0.015393657020258166,
+   "lm_doc_litigious": 0.009346654676513699,
+   "lm_doc_strong_modal": 0.004446741770341365,
+   "lm_doc_weak_modal": 0.008419070007859688,
+   "lm_doc_constraining": 0.006953344615406402,
+   "lm_doc_fog": 21.24039737945762,
+   "lm_risk_factors_negative": 0.04580375376835554,
+   "lm_risk_factors_positive": 0.008217446270543615,
+   "lm_risk_factors_uncertainty": 0.03355052027618399,
+   "lm_risk_factors_litigious": 0.018088106583681804,
+   "lm_risk_factors_strong_modal": 0.002577068948750365,
+   "lm_risk_factors_weak_modal": 0.023777107847904308,
+   "lm_risk_factors_constraining": 0.012642225031605562,
+   "lm_risk_factors_fog": 22.775780490014217,
+   "lm_use_of_proceeds_negative": 0.0150093808630394,
+   "lm_use_of_proceeds_positive": 0.005628517823639775,
+   "lm_use_of_proceeds_uncertainty": 0.028142589118198873,
+   "lm_use_of_proceeds_litigious": 0.0075046904315197,
+   "lm_use_of_proceeds_strong_modal": 0.009380863039399626,
+   "lm_use_of_proceeds_weak_modal": 0.020637898686679174,
+   "lm_use_of_proceeds_constraining": 0.0075046904315197,
+   "lm_use_of_proceeds_fog": 21.868117573483428,
+   "lm_summary_negative": 0.0031221303948576677,
+   "lm_summary_positive": 0.025711662075298437,
+   "lm_summary_uncertainty": 0.007529843893480257,
+   "lm_summary_litigious": 0.00202020202020202,
+   "lm_summary_strong_modal": 0.004775022956841139,
+   "lm_summary_weak_modal": 0.001652892561983471,
+   "lm_summary_constraining": 0.003489439853076217,
+   "lm_summary_fog": 20.52085399449036,
+   "lm_doc_net_tone": -0.0064081230926097705,
+   "fb_summary_pos": 0.4386194784892723,
+   "fb_summary_neg": 0.046541931718820706,
+   "fb_summary_net": 0.3920775467704516,
+   "fb_risk_factors_pos": 0.12595973658608273,
+   "fb_risk_factors_neg": 0.3448482649109792,
+   "fb_risk_factors_net": -0.21888852832489647,
+   "fb_use_of_proceeds_pos": 0.03269705715190087,
+   "fb_use_of_proceeds_neg": 0.23675582843965717,
+   "fb_use_of_proceeds_net": -0.2040587712877563,
+   "rel_lm_doc_negative": -0.0025490675986069543,
+   "rel_lm_doc_uncertainty": -0.0006578707876567658,
+   "rel_lm_doc_weak_modal": -0.001087896736911705,
+   "rel_lm_doc_litigious": -0.003038620459889896,
+   "rel_lm_doc_net_tone": 0.0036644657807974497,
+   "rel_lm_doc_fog": -0.4623636895460663,
+   "rel_lm_risk_factors_negative": 0.008686883241629521,
+   "rel_lm_risk_factors_uncertainty": 0.0023997742524203766,
+   "rel_lm_risk_factors_weak_modal": 0.00017850611443886305,
+   "rel_fb_risk_factors_net": 0.07585681563068647,
+   "rel_fb_summary_net": 0.20262032256869134,
+   "rel_fb_use_of_proceeds_net": -0.28244610405748793,
+   "rel_log_doc_chars": 0.2681273710054306,
+   "rel_log_risk_chars": -0.18826363115224432
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.010752688172043001,
+      "contribution": -0.07304822275584356
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 22.0,
+      "contribution": 0.04077201383190969
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": -0.07364936439132269,
+      "contribution": -0.035416850979201976
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.035046097625209625
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.828641396489095,
+      "contribution": 0.017209451375129192
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": 0.10752688172043011,
+      "contribution": -0.014750270214232085
+     }
+    ],
+    "probability": 0.37352343496921675
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.010752688172043001,
+      "contribution": -0.07611061746353236
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.038899465739429845
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.03191836538202078
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.027854652148091404
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.0235844732965326
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.828641396489095,
+      "contribution": 0.0231876141863693
+     }
+    ],
+    "probability": 0.34407496235205537
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.047416665764248134
+     },
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": -0.010752688172043001,
+      "contribution": 0.03866303438375147
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.02651531784195418
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.020437768283786354
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.0181372794984882
+     },
+     {
+      "feature": "dual_class",
+      "label": "Dual-class shares",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.012605471198418493
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.3442937431675089,
+     "fair": 0.406078345266283,
+     "underpriced": 0.19428251282960116,
+     "heavily_underpriced": 0.05534539873660696
+    },
+    "predicted": "fair"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Birkenstock Holding plc",
+  "ticker": "BIRK",
+  "ipo_date": "2023-10-11",
+  "actual": {
+   "first_day_return": -0.12608693993609887,
+   "pop": 0,
+   "bucket": "overpriced"
+  }
+ },
+ "alab": {
+  "source": "EDGAR prospectus (ALAB)",
+  "market": "US",
+  "deal": {
+   "offer_price": 36.0,
+   "shares_offered": 19800000.0,
+   "price_range": null,
+   "price_range_source": null,
+   "ipo_date_used": "2024-03-20",
+   "underwriters": "Morgan Stanley & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/Evercore Group L.L.C/Jefferies LLC/Needham & Company, LLC/Stifel, Nicolaus & Company, Incorporated/Craig-Hallum Capital Group LLC/Roth Capital Partners, LLC/Loop Capital Markets LLC/Siebert Williams Shank & Co., LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 12,
+   "exchange": "Nasdaq",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": false,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": null,
+   "document_chars": 737003
+  },
+  "features": {
+   "log_proceeds": 20.384711434120874,
+   "log_offer_price": 3.58351893845611,
+   "price_revision": null,
+   "above_range": null,
+   "below_range": null,
+   "range_width": null,
+   "is_nasdaq": 1.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 12.0,
+   "vix_prev": 13.819999694824219,
+   "sp500_ret_30d": 0.03454950135137547,
+   "nasdaq_ret_30d": 0.024793884166572466,
+   "ipo_count_30d": 4.0,
+   "prior_ipo_return_30d": -0.1950000047683716,
+   "log_doc_chars": 13.510347241719499,
+   "log_risk_chars": null,
+   "lm_doc_negative": 0.018931855030533684,
+   "lm_doc_positive": 0.008407685362278036,
+   "lm_doc_uncertainty": 0.0159318841564645,
+   "lm_doc_litigious": 0.009902816477509927,
+   "lm_doc_strong_modal": 0.005058203318414384,
+   "lm_doc_weak_modal": 0.009621265812953273,
+   "lm_doc_constraining": 0.007582450655818876,
+   "lm_doc_fog": 22.09866494209162,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.009456264775413711,
+   "lm_use_of_proceeds_uncertainty": 0.018912529550827423,
+   "lm_use_of_proceeds_litigious": 0.002364066193853428,
+   "lm_use_of_proceeds_strong_modal": 0.018912529550827423,
+   "lm_use_of_proceeds_weak_modal": 0.002364066193853428,
+   "lm_use_of_proceeds_constraining": 0.009456264775413711,
+   "lm_use_of_proceeds_fog": 23.2725768321513,
+   "lm_summary_negative": 0.01552442256720939,
+   "lm_summary_positive": 0.017985611510791366,
+   "lm_summary_uncertainty": 0.013631200302915562,
+   "lm_summary_litigious": 0.0017039000378644452,
+   "lm_summary_strong_modal": 0.003029155622870125,
+   "lm_summary_weak_modal": 0.006815600151457781,
+   "lm_summary_constraining": 0.007762211283604695,
+   "lm_summary_fog": 21.085655344016207,
+   "lm_doc_net_tone": -0.010524169668255649,
+   "fb_summary_pos": 0.4627477976027876,
+   "fb_summary_neg": 0.019341294333571568,
+   "fb_summary_net": 0.44340650326921605,
+   "fb_use_of_proceeds_pos": 0.05110190398991108,
+   "fb_use_of_proceeds_neg": 0.018011214677244425,
+   "fb_use_of_proceeds_net": 0.033090689312666656,
+   "rel_lm_doc_negative": 0.0016431246026917604,
+   "rel_lm_doc_uncertainty": 3.5387396893342415e-05,
+   "rel_lm_doc_weak_modal": 0.00011429906818188028,
+   "rel_lm_doc_litigious": -0.002469555704217528,
+   "rel_lm_doc_net_tone": -1.720938192920074e-05,
+   "rel_lm_doc_fog": 0.4716158742327252,
+   "rel_lm_risk_factors_negative": null,
+   "rel_lm_risk_factors_uncertainty": null,
+   "rel_lm_risk_factors_weak_modal": null,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": 0.2533143363252748,
+   "rel_fb_use_of_proceeds_net": -0.03280965903435242,
+   "rel_log_doc_chars": -0.21361540637429322,
+   "rel_log_risk_chars": null
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.58351893845611,
+      "contribution": 0.08226148852594581
+     },
+     {
+      "feature": "log_proceeds",
+      "label": "Deal size",
+      "group": "Deal terms",
+      "value": 20.384711434120874,
+      "contribution": 0.04162294491474665
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 12.0,
+      "contribution": 0.032276384323182666
+     },
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": -0.031508597490521664
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": -0.1950000047683716,
+      "contribution": -0.026039360559088467
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": -0.023755720285104306
+     }
+    ],
+    "probability": 0.6066302263103741
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": -0.07761217763281297
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": -0.051790096941247005
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.04647581479073757
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.028923141301618223
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.58351893845611,
+      "contribution": 0.021490874617026045
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": -0.0166431691442969
+     }
+    ],
+    "probability": 0.2994155753124284
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.062218068307713884
+     },
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": 0.05390794506414617
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": null,
+      "contribution": 0.035190541667091756
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.033746376529536874
+     },
+     {
+      "feature": "dual_class",
+      "label": "Dual-class shares",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.029105220414308706
+     },
+     {
+      "feature": "log_proceeds",
+      "label": "Deal size",
+      "group": "Deal terms",
+      "value": 20.384711434120874,
+      "contribution": 0.023867623451532365
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.20853593173281265,
+     "fair": 0.5327542891949033,
+     "underpriced": 0.15479629361622965,
+     "heavily_underpriced": 0.1039134854560544
+    },
+    "predicted": "fair"
+   }
+  },
+  "notes": [
+   "No filing price range was found, so the strongest single predictor (price revision) is missing. Enter the initial range for a better estimate."
+  ],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Astera Labs, Inc.",
+  "ticker": "ALAB",
+  "ipo_date": "2024-03-20",
+  "actual": {
+   "first_day_return": 0.7230555216471355,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "rddt": {
+  "source": "EDGAR prospectus (RDDT)",
+  "market": "US",
+  "deal": {
+   "offer_price": 34.0,
+   "shares_offered": 22000000.0,
+   "price_range": [
+    31.0,
+    34.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2024-03-21",
+   "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/BofA Securities, Inc/Citigroup Global Markets Inc/Deutsche Bank Securities Inc/MUFG Securities Americas Inc/Citizens JMP Securities, LLC/Needham & Company, LLC/Piper Sandler & Co/Raymond James & Associates, Inc/Academy Securities, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Telsey Advisory Group LLC",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 15,
+   "exchange": "New York Stock Exchange",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks described below as well as the other information in this prospectus, including our consolidated financial statements and the notes thereto, and \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations,\u201d before deciding whether to invest in our Class A common stock. The occurrence of any of the events or developments described below could adversely affect our business, results of operations, financial condition, reputation, and prospects. In such an event, the market price of our Class A common stock could decline, and you may lose all or part of your investment. Additional risks and uncertainties not presently known to us or that we currently believe are not material may also impair our business, results of operations, financial condition, and prospects.\nRisks Related to Our Business\nIf we fail to increase or retain our user base, and in particular, our DAUq, or if user engagement declines, our business, results of operations, financial condition, and prospects will be harmed.\nThe size of our user base and their level of engagement are critical to our success. Our financial performance has been, and will continue to be, significantly determined by our success in growing our user base so that we add Redditors, and those Redditors become more active users\u2014more specifically, daily active uniques (\u201cDAUq\u201d). We define a user whom we can identif",
+   "document_chars": 1027681
+  },
+  "features": {
+   "log_proceeds": 20.432913535938752,
+   "log_offer_price": 3.5263605246161616,
+   "price_revision": 0.04615384615384621,
+   "above_range": 0.0,
+   "below_range": 0.0,
+   "range_width": 0.09230769230769231,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 15.0,
+   "vix_prev": 13.039999961853027,
+   "sp500_ret_30d": 0.050067302306100014,
+   "nasdaq_ret_30d": 0.04725483116589557,
+   "ipo_count_30d": 6.0,
+   "prior_ipo_return_30d": 0.11101850403679743,
+   "log_doc_chars": 13.842815365556692,
+   "log_risk_chars": 12.507838819751601,
+   "lm_doc_negative": 0.017772331380938533,
+   "lm_doc_positive": 0.00824575250280397,
+   "lm_doc_uncertainty": 0.01477450532408369,
+   "lm_doc_litigious": 0.01135435273266038,
+   "lm_doc_strong_modal": 0.005220232902698736,
+   "lm_doc_weak_modal": 0.008889627383375566,
+   "lm_doc_constraining": 0.00680568825378363,
+   "lm_doc_fog": 21.486765796297668,
+   "lm_risk_factors_negative": 0.039935064935064934,
+   "lm_risk_factors_positive": 0.008191808191808193,
+   "lm_risk_factors_uncertainty": 0.029170829170829173,
+   "lm_risk_factors_litigious": 0.018931068931068933,
+   "lm_risk_factors_strong_modal": 0.004545454545454545,
+   "lm_risk_factors_weak_modal": 0.02197802197802198,
+   "lm_risk_factors_constraining": 0.011338661338661338,
+   "lm_risk_factors_fog": 24.35905844383511,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.013513513513513514,
+   "lm_use_of_proceeds_uncertainty": 0.016891891891891893,
+   "lm_use_of_proceeds_litigious": 0.006756756756756757,
+   "lm_use_of_proceeds_strong_modal": 0.015202702702702704,
+   "lm_use_of_proceeds_weak_modal": 0.005067567567567568,
+   "lm_use_of_proceeds_constraining": 0.013513513513513514,
+   "lm_use_of_proceeds_fog": 23.45643879173291,
+   "lm_summary_negative": 0.007672264041690793,
+   "lm_summary_positive": 0.016068326577880716,
+   "lm_summary_uncertainty": 0.013028372900984365,
+   "lm_summary_litigious": 0.0026056745801968733,
+   "lm_summary_strong_modal": 0.0036189924724956573,
+   "lm_summary_weak_modal": 0.00506658946149392,
+   "lm_summary_constraining": 0.0033294730746960045,
+   "lm_summary_fog": 18.35760192442961,
+   "lm_doc_net_tone": -0.009526578878134562,
+   "fb_summary_pos": 0.23085100413300097,
+   "fb_summary_neg": 0.02782750324695371,
+   "fb_summary_net": 0.20302350088604726,
+   "fb_risk_factors_pos": 0.04180031339637935,
+   "fb_risk_factors_neg": 0.45467785419896245,
+   "fb_risk_factors_net": -0.4128775408025831,
+   "fb_use_of_proceeds_pos": 0.1508193463087082,
+   "fb_use_of_proceeds_neg": 0.023810963612049818,
+   "fb_use_of_proceeds_net": 0.12700838269665837,
+   "rel_lm_doc_negative": 0.00039384295952874307,
+   "rel_lm_doc_uncertainty": -0.0011573788323808107,
+   "rel_lm_doc_weak_modal": -0.0006681921733936811,
+   "rel_lm_doc_litigious": -0.0009736590308098442,
+   "rel_lm_doc_net_tone": 0.0009975907901210862,
+   "rel_lm_doc_fog": -0.15869402229302665,
+   "rel_lm_risk_factors_negative": 0.0012319649268611385,
+   "rel_lm_risk_factors_uncertainty": -0.002047444772022136,
+   "rel_lm_risk_factors_weak_modal": -0.0018430465461368624,
+   "rel_fb_risk_factors_net": -0.1225083336175885,
+   "rel_fb_summary_net": 0.008112293406156823,
+   "rel_fb_use_of_proceeds_net": 0.06284415004774926,
+   "rel_log_doc_chars": 0.1554871036057417,
+   "rel_log_risk_chars": 0.5282440786956286
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.04615384615384621,
+      "contribution": 0.19575532196257006
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.5263605246161616,
+      "contribution": 0.05459333337914388
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03052610889001091
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 15.0,
+      "contribution": 0.025697454295135095
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.022667616494807967
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.04725483116589557,
+      "contribution": 0.021610313664171422
+     }
+    ],
+    "probability": 0.837228517742563
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": -0.038617543072447004
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.03417335683173312
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02784123652749417
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.02441293440099305
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.5263605246161616,
+      "contribution": 0.018322625443168795
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.11101850403679743,
+      "contribution": -0.01126599982451197
+     }
+    ],
+    "probability": 0.4352886718160338
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.0458941638384785
+     },
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.04615384615384621,
+      "contribution": 0.035756202309699524
+     },
+     {
+      "feature": "log_firm_age",
+      "label": "Firm age",
+      "group": "Firm",
+      "value": null,
+      "contribution": 0.024459161275909972
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02322052958758058
+     },
+     {
+      "feature": "range_width",
+      "label": "Filing range width",
+      "group": "Deal terms",
+      "value": 0.09230769230769231,
+      "contribution": 0.020706055314469507
+     },
+     {
+      "feature": "log_proceeds",
+      "label": "Deal size",
+      "group": "Deal terms",
+      "value": 20.432913535938752,
+      "contribution": 0.018002243856669136
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.15962419550499043,
+     "fair": 0.44697112100483993,
+     "underpriced": 0.2781143722917391,
+     "heavily_underpriced": 0.11529031119843017
+    },
+    "predicted": "fair"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Reddit, Inc.",
+  "ticker": "RDDT",
+  "ipo_date": "2024-03-21",
+  "actual": {
+   "first_day_return": 0.4835293713737936,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ },
+ "crcl": {
+  "source": "EDGAR prospectus (CRCL)",
+  "market": "US",
+  "deal": {
+   "offer_price": 31.0,
+   "shares_offered": 34000000.0,
+   "price_range": [
+    24.0,
+    26.0
+   ],
+   "price_range_source": "entered",
+   "ipo_date_used": "2025-06-05",
+   "underwriters": "J.P. Morgan Securities LLC/Citigroup Global Markets Inc/Goldman Sachs & Co. LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/SG Americas Securities, LLC/BNY Mellon Capital Markets, LLC/Canaccord Genuity LLC/Needham & Company, LLC/Oppenheimer & Co. Inc/Santander US Capital Markets LLC/AmeriVet Securities, Inc/Drexel Hamilton, LLC/Mischler Financial Group, Inc/Roberts & Ryan, Inc",
+   "lead_underwriter_rank": 9.001,
+   "syndicate_size": 15,
+   "exchange": "NYSE",
+   "sections_found": {
+    "summary": true,
+    "risk_factors": true,
+    "use_of_proceeds": true
+   },
+   "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below together with all of\nthe other information contained in this prospectus, including our consolidated financial statements and the notes thereto, before deciding to invest in our Class A common stock. The risks and uncertainties described below are not the only ones we\nface. Additional risks and uncertainties not presently known to us or that we currently believe to be immaterial may also adversely affect our business. If any of the following risks actually occurs, our business, results of operations, financial\ncondition, and prospects would likely suffer. In such case, the trading price of our Class A common stock could decline, and you may lose all or part of your investment. \n\nRisks related to our business and industry \n\nWe face intense and\nincreasing competition. \n\nWe operate in a rapidly changing and highly competitive industry, and our results of operations and future prospects depend in part\non the continued growth of the Circle stablecoin network, our ability to monetize the Circle stablecoin network, and our ability to innovate and create successful new products and services and improve existing products and services. \n\nAlthough there may be certain regulatory and other barriers to enter the markets we serve, we nonetheless expect our competition to continue to increase. We face\ncompetition from both established enterprises and",
+   "document_chars": 1197290
+  },
+  "features": {
+   "log_proceeds": 20.77585828706558,
+   "log_offer_price": 3.4339872044851463,
+   "price_revision": 0.24,
+   "above_range": 1.0,
+   "below_range": 0.0,
+   "range_width": 0.08,
+   "is_nasdaq": 0.0,
+   "log_firm_age": null,
+   "vc": null,
+   "dual_class": null,
+   "internet": null,
+   "rollup": null,
+   "lead_uw_rank": 9.001,
+   "n_syndicate": 15.0,
+   "vix_prev": 17.610000610351562,
+   "sp500_ret_30d": 0.056709492534465555,
+   "nasdaq_ret_30d": 0.09057544500474002,
+   "ipo_count_30d": 7.0,
+   "prior_ipo_return_30d": 0.07199075133712207,
+   "log_doc_chars": 13.99557122754444,
+   "log_risk_chars": 12.319570959306597,
+   "lm_doc_negative": 0.016620549714074895,
+   "lm_doc_positive": 0.008128881510176475,
+   "lm_doc_uncertainty": 0.014948041566746603,
+   "lm_doc_litigious": 0.013367767324601857,
+   "lm_doc_strong_modal": 0.003916866506794564,
+   "lm_doc_weak_modal": 0.007741499108405583,
+   "lm_doc_constraining": 0.007384861341695874,
+   "lm_doc_fog": 21.23628650986935,
+   "lm_risk_factors_negative": 0.04071051662780709,
+   "lm_risk_factors_positive": 0.006902687446312431,
+   "lm_risk_factors_uncertainty": 0.031169468646459687,
+   "lm_risk_factors_litigious": 0.025555282856792243,
+   "lm_risk_factors_strong_modal": 0.003681433304699963,
+   "lm_risk_factors_weak_modal": 0.022334028715179775,
+   "lm_risk_factors_constraining": 0.011872622407657381,
+   "lm_risk_factors_fog": 22.89426314733058,
+   "lm_use_of_proceeds_negative": 0.0,
+   "lm_use_of_proceeds_positive": 0.008849557522123894,
+   "lm_use_of_proceeds_uncertainty": 0.02359882005899705,
+   "lm_use_of_proceeds_litigious": 0.0,
+   "lm_use_of_proceeds_strong_modal": 0.017699115044247787,
+   "lm_use_of_proceeds_weak_modal": 0.0058997050147492625,
+   "lm_use_of_proceeds_constraining": 0.011799410029498525,
+   "lm_use_of_proceeds_fog": 24.651445427728614,
+   "lm_summary_negative": 0.010201423858308734,
+   "lm_summary_positive": 0.005730161486369161,
+   "lm_summary_uncertainty": 0.007640215315158882,
+   "lm_summary_litigious": 0.012502170515714534,
+   "lm_summary_strong_modal": 0.008812293801007119,
+   "lm_summary_weak_modal": 0.005556520229206459,
+   "lm_summary_constraining": 0.006902239972217399,
+   "lm_summary_fog": 20.75229477305559,
+   "lm_doc_net_tone": -0.00849166820389842,
+   "fb_summary_pos": 0.12208588456269354,
+   "fb_summary_neg": 0.03792102570878342,
+   "fb_summary_net": 0.08416485885391012,
+   "fb_risk_factors_pos": 0.03172882570652291,
+   "fb_risk_factors_neg": 0.5020768562098965,
+   "fb_risk_factors_net": -0.4703480305033736,
+   "fb_use_of_proceeds_pos": 0.14401067358752093,
+   "fb_use_of_proceeds_neg": 0.022945733947886363,
+   "fb_use_of_proceeds_net": 0.12106493963963456,
+   "rel_lm_doc_negative": -0.0012067997545124783,
+   "rel_lm_doc_uncertainty": -0.001125317316901197,
+   "rel_lm_doc_weak_modal": -0.0016026081105310367,
+   "rel_lm_doc_litigious": 0.0008289875934746598,
+   "rel_lm_doc_net_tone": 0.002353000038909158,
+   "rel_lm_doc_fog": -1.114737434960297,
+   "rel_lm_risk_factors_negative": 0.00425714146452489,
+   "rel_lm_risk_factors_uncertainty": 0.00016462946615673074,
+   "rel_lm_risk_factors_weak_modal": -0.0009715539887547829,
+   "rel_fb_risk_factors_net": -0.2109693718375638,
+   "rel_fb_summary_net": -0.12350752329803072,
+   "rel_fb_use_of_proceeds_net": 0.019303034767647817,
+   "rel_log_doc_chars": 0.1675670409987724,
+   "rel_log_risk_chars": 0.1369357033020382
+  },
+  "predictions": {
+   "pop": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7672725542443853,
+     "f1": 0.7869415807560137,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.1796039817919145,
+     "log_loss": 0.5307207676249447
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.24,
+      "contribution": 0.1764385483889036
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.10332025542987172
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4339872044851463,
+      "contribution": 0.04356637139794172
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09057544500474002,
+      "contribution": 0.029955913166682245
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.02875506631665652
+     },
+     {
+      "feature": "n_syndicate",
+      "label": "Syndicate size",
+      "group": "Underwriter",
+      "value": 15.0,
+      "contribution": 0.01945016875113117
+     }
+    ],
+    "probability": 0.9125808013356983
+   },
+   "pop10": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "auc": 0.7768626060846175,
+     "f1": 0.7075471698113207,
+     "accuracy": 0.7168949771689498,
+     "brier": 0.19066622687570536,
+     "log_loss": 0.5643034437296004
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.24,
+      "contribution": 0.1598324775221414
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.12067447741203499
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.03358410966792423
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.031284585546576454
+     },
+     {
+      "feature": "log_offer_price",
+      "label": "Offer price",
+      "group": "Deal terms",
+      "value": 3.4339872044851463,
+      "contribution": 0.018675631278781836
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09057544500474002,
+      "contribution": 0.016351588103539545
+     }
+    ],
+    "probability": 0.8034910412322334
+   },
+   "bucket": {
+    "model": "random_forest",
+    "feature_set": "no_text",
+    "test_scores": {
+     "macro_f1": 0.3993563122923588,
+     "accuracy": 0.4155251141552511,
+     "log_loss": 1.2206594049573918
+    },
+    "reasons": [
+     {
+      "feature": "price_revision",
+      "label": "Price vs. filing range",
+      "group": "Deal terms",
+      "value": 0.24,
+      "contribution": 0.1878161721043063
+     },
+     {
+      "feature": "above_range",
+      "label": "Priced above range",
+      "group": "Deal terms",
+      "value": 1.0,
+      "contribution": 0.13374464038202272
+     },
+     {
+      "feature": "vc",
+      "label": "VC-backed",
+      "group": "Firm",
+      "value": null,
+      "contribution": -0.07538028154586318
+     },
+     {
+      "feature": "nasdaq_ret_30d",
+      "label": "Nasdaq, past month",
+      "group": "Market conditions",
+      "value": 0.09057544500474002,
+      "contribution": 0.03763890441821595
+     },
+     {
+      "feature": "prior_ipo_return_30d",
+      "label": "Recent IPOs' first-day returns",
+      "group": "Market conditions",
+      "value": 0.07199075133712207,
+      "contribution": -0.0255270349584538
+     },
+     {
+      "feature": "below_range",
+      "label": "Priced below range",
+      "group": "Deal terms",
+      "value": 0.0,
+      "contribution": 0.022853333715951305
+     }
+    ],
+    "probabilities": {
+     "overpriced": 0.041125597142757785,
+     "fair": 0.12249948239637562,
+     "underpriced": 0.3014412422848377,
+     "heavily_underpriced": 0.5349336781760293
+    },
+    "predicted": "heavily_underpriced"
+   }
+  },
+  "notes": [],
+  "disclaimer": "Research demo from a data science course project. Not investment advice.",
+  "company": "Circle Internet Group, Inc.",
+  "ticker": "CRCL",
+  "ipo_date": "2025-06-05",
+  "actual": {
+   "first_day_return": 1.6848388179655998,
+   "pop": 1,
+   "bucket": "heavily_underpriced"
+  }
+ }
+}

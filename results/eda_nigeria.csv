@@ -1,0 +1,14 @@
+company,listing_type,day1_return,adjusted_return,censored
+Airtel Africa Plc,introduction,0.10000000000000009,-0.10881542699724522,False
+Dangote Cement Plc,introduction,0.0,0.0,False
+Skyway Aviation Handling Company Plc,ipo,0.0,0.0,False
+The Initiates Plc,introduction,0.04705882352941182,0.04705882352941182,False
+Seplat Petroleum Development Company Plc,ipo,0.04999999999999982,0.04999999999999982,False
+Dangote Sugar Refinery Plc,ipo,0.04999999999999982,0.04999999999999982,True
+Zichis Agro Allied Industries Plc,introduction,0.09944751381215466,0.09944751381215466,True
+Aradel Holdings Plc,introduction,0.09991603694374462,0.1669441716831035,False
+Geregu Power Plc,introduction,0.10000000000000009,0.20900000000000007,False
+Transcorp Power Plc,introduction,0.10000000000000009,0.4637500000000001,False
+Legend Internet Plc,introduction,0.09929078014184411,0.6010638297872339,False
+BUA Foods Plc,introduction,0.10000000000000009,0.6499999999999999,False
+MTN Nigeria Communications Plc,introduction,0.10000000000000009,0.6555555555555554,False

@@ -1,0 +1,71 @@
+"""API tests. Run from the project root: .venv/Scripts/python -m pytest tests -q
+
+The end-to-end test scores a saved EDGAR prospectus, so it needs the pipeline outputs (models, texts).
+"""
+import gzip
+import math
+import sys
+from pathlib import Path
+
+import numpy as np
+import pytest
+from fastapi.testclient import TestClient
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from api.app.main import app, clean  # noqa: E402
+
+client = TestClient(app)
+HAVE_MODELS = (ROOT / "models" / "pop.joblib").exists()
+TEXTS = ROOT / "data/raw/edgar/prospectus_text"
+
+
+def test_clean_makes_json_safe():
+    out = clean({"a": np.float64(1.5), "b": float("nan"), "c": [np.int64(2), float("inf")], 3: "x"})
+    assert out == {"a": 1.5, "b": None, "c": [2, None], "3": "x"}
+
+
+def test_needs_exactly_one_input():
+    assert client.post("/analyze", data={}).status_code == 422
+    files = {"file": ("p.txt", b"x" * 10, "text/plain")}
+    r = client.post("/analyze", data={"url": "https://www.sec.gov/Archives/edgar/data/1/2/a.htm"}, files=files)
+    assert r.status_code == 422
+
+
+def test_rejects_non_sec_links():
+    r = client.post("/analyze", data={"url": "https://example.com/prospectus.htm"})
+    assert r.status_code == 422
+    assert "EDGAR" in r.json()["detail"]
+
+
+def test_rejects_unknown_file_type():
+    r = client.post("/analyze", files={"file": ("p.docx", b"x" * 10000, "application/octet-stream")})
+    assert r.status_code == 422
+
+
+def test_rejects_inverted_range():
+    files = {"file": ("p.txt", b"x" * 10000, "text/plain")}
+    r = client.post("/analyze", data={"range_low": "20", "range_high": "10"}, files=files)
+    assert r.status_code == 422
+
+
+@pytest.mark.skipif(not HAVE_MODELS, reason="run the pipeline first")
+def test_health_lists_models():
+    assert client.get("/health").json()["models"] == ["bucket", "pop", "pop10"]
+
+
+@pytest.mark.skipif(not HAVE_MODELS or not (TEXTS / "ABNB_20201210.txt.gz").exists(), reason="needs pipeline outputs")
+def test_analyze_saved_prospectus():
+    text = gzip.open(TEXTS / "ABNB_20201210.txt.gz", "rt", encoding="utf-8").read().encode()
+    r = client.post("/analyze", files={"file": ("airbnb.txt", text, "text/plain")},
+                    data={"ipo_date": "2020-12-10", "range_low": "44", "range_high": "50"})
+    assert r.status_code == 200, r.text
+    a = r.json()
+    assert a["market"] == "US"
+    assert a["deal"]["offer_price"] == 68.0
+    assert a["deal"]["price_range"] == [44.0, 50.0]
+    assert math.isclose(a["features"]["price_revision"], 68 / 47 - 1, rel_tol=1e-6)
+    pop = a["predictions"]["pop"]
+    assert 0 <= pop["probability"] <= 1 and len(pop["reasons"]) > 0
+    probs = a["predictions"]["bucket"]["probabilities"]
+    assert math.isclose(sum(probs.values()), 1, rel_tol=1e-6)

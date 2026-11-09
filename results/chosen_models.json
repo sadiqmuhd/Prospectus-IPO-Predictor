@@ -1,0 +1,26 @@
+{
+  "pop": {
+    "features_set": "no_text",
+    "model": "random_forest",
+    "params": {
+      "depth": null,
+      "leaf": 5
+    }
+  },
+  "pop10": {
+    "features_set": "no_text",
+    "model": "random_forest",
+    "params": {
+      "depth": 6,
+      "leaf": 5
+    }
+  },
+  "bucket": {
+    "features_set": "no_text",
+    "model": "random_forest",
+    "params": {
+      "depth": null,
+      "leaf": 5
+    }
+  }
+}
