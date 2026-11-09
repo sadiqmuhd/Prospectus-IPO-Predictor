@@ -1,13 +1,27 @@
-import { Analysis, BUCKETS, BUCKET_LABELS, BinaryPrediction, Reason, pct, signedPct } from "@/lib/api";
+"use client";
+
+import { Analysis, BUCKETS, BUCKET_LABELS, Reason, Verdict, pct, signedPct } from "@/lib/api";
+import StepList from "./StepList";
+import { GLOSSARY, Icon, Term } from "./ui";
 
 const BUCKET_COLORS = ["var(--b1)", "var(--b2)", "var(--b3)", "var(--b4)"];
-const SECTION_LABELS: Record<string, string> = {
-  summary: "Summary",
-  risk_factors: "Risk Factors",
-  use_of_proceeds: "Use of Proceeds",
+const TONE_STYLE = {
+  positive: { bg: "var(--success-bg)", ink: "var(--success-ink)" },
+  neutral: { bg: "var(--surface-2)", ink: "var(--text-2)" },
+  negative: { bg: "var(--danger-bg)", ink: "var(--danger-ink)" },
 };
 
-function Card({ title, children, className = "" }: { title: string; children: React.ReactNode; className?: string }) {
+/** Saved examples predate the verdict field; derive the same wording from the probability. */
+function verdictFor(p: number): Verdict {
+  const in_ten = Math.round(p * 10);
+  const [label, tone]: [string, Verdict["tone"]] =
+    p >= 0.75 ? ["Likely to pop", "positive"] : p >= 0.6 ? ["Leaning towards a pop", "positive"]
+      : p >= 0.45 ? ["Could go either way", "neutral"] : p >= 0.3 ? ["Leaning towards a fall", "negative"]
+        : ["Likely to close below the offer price", "negative"];
+  return { label, tone, in_ten, sentence: `About ${in_ten} in 10 chance its shares close above the offer price on the first day.` };
+}
+
+function Card({ title, children, className = "" }: { title: React.ReactNode; children: React.ReactNode; className?: string }) {
   return (
     <section className={`rounded-lg border border-line bg-surface p-5 ${className}`}>
       <h2 className="mb-3 text-sm font-semibold text-ink">{title}</h2>
@@ -16,46 +30,53 @@ function Card({ title, children, className = "" }: { title: string; children: Re
   );
 }
 
-function Probability({ title, p, hint }: { title: string; p: BinaryPrediction; hint: string }) {
-  const value = p.probability;
+function Headline({ a }: { a: Analysis }) {
+  const p = a.predictions.pop!;
+  const v = a.verdict ?? verdictFor(p.probability);
+  const tone = TONE_STYLE[v.tone];
+  const top = p.reasons[0];
   return (
-    <div>
-      <div className="flex items-baseline justify-between">
-        <span className="text-sm text-ink-2">{title}</span>
-        <span className="text-3xl font-semibold tabular-nums">{pct(value)}</span>
+    <section className="rounded-lg border border-line bg-surface p-6">
+      <span className="inline-block rounded-full px-3 py-1 text-sm font-medium" style={{ background: tone.bg, color: tone.ink }}>
+        {v.label}
+      </span>
+      <div className="mt-4 flex flex-wrap items-end gap-x-6 gap-y-2">
+        <p className="text-5xl font-semibold tabular-nums tracking-tight">
+          {v.in_ten} <span className="text-2xl font-normal text-ink-2">in 10</span>
+        </p>
+        <p className="max-w-md pb-1 text-ink-2">
+          chance its shares close above the <Term tip={GLOSSARY.offer}>offer price</Term>
+          {a.deal.offer_price != null && <> of ${a.deal.offer_price.toFixed(2)}{a.deal.expected_price && " (expected)"}</>}{" "}
+          on the first day of trading.
+        </p>
       </div>
-      <div
-        className="mt-2 h-2 w-full overflow-hidden rounded-full"
-        style={{ background: "var(--neutral)" }}
-        role="meter"
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={Math.round(value * 100)}
-        aria-label={title}
-        title={`${title}: ${pct(value, 1)}`}
-      >
-        <div className="h-full rounded-full" style={{ width: `${value * 100}%`, background: "var(--accent)" }} />
-      </div>
-      <p className="mt-1 text-xs text-ink-3">{hint}</p>
-    </div>
+      {top && (
+        <p className="mt-4 text-sm text-ink">
+          <span className="text-ink-2">Biggest factor: </span>
+          {top.text ?? top.label}
+          {top.contribution >= 0 ? ", which raises the chance." : ", which lowers the chance."}
+        </p>
+      )}
+      {a.actual && (
+        <p className="mt-3 text-sm text-ink-2">
+          What actually happened: <span className="font-medium text-ink">{signedPct(a.actual.first_day_return)}</span> on day one ({BUCKET_LABELS[a.actual.bucket]}).
+        </p>
+      )}
+    </section>
   );
 }
 
 function Buckets({ probs, predicted, actual }: { probs: Record<string, number>; predicted: string; actual?: string }) {
-  const max = Math.max(...Object.values(probs));
   return (
-    <div className="space-y-2">
+    <div className="space-y-2.5">
       {BUCKETS.map((b, i) => (
-        <div key={b} className="grid grid-cols-[minmax(0,11rem)_1fr_3rem] items-center gap-3 text-sm">
+        <div key={b} className="grid grid-cols-[minmax(0,10.5rem)_1fr_2.75rem] items-center gap-3 text-sm">
           <span className={b === predicted ? "font-medium text-ink" : "text-ink-2"}>
             {BUCKET_LABELS[b]}
             {b === actual && <span className="ml-1 text-xs text-ink-3">(actual)</span>}
           </span>
-          <div className="h-3 w-full" title={`${BUCKET_LABELS[b]}: ${pct(probs[b], 1)}`}>
-            <div
-              className="h-full rounded-r"
-              style={{ width: `${(probs[b] / max) * 100}%`, background: BUCKET_COLORS[i], minWidth: 2 }}
-            />
+          <div className="h-3 w-full rounded" style={{ background: "var(--neutral)" }} title={`${BUCKET_LABELS[b]}: ${pct(probs[b], 1)}`}>
+            <div className="h-full rounded" style={{ width: `${probs[b] * 100}%`, background: BUCKET_COLORS[i], minWidth: 2 }} />
           </div>
           <span className="text-right tabular-nums text-ink-2">{pct(probs[b])}</span>
         </div>
@@ -64,169 +85,119 @@ function Buckets({ probs, predicted, actual }: { probs: Record<string, number>; 
   );
 }
 
-function formatValue(r: Reason): string {
-  if (r.value == null) return "missing";
-  const v = r.value;
-  if (r.feature === "price_revision" || r.feature.endsWith("_ret_30d") || r.feature === "prior_ipo_return_30d")
-    return signedPct(v);
-  if (r.feature.startsWith("lm_") && !r.feature.endsWith("_words") && !r.feature.endsWith("_fog"))
-    return pct(v, 2);
-  if (r.feature.startsWith("fb_")) return v.toFixed(2);
-  if (r.feature.startsWith("log_")) return Math.exp(v).toLocaleString(undefined, { maximumFractionDigits: 0 });
-  if (["above_range", "below_range", "is_nasdaq", "vc", "dual_class", "internet", "rollup"].includes(r.feature))
-    return v ? "yes" : "no";
-  return v.toLocaleString(undefined, { maximumFractionDigits: 2 });
-}
-
-function Reasons({ reasons, toward }: { reasons: Reason[]; toward: string }) {
+function Reasons({ reasons }: { reasons: Reason[] }) {
   const max = Math.max(...reasons.map((r) => Math.abs(r.contribution)), 1e-9);
   return (
-    <div>
-      <div className="mb-2 flex justify-between text-xs text-ink-3">
-        <span>
-          <span className="mr-1 inline-block h-2 w-2 rounded-sm" style={{ background: "var(--against)" }} />
-          against {toward}
-        </span>
-        <span>
-          toward {toward}
-          <span className="ml-1 inline-block h-2 w-2 rounded-sm" style={{ background: "var(--toward)" }} />
-        </span>
-      </div>
-      <ul className="space-y-2">
-        {reasons.map((r) => {
-          const w = (Math.abs(r.contribution) / max) * 50;
-          const pos = r.contribution >= 0;
-          return (
-            <li key={r.feature} className="text-sm" title={`SHAP ${r.contribution.toFixed(3)}`}>
-              <div className="flex justify-between gap-2">
-                <span className="text-ink">{r.label}</span>
-                <span className="shrink-0 tabular-nums text-ink-3">{formatValue(r)}</span>
-              </div>
-              <div className="relative mt-1 h-2 w-full">
-                <div className="absolute left-1/2 top-0 h-full w-px" style={{ background: "var(--border)" }} />
-                <div
-                  className="absolute top-0 h-full"
-                  style={{
-                    background: pos ? "var(--toward)" : "var(--against)",
-                    width: `${w}%`,
-                    left: pos ? "50%" : `${50 - w}%`,
-                    borderRadius: pos ? "0 3px 3px 0" : "3px 0 0 3px",
-                  }}
-                />
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul className="space-y-3">
+      {reasons.map((r) => {
+        const up = r.contribution >= 0;
+        const color = up ? "var(--toward)" : "var(--against)";
+        return (
+          <li key={r.feature} className="flex items-start gap-3 text-sm">
+            <span className="mt-0.5 shrink-0" style={{ color }} aria-label={up ? "raises the chance" : "lowers the chance"}>
+              <Icon name={up ? "up" : "down"} />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="text-ink">{r.text ?? r.label}</p>
+              <div className="mt-1 h-1.5 rounded-full" style={{ width: `${Math.max(4, (Math.abs(r.contribution) / max) * 100)}%`, background: color }}
+                title={`SHAP ${r.contribution.toFixed(3)}`} />
+            </div>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
-function Fact({ k, v }: { k: string; v: React.ReactNode }) {
-  return (
-    <div className="flex justify-between gap-4 border-b border-line py-1.5 text-sm last:border-0">
-      <dt className="text-ink-2">{k}</dt>
-      <dd className="text-right tabular-nums text-ink">{v ?? "–"}</dd>
-    </div>
-  );
-}
-
-export default function ResultView({ a }: { a: Analysis }) {
-  const { deal, predictions: p } = a;
-  const money = (v: number | null) => (v == null ? "–" : `${a.market === "NG" ? "₦" : "$"}${v.toFixed(2)}`);
+export default function ResultView({ a, onImprove }: { a: Analysis; onImprove?: () => void }) {
+  const p = a.predictions;
+  const missingRange = !a.deal.price_range;
   return (
     <div className="space-y-5">
       {a.company && (
         <div>
           <h1 className="text-2xl font-semibold">{a.company}</h1>
-          <p className="text-sm text-ink-2">
-            IPO on {a.ipo_date}
-            {a.actual && (
-              <>
-                {" · "}actual first-day return{" "}
-                <span className="font-medium text-ink">{signedPct(a.actual.first_day_return)}</span> (
-                {BUCKET_LABELS[a.actual.bucket]})
-              </>
-            )}
-          </p>
+          <p className="text-sm text-ink-2">IPO on {a.ipo_date}</p>
         </div>
       )}
+
+      {p.pop && <Headline a={a} />}
 
       {a.notes.length > 0 && (
         <div className="space-y-2">
           {a.notes.map((n) => (
-            <p
-              key={n}
-              className="rounded-md px-4 py-3 text-sm"
-              style={{ background: "var(--warning-bg)", color: "var(--warning-ink)" }}
-            >
-              <span aria-hidden>⚠ </span>
-              {n}
-            </p>
+            <div key={n} className="flex flex-wrap items-center gap-3 rounded-md px-4 py-3 text-sm"
+              style={{ background: "var(--warning-bg)", color: "var(--warning-ink)" }}>
+              <span className="flex-1">{n}</span>
+              {onImprove && missingRange && n.includes("price range") && (
+                <button type="button" onClick={onImprove} className="rounded-md border px-3 py-1 text-xs font-medium"
+                  style={{ borderColor: "currentColor" }}>
+                  Add the range
+                </button>
+              )}
+            </div>
           ))}
         </div>
       )}
 
       <div className="grid gap-5 md:grid-cols-2">
-        <Card title="Prediction">
-          <div className="space-y-5">
-            {p.pop && (
-              <Probability title="Chance it closes above the offer price" p={p.pop} hint="Pop: first-day return > 0%" />
-            )}
-            {p.pop10 && (
-              <Probability title="Chance of a pop above 10%" p={p.pop10} hint="First-day return > 10%" />
-            )}
-          </div>
-        </Card>
-        <Card title="Expected return bucket">
-          {p.bucket && <Buckets probs={p.bucket.probabilities} predicted={p.bucket.predicted} actual={a.actual?.bucket} />}
-        </Card>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <Card title="Why: what moved the pop prediction">
-          {p.pop && <Reasons reasons={p.pop.reasons} toward="a pop" />}
-          <p className="mt-3 text-xs text-ink-3">
-            SHAP contributions for this prospectus, largest first. Missing values are shown as such; the model has
-            learned what a missing value usually means.
+        <Card title="Why the bot thinks so">
+          {p.pop && <Reasons reasons={p.pop.reasons} />}
+          <p className="mt-4 text-xs text-ink-3">
+            The factors that moved this prediction most, largest first. Blue raises the chance of a{" "}
+            <Term tip={GLOSSARY.pop}>pop</Term>; red lowers it.
           </p>
         </Card>
-        <Card title="What the bot read">
-          <dl>
-            <Fact k="Offer price" v={money(deal.offer_price)} />
-            <Fact
-              k="Initial filing range"
-              v={deal.price_range ? `${money(deal.price_range[0])} – ${money(deal.price_range[1])}` : "not found"}
-            />
-            <Fact k="Shares offered" v={deal.shares_offered?.toLocaleString()} />
-            <Fact k="Exchange" v={deal.exchange} />
-            <Fact k="Lead underwriter rank (0–9)" v={deal.lead_underwriter_rank?.toFixed(1)} />
-            <Fact k="Syndicate size" v={deal.syndicate_size || "–"} />
-            <Fact k="Date used for market conditions" v={deal.ipo_date_used} />
-            <Fact
-              k="Sections found"
-              v={
-                Object.entries(deal.sections_found)
-                  .filter(([, ok]) => ok)
-                  .map(([s]) => SECTION_LABELS[s] ?? s)
-                  .join(", ") || "none"
-              }
-            />
-          </dl>
-          {deal.underwriters && (
-            <p className="mt-3 text-xs text-ink-3">
-              <span className="text-ink-2">Underwriters: </span>
-              {deal.underwriters}
+        <Card title={<>How big a first-day move? <Term tip={GLOSSARY.bucket}>(what these mean)</Term></>}>
+          {p.bucket && <Buckets probs={p.bucket.probabilities} predicted={p.bucket.predicted} actual={a.actual?.bucket} />}
+          {p.pop10 && (
+            <p className="mt-4 text-sm text-ink-2">
+              Chance of rising more than 10%: <span className="font-medium tabular-nums text-ink">{pct(p.pop10.probability)}</span>
             </p>
           )}
         </Card>
       </div>
 
-      {deal.risk_factors_excerpt && (
-        <Card title="Risk Factors (opening)">
-          <p className="whitespace-pre-line text-sm leading-relaxed text-ink-2">{deal.risk_factors_excerpt}…</p>
+      {a.steps && a.steps.length > 0 && (
+        <Card title="How the bot got here">
+          <p className="-mt-1 mb-1 text-xs text-ink-3">Open any step to see what the bot read and where it found it.</p>
+          <StepList steps={a.steps} />
         </Card>
       )}
+
+      <details className="rounded-lg border border-line p-5 text-sm">
+        <summary className="cursor-pointer font-semibold text-ink">Technical details</summary>
+        <div className="mt-3 space-y-3 text-ink-2">
+          {p.pop && (
+            <p>
+              Pop model: {p.pop.model.replace("_", " ")} ({p.pop.feature_set === "text" ? "with" : "without"} text features),
+              test ROC-AUC {p.pop.test_scores.auc?.toFixed(3)} on 2021–2025 IPOs it never saw in training. Probability{" "}
+              {pct(p.pop.probability, 1)}.
+            </p>
+          )}
+          {p.pop && (
+            <table className="w-full text-left">
+              <thead className="text-xs text-ink-3">
+                <tr><th className="py-1 font-normal">Input</th><th className="py-1 text-right font-normal">SHAP contribution</th></tr>
+              </thead>
+              <tbody>
+                {p.pop.reasons.map((r) => (
+                  <tr key={r.feature} className="border-t border-line">
+                    <td className="py-1.5">{r.label}</td>
+                    <td className="py-1.5 text-right tabular-nums">{r.contribution >= 0 ? "+" : ""}{r.contribution.toFixed(3)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+          {a.deal.underwriters && <p><span className="text-ink-3">Underwriters read: </span>{a.deal.underwriters}</p>}
+          {a.source.startsWith("http") && (
+            <a href={a.source} target="_blank" rel="noreferrer" className="text-accent-ink underline-offset-2 hover:underline">
+              Source document on SEC EDGAR
+            </a>
+          )}
+        </div>
+      </details>
 
       <p className="text-xs text-ink-3">{a.disclaimer}</p>
     </div>

@@ -44,9 +44,15 @@ MIN_SECTION_CHARS = {"use_of_proceeds": 300, "dividend_policy": 200}
 DEFAULT_MIN_SECTION_CHARS = 1500
 
 UW_SUFFIX = r"(?:LLC|L\.L\.C\.|Inc\.?|Incorporated|L\.P\.|LP|& Co\.?|Co\.|Corporation|Corp\.|Ltd\.?|Limited|plc|Securities|Capital Markets|Capital)"
+# a full stop inside a bank's name: initials ("J.P. Morgan") and abbreviations ("Morgan Stanley & Co. LLC")
+ABBREV_DOT = r"(?:(?<=\b[A-Z])|(?<=\bCo)|(?<=\bInc)|(?<=\bCorp)|(?<=\bLtd)|(?<=\bL\.P)|(?<=\bL\.L\.C))\."
+# "<banks> are acting as the representatives of the underwriters": find the phrase first, then read the bank
+# names from the text just before it (one pattern over the whole document backtracks for tens of seconds)
 REPS_RE = re.compile(
-    r"([A-Z][^.;:]{2,400}?)\s+(?:are|is)\s+(?:acting\s+as\s+)?(?:the\s+)?(?:joint\s+)?(?:book[- ]running\s+managers?\s+(?:of\s+this\s+offering\s+)?and\s+)?"
+    r"\s+(?:are|is)\s+(?:acting\s+as\s+)?(?:the\s+)?(?:joint\s+)?(?:book[- ]running\s+managers?\s+(?:of\s+this\s+offering\s+)?and\s+)?"
     r"(?:as\s+)?representatives?\s+of\s+(?:the|each\s+of\s+the)\s+underwriters", re.I)
+REPS_NAMES_RE = re.compile(r"[A-Z](?:[^.;:]|" + ABBREV_DOT + r"){2,400}\Z")
+REPS_WINDOW = 450
 UW_ROW_RE = re.compile(rf"(?m)^[ \t]*([A-Z][\w.,&'()/ -]{{2,90}}?{UW_SUFFIX}[\w.,() -]{{0,20}}?)[ \t.]+([\d,]{{4,}})[ \t]*$")
 # first dollar amount shortly after the phrase: "initial public offering price of the common stock is $20.00",
 # "Public offering price ........ $15.00", "at the initial public offering price\nof $11.00 per share"
@@ -81,10 +87,11 @@ def underwriters(text: str, uw_section: str | None) -> tuple[str | None, int, st
     if uw_section:
         rows = UW_ROW_RE.findall(uw_section[:20000])
         table = [n.strip(" .") for n, _ in rows if not re.match(r"total", n, re.I)]
-    m = REPS_RE.search(text)
-    if m:
-        reps = re.sub(r"\s+", " ", m.group(1))[-300:]
-        return reps, len(table), "representatives"
+    for m in REPS_RE.finditer(text):
+        names = REPS_NAMES_RE.search(text[max(0, m.start() - REPS_WINDOW):m.start()])
+        if names:
+            reps = re.sub(r"\s+", " ", names.group(0))[-300:]
+            return reps, len(table), "representatives"
     if table:
         return "/".join(table), len(table), "table"
     return None, 0, "none"

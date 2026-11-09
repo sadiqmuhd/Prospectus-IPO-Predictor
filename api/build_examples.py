@@ -40,7 +40,8 @@ def main() -> None:
         res = analyze(doc, {"ipo_date": r.ipo_date.date(), "offer_price": r.offer_price,
                             "shares_offered": r.shares_offered if pd.notna(r.shares_offered) else None,
                             "range_low": r.range_low if pd.notna(r.range_low) else None,
-                            "range_high": r.range_high if pd.notna(r.range_high) else None})
+                            "range_high": r.range_high if pd.notna(r.range_high) else None,
+                            "range_source": "from its S-1 filings"})
         res.update(company=r.company, ticker=r.ticker, ipo_date=str(r.ipo_date.date()),
                    actual={"first_day_return": r.first_day_return, "pop": int(r.pop), "bucket": r.bucket})
         out[r.ticker.lower()] = clean(res)

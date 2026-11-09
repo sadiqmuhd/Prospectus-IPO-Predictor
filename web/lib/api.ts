@@ -18,6 +18,34 @@ export type Reason = {
   group: string;
   value: number | null;
   contribution: number;
+  text?: string; // plain sentence, e.g. "Priced 54% above the middle of its first price range"
+};
+
+export type StepState = "pending" | "running" | "done" | "warning" | "error";
+export type Step = {
+  id: string;
+  state: StepState;
+  title: string;
+  summary?: string | null;
+  details?: { label: string; value: string }[];
+  quote?: string | null;
+  link?: string | null;
+  rows?: (Record<string, string> & { link?: string })[] | null;
+};
+
+export type Verdict = { label: string; tone: "positive" | "neutral" | "negative"; in_ten: number; sentence: string };
+
+export type IpoStatus = "priced" | "registration" | "withdrawn" | "public" | "none";
+export type Company = {
+  cik: number;
+  name: string;
+  tickers: string[];
+  status: IpoStatus;
+  status_label: string;
+  description: string;
+  analyzable: boolean;
+  date?: string;
+  document?: string;
 };
 
 type Base = {
@@ -45,11 +73,15 @@ export type Analysis = {
     sections_found: Record<string, boolean>;
     risk_factors_excerpt: string | null;
     document_chars: number;
+    expected_price?: boolean;
+    preliminary?: boolean;
   };
   features: Record<string, number | null>;
   predictions: { pop?: BinaryPrediction; pop10?: BinaryPrediction; bucket?: BucketPrediction };
   notes: string[];
   disclaimer: string;
+  verdict?: Verdict;
+  steps?: Step[];
   // examples only
   company?: string;
   ticker?: string;
@@ -79,8 +111,61 @@ async function asJson<T>(res: Response): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export async function analyze(form: FormData): Promise<Analysis> {
-  return asJson(await fetch(`${API_URL}/analyze`, { method: "POST", body: form }));
+export async function searchCompanies(q: string, signal?: AbortSignal): Promise<Company[]> {
+  return asJson(await fetch(`${API_URL}/search?q=${encodeURIComponent(q)}`, { signal }));
+}
+
+export type StreamEvent =
+  | ({ event: "step" } & Step)
+  | { event: "result"; result: Analysis }
+  | { event: "error"; message: string };
+
+/**
+ * Runs an analysis, reporting upload progress (0–1) and each step as the API finishes it.
+ * XMLHttpRequest rather than fetch: only XHR reports upload progress, and it also exposes the
+ * response as it streams in (one JSON event per line).
+ */
+export function analyzeStream(
+  form: FormData,
+  on: { upload?: (fraction: number) => void; event: (e: StreamEvent) => void },
+): { done: Promise<void>; abort: () => void } {
+  const xhr = new XMLHttpRequest();
+  let seen = 0;
+  let buffer = "";
+  const drain = () => {
+    buffer += xhr.responseText.slice(seen);
+    seen = xhr.responseText.length;
+    const lines = buffer.split("\n");
+    buffer = lines.pop() ?? "";
+    for (const line of lines) if (line.trim()) on.event(JSON.parse(line) as StreamEvent);
+  };
+  const done = new Promise<void>((resolve, reject) => {
+    xhr.upload.onprogress = (e) => e.lengthComputable && on.upload?.(e.loaded / e.total);
+    xhr.upload.onload = () => on.upload?.(1);
+    xhr.onprogress = drain;
+    xhr.onload = () => {
+      if (xhr.status >= 400) {
+        let detail = `The server answered ${xhr.status}.`;
+        try {
+          const body = JSON.parse(xhr.responseText);
+          if (typeof body.detail === "string") detail = body.detail;
+          else if (Array.isArray(body.detail)) detail = body.detail.map((d: { msg: string }) => d.msg).join("; ");
+        } catch {
+          /* keep the status line */
+        }
+        reject(new Error(detail));
+        return;
+      }
+      drain();
+      if (buffer.trim()) on.event(JSON.parse(buffer) as StreamEvent);
+      resolve();
+    };
+    xhr.onerror = () => reject(new Error("Couldn't reach the analysis server. Check your connection and try again."));
+    xhr.onabort = () => reject(new DOMException("Cancelled", "AbortError"));
+  });
+  xhr.open("POST", `${API_URL}/analyze/stream`);
+  xhr.send(form);
+  return { done, abort: () => xhr.abort() };
 }
 
 export async function getExamples(): Promise<ExampleSummary[]> {

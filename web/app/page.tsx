@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnalyzeForm from "@/components/AnalyzeForm";
+import Analyzer from "@/components/Analyzer";
 import { BUCKET_LABELS, ExampleSummary, getExamples, signedPct } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
@@ -16,17 +16,17 @@ export default async function Home() {
       <section className="max-w-2xl space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight">Will this IPO pop on day one?</h1>
         <p className="text-ink-2">
-          Give the bot a prospectus. It reads the deal terms, the underwriters and the tone of the Risk Factors, checks
-          market conditions, and estimates the first-day return, with the reasons behind it. Trained on 3,600 US IPOs
-          from 2000 to 2025, with a Nigerian (NGX) case study.
+          Find a company and the bot reads its IPO prospectus: the price, the banks, the risks and the market at the
+          time. It then estimates how the shares will do on their first day, and shows you why, step by step.
         </p>
+        <p className="text-sm text-ink-3">Trained on 3,600 US IPOs from 2000 to 2025. A research project, not investment advice.</p>
       </section>
 
-      <AnalyzeForm />
+      <Analyzer />
 
       {examples.length > 0 && (
         <section className="space-y-3">
-          <h2 className="text-sm font-semibold">Or open a past IPO with a known outcome</h2>
+          <h2 className="text-sm font-semibold">Or open a past IPO with a known outcome, already analyzed</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {examples.map((e) => (
               <Link

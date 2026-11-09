@@ -4,15 +4,17 @@
   "market": "US",
   "deal": {
    "offer_price": 120.0,
+   "expected_price": false,
    "shares_offered": 28000000.0,
    "price_range": [
     75.0,
     85.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2020-09-16",
-   "underwriters": "LLC",
-   "lead_underwriter_rank": null,
+   "underwriters": "Goldman Sachs & Co. LLC",
+   "lead_underwriter_rank": 9.001,
    "syndicate_size": 23,
    "exchange": "New York Stock Exchange",
    "sections_found": {
@@ -21,7 +23,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties described below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are not the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial condition, or results of operations. In such case, the trading price of our Class A common stock could decline, and you may lose some or all of your original investment.\nRisks Related to Our Business and Industry\nWe have a limited operating history, which makes it difficult to forecast our future results of operations.\nWe were founded in 2012 and first offered our platform for sale in 2014. Our revenue was $96.7 million and $264.7 million for the fiscal years ended \nJanuary 31, 2019 and 2020\n, respectively, and $104.0 million and $242.0 million for the six months ended July 31, 2019 and 2020, respectively. However, you should not rely on the revenue growth of any prior quarterly or annual period as an indication of our future performance. As a result of our limited operating history, our ability to accurately forecast our future results of operations ",
-   "document_chars": 694949
+   "document_chars": 694949,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 21.935206810921525,
@@ -36,7 +39,7 @@
    "dual_class": null,
    "internet": null,
    "rollup": null,
-   "lead_uw_rank": null,
+   "lead_uw_rank": 9.001,
    "n_syndicate": 23.0,
    "vix_prev": 25.59000015258789,
    "sp500_ret_30d": 0.008405310848331293,
@@ -78,15 +81,6 @@
    "lm_summary_constraining": 0.0071633237822349575,
    "lm_summary_fog": 17.13540752761789,
    "lm_doc_net_tone": -0.009583961789844142,
-   "fb_summary_pos": 0.2947929915098939,
-   "fb_summary_neg": 0.18906804182915948,
-   "fb_summary_net": 0.10572494968073443,
-   "fb_risk_factors_pos": 0.11172968102619052,
-   "fb_risk_factors_neg": 0.4439468411146663,
-   "fb_risk_factors_net": -0.3322171600884758,
-   "fb_use_of_proceeds_pos": 0.1558564391452819,
-   "fb_use_of_proceeds_neg": 0.014841006079223007,
-   "fb_use_of_proceeds_net": 0.1410154330660589,
    "rel_lm_doc_negative": -0.0028429325703847597,
    "rel_lm_doc_uncertainty": -0.0028002758746366006,
    "rel_lm_doc_weak_modal": -0.0022533715104928317,
@@ -96,11 +90,17 @@
    "rel_lm_risk_factors_negative": 0.0020267192677632037,
    "rel_lm_risk_factors_uncertainty": 0.0010242643144374418,
    "rel_lm_risk_factors_weak_modal": -0.0014351093896384816,
-   "rel_fb_risk_factors_net": -0.07110476517118514,
-   "rel_fb_summary_net": -0.1426258759747725,
-   "rel_fb_use_of_proceeds_net": 0.005709175496700802,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": -0.25917127236294135,
    "rel_log_risk_chars": -0.5623193245839975
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -119,45 +119,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.5,
-      "contribution": 0.16374224854333286
+      "contribution": 0.1641234769008991,
+      "text": "Priced 50% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.09955766529500823
+      "contribution": 0.09748155046672001,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.787491742782046,
-      "contribution": 0.02760763020159613
+      "contribution": 0.027611801266474615,
+      "text": "Offer price of $120.00 a share"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.025544323076354677
+      "contribution": 0.02563306924629222,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 23.0,
-      "contribution": 0.021556174900286638
+      "contribution": 0.02200343753955051,
+      "text": "23 banks selling the shares"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.01743659078388257
+      "contribution": -0.017879448218908797,
+      "text": "Venture-capital backing not known"
      }
     ],
-    "probability": 0.8618369772721437
+    "probability": 0.8578591000683444
    },
    "pop10": {
     "model": "random_forest",
@@ -175,45 +181,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.5,
-      "contribution": 0.14371523953281823
+      "contribution": 0.14743427798046094,
+      "text": "Priced 50% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.11489831763280986
+      "contribution": 0.11678549852223509,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03290055102033066
+      "contribution": 0.03340301669695366,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.030101260793168664
+      "contribution": -0.03070024331563907,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.787491742782046,
-      "contribution": 0.018815976950588804
+      "contribution": 0.018865415996734313,
+      "text": "Offer price of $120.00 a share"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.014306997240507501
+      "contribution": -0.015219017078516472,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      }
     ],
-    "probability": 0.7568180743388493
+    "probability": 0.7537299489791629
    },
    "bucket": {
     "model": "random_forest",
@@ -229,54 +241,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.5,
-      "contribution": 0.19605320940668772
+      "contribution": 0.20199827270186554,
+      "text": "Priced 50% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.12236003694728209
+      "contribution": 0.12589889246808902,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.06216474276290055
+      "contribution": -0.06369165685390768,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.023658825925248296
+      "contribution": 0.023893790631129938,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.787491742782046,
-      "contribution": 0.019501518625843768
+      "contribution": 0.018848032322074645,
+      "text": "Offer price of $120.00 a share"
      },
      {
-      "feature": "lead_uw_rank",
-      "label": "Lead underwriter prestige",
-      "group": "Underwriter",
-      "value": null,
-      "contribution": 0.01857187161158624
+      "feature": "vix_prev",
+      "label": "VIX before the IPO",
+      "group": "Market conditions",
+      "value": 25.59000015258789,
+      "contribution": 0.017229274040234274,
+      "text": "Market volatility (VIX) at 26"
      }
     ],
     "probabilities": {
-     "overpriced": 0.05528914958825021,
-     "fair": 0.1323850988811052,
-     "underpriced": 0.2744362687139256,
-     "heavily_underpriced": 0.5378894828167188
+     "overpriced": 0.0545570028293213,
+     "fair": 0.1393735812556254,
+     "underpriced": 0.2804614148701662,
+     "heavily_underpriced": 0.5256080010448868
     },
     "predicted": "heavily_underpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "108,170 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $120.00",
+    "summary": "28,000,000 shares, raising about $3.36 billion, listing on New York Stock Exchange.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$120.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "28,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "New York Stock Exchange"
+     },
+     {
+      "label": "IPO date used",
+      "value": "16 September 2020, provided"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $75.00\u201385.00",
+    "summary": "First range $75.00\u201385.00 (from its S-1 filings). Priced above it, 50% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "23 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "3.9% of the words are negative, more than in 74% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.90%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.17%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 74%, more uncertain than 66%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "2.04%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties described below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are not the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial condition, or results of operations. In such case, the trading",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 26, Nasdaq +1.6% over the past month, as of 16 September 2020.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "25.6"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+0.8%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+1.6%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "34"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+11.2%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Snowflake Inc.",
   "ticker": "SNOW",
@@ -292,12 +463,14 @@
   "market": "US",
   "deal": {
    "offer_price": 68.0,
+   "expected_price": false,
    "shares_offered": 51323531.0,
    "price_range": [
     44.0,
     50.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2020-12-10",
    "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/Allen & Company LLC/BofA Securities, Inc/Barclays Capital Inc/Citigroup Global Markets Inc/BNP Paribas Securities Corp/Mizuho Securities USA LLC/Credit Suisse Securities (USA) LLC/Deutsche Bank Securities Inc/Jefferies LLC/Wells Fargo Securities, LLC/Canaccord Genuity LLC/Cowen and Company, LLC/D.A. Davidson & Co/JMP Securities LLC/KeyBanc Capital Markets Inc/Needham & Company, LLC/Oppenheimer & Co. Inc/Piper Sandler & Co/Raymond James & Associates, Inc/Robert W. Baird & Co. Incorporated/Stifel, Nicolaus & Company, Incorporated/Wedbush Securities Inc/William Blair & Company, L.L.C/Academy Securities, Inc/Blaylock Van, LLC/CastleOak Securities, L.P/C.L. King & Associates, Inc/Guzman & Company/Loop Capital Markets LLC/MFR Securities, Inc/Mischler Financial Group, Inc/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Telsey Advisory Group LLC/Tigress Financial Partners LLC",
    "lead_underwriter_rank": 9.001,
@@ -309,7 +482,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described\nbelow, together with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects\ncould be harmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial\nalso may impair our business operations. \n\nRisks Related to Our Business \n\nThe \nCOVID-19\n pandemic and the impact of actions to mitigate the COVID-19 pandemic have materially\nadversely impacted and will continue to materially adversely impact our business, results of operations, and financial condition.\n\nIn March 2020, the World Health Organization declared the outbreak of \nCOVID-19\n a pandemic. In an attempt to\nlimit the spread of the virus, governments have imposed various restrictions, including emergency declarations at the federal, state, and local levels, school and business closings, quarantines, \u0093shelter at home\u0094 orders, restrictions on\ntravel, limitations on social or public gatherings, and other social distancing measures, which have had and may continue to have a material adverse impact on our business and operations and on travel behavior and demand. \n\nT",
-   "document_chars": 1354909
+   "document_chars": 1354909,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 21.973167604106305,
@@ -366,15 +540,6 @@
    "lm_summary_constraining": 0.002504591751544498,
    "lm_summary_fog": 15.314203936531397,
    "lm_doc_net_tone": -0.011915731943694195,
-   "fb_summary_pos": 0.24113421933725476,
-   "fb_summary_neg": 0.0695409164763987,
-   "fb_summary_net": 0.17159330286085606,
-   "fb_risk_factors_pos": 0.07527952530654147,
-   "fb_risk_factors_neg": 0.3830784883466549,
-   "fb_risk_factors_net": -0.30779896304011345,
-   "fb_use_of_proceeds_pos": 0.16362613905221224,
-   "fb_use_of_proceeds_neg": 0.03914802692209681,
-   "fb_use_of_proceeds_net": 0.12447811213011542,
    "rel_lm_doc_negative": 0.0005319866504530056,
    "rel_lm_doc_uncertainty": -0.0016611554670341536,
    "rel_lm_doc_weak_modal": -0.0014366601140292177,
@@ -384,11 +549,17 @@
    "rel_lm_risk_factors_negative": 0.0022745265687129507,
    "rel_lm_risk_factors_uncertainty": -0.004980698360518444,
    "rel_lm_risk_factors_weak_modal": -0.004504074546376316,
-   "rel_fb_risk_factors_net": -0.034924454463180155,
-   "rel_fb_summary_net": -0.08432268488104455,
-   "rel_fb_use_of_proceeds_net": -0.009400542456811933,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.4067431748000043,
    "rel_log_risk_chars": 0.47978985027437027
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -407,42 +578,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.44680851063829796,
-      "contribution": 0.15939663827109868
+      "contribution": 0.15939663827109868,
+      "text": "Priced 45% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.09499070419710122
+      "contribution": 0.09499070419710122,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02664692132781409
+      "contribution": 0.02664692132781409,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.219507705176107,
-      "contribution": 0.025444135677183465
+      "contribution": 0.025444135677183465,
+      "text": "Offer price of $68.00 a share"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.802875620749229,
-      "contribution": 0.025346467561967075
+      "contribution": 0.025346467561967075,
+      "text": "IPOs in the past month rose +80% on day one on average"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.05337046685882041,
-      "contribution": 0.022072354332599662
+      "contribution": 0.022072354332599662,
+      "text": "Nasdaq +5.3% over the past month"
      }
     ],
     "probability": 0.9010576095610856
@@ -463,42 +640,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.44680851063829796,
-      "contribution": 0.14413160112021794
+      "contribution": 0.14413160112021794,
+      "text": "Priced 45% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.11067491409430283
+      "contribution": 0.11067491409430283,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.802875620749229,
-      "contribution": 0.03446237209590465
+      "contribution": 0.03446237209590465,
+      "text": "IPOs in the past month rose +80% on day one on average"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03273885503652343
+      "contribution": 0.03273885503652343,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.028273085760317642
+      "contribution": -0.028273085760317642,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.219507705176107,
-      "contribution": 0.01753894837115525
+      "contribution": 0.01753894837115525,
+      "text": "Offer price of $68.00 a share"
      }
     ],
     "probability": 0.8373260103697151
@@ -517,42 +700,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.44680851063829796,
-      "contribution": 0.19769644115890178
+      "contribution": 0.19769644115890178,
+      "text": "Priced 45% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.14244412230126227
+      "contribution": 0.14244412230126227,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.802875620749229,
-      "contribution": 0.07174986209122947
+      "contribution": 0.07174986209122947,
+      "text": "IPOs in the past month rose +80% on day one on average"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.060513714005415234
+      "contribution": -0.060513714005415234,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "vix_prev",
       "label": "VIX before the IPO",
       "group": "Market conditions",
       "value": 22.270000457763672,
-      "contribution": 0.03072232749484723
+      "contribution": 0.03072232749484723,
+      "text": "Market volatility (VIX) at 22"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.05337046685882041,
-      "contribution": 0.02583481931704288
+      "contribution": 0.02583481931704288,
+      "text": "Nasdaq +5.3% over the past month"
      }
     ],
     "probabilities": {
@@ -565,6 +754,159 @@
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "212,204 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $68.00",
+    "summary": "51,323,531 shares, raising about $3.49 billion, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$68.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "51,323,531"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "10 December 2020, provided"
+     }
+    ],
+    "quote": "Prospectus dated December 9, 2020",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $44.00\u201350.00",
+    "summary": "First range $44.00\u201350.00 (from its S-1 filings). Priced above it, 45% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "37 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Morgan Stanley & Co. LLC, Goldman Sachs & Co. LLC, Allen & Company LLC, BofA Securities, Inc, Barclays Capital Inc, Citigroup Global Markets Inc, BNP Paribas Securities Corp, Mizuho Securities USA LLC, Credit Suisse Securities (USA) LLC, Deutsche Bank Securities Inc, Jefferies LLC, Wells Fargo Securities, LLC, Canaccord Genuity LLC, Cowen and Company, LLC, D.A. Davidson & Co, JMP Securities LLC, KeyBanc Capital Markets Inc, Needham & Company, LLC, Oppenheimer & Co. Inc, Piper Sandler & Co, Raymond James & Associates, Inc, Robert W. Baird & Co. Incorporated, Stifel, Nicolaus & Company, Incorporated, Wedbush Securities Inc, William Blair & Company, L.L.C, Academy Securities, Inc, Blaylock Van, LLC, CastleOak Securities, L.P, C.L. King & Associates, Inc, Guzman & Company, Loop Capital Markets LLC, MFR Securities, Inc, Mischler Financial Group, Inc, Samuel A. Ramirez & Company, Inc, Siebert Williams Shank & Co., LLC, Telsey Advisory Group LLC, Tigress Financial Partners LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "3.9% of the words are negative, more than in 75% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.92%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "2.57%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 75%, more uncertain than 6%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "2.12%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described\nbelow, together with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects\ncould be harmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial\nalso may impair our business operations. \n\nRisks Related to Our Business \n\nThe",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 22, Nasdaq +5.3% over the past month, as of 10 December 2020.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "22.3"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+3.4%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+5.3%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "11"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+80.3%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Airbnb, Inc.",
   "ticker": "ABNB",
@@ -580,14 +922,16 @@
   "market": "US",
   "deal": {
    "offer_price": 43.0,
+   "expected_price": false,
    "shares_offered": 50000000.0,
    "price_range": [
     28.0,
     30.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2021-02-11",
-   "underwriters": "Goldman Sachs & Co. LLC/Citigroup Global Markets Inc/Morgan Stanley & Co. LLC/J.P. Morgan Securities LLC/Jefferies LLC/RBC Capital Markets, LLC/Evercore Group L.L.C/Blackstone Securities Partners L.P/BMO Capital Markets Corp/Cowen and Company, LLC/Raymond James & Associates, Inc/Stifel, Nicolaus & Company, Incorporated/BTIG, LLC/Nomura Securities International, Inc/SMBC Nikko Securities America, Inc/AmeriVet Securities, Inc/C.L. King & Associates, Inc/Drexel Hamilton, LLC/Loop Capital Markets LLC/R. Seelaus & Co., LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Telsey Advisory Group LLC",
+   "underwriters": "Goldman Sachs & Co. LLC and Citigroup Global Markets Inc.",
    "lead_underwriter_rank": 9.001,
    "syndicate_size": 23,
    "exchange": "Nasdaq",
@@ -597,7 +941,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "An investment in shares of our Class A common stock involves risks. You should carefully consider the following information about\nthese risks, together with the other information contained in this prospectus, before investing in shares of our Class A common stock. \n\nRisks\nRelated to Our Brand, Products and Operations \n\nIf we fail to retain existing users or add new users, or if our users decrease their level of\nengagement with our products or do not convert to paying users, our revenue, financial results and business may be significantly harmed. \n\nThe size of our user base and our users\u0092 level of engagement are critical to our success. Our financial performance has been and will\ncontinue to be significantly determined by our success in adding, retaining and engaging users of our products and converting users into paying subscribers or \nin-app\n purchasers. We expect that the size of our\nuser base will fluctuate or decline in one or more markets from time to time. If people do not perceive our products to be useful, reliable, and/or trustworthy, we may not be able to attract or retain users or otherwise maintain or increase the\nfrequency and duration of their engagement. A number of other online dating companies that achieved early popularity have since experienced slower growth or declines in their user bases or levels of engagement. There is no guarantee that we will not\nexperience a similar erosion of our user base or engagement levels. User engagement can be difficult to me",
-   "document_chars": 1077761
+   "document_chars": 1077761,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 21.488733679085982,
@@ -654,15 +999,6 @@
    "lm_summary_constraining": 0.009635217993275127,
    "lm_summary_fog": 20.508156745067044,
    "lm_doc_net_tone": -0.010629490158374062,
-   "fb_summary_pos": 0.04079229274066165,
-   "fb_summary_neg": 0.09067673166282475,
-   "fb_summary_net": -0.0498844389221631,
-   "fb_risk_factors_pos": 0.0709363606874831,
-   "fb_risk_factors_neg": 0.21165178529918194,
-   "fb_risk_factors_net": -0.14071542461169884,
-   "fb_use_of_proceeds_pos": 0.05133753712289035,
-   "fb_use_of_proceeds_neg": 0.01889884890988469,
-   "fb_use_of_proceeds_net": 0.03243868821300566,
    "rel_lm_doc_negative": -0.0011872047459257282,
    "rel_lm_doc_uncertainty": -0.0010146063716946502,
    "rel_lm_doc_weak_modal": -0.0016959399032385036,
@@ -672,11 +1008,17 @@
    "rel_lm_risk_factors_negative": 0.0008555822573805619,
    "rel_lm_risk_factors_uncertainty": -0.0018241127082131471,
    "rel_lm_risk_factors_weak_modal": -0.001597374646323993,
-   "rel_fb_risk_factors_net": 0.13243313372367993,
-   "rel_fb_summary_net": -0.31051575811579823,
-   "rel_fb_use_of_proceeds_net": -0.09606382651771936,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.17639867214008476,
    "rel_log_risk_chars": 0.04577096074948983
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -695,42 +1037,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.48275862068965525,
-      "contribution": 0.15996911987452161
+      "contribution": 0.15996911987452161,
+      "text": "Priced 48% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.0915847701403015
+      "contribution": 0.0915847701403015,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.7612001156935624,
-      "contribution": 0.027627754891596395
+      "contribution": 0.027627754891596395,
+      "text": "Offer price of $43.00 a share"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.071806515156146,
-      "contribution": 0.026575090557025522
+      "contribution": 0.026575090557025522,
+      "text": "Nasdaq +7.2% over the past month"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.025718342794466373
+      "contribution": 0.025718342794466373,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.48580246801575405,
-      "contribution": 0.0189547185172696
+      "contribution": 0.0189547185172696,
+      "text": "IPOs in the past month rose +49% on day one on average"
      }
     ],
     "probability": 0.8789916522672027
@@ -751,45 +1099,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.48275862068965525,
-      "contribution": 0.1455172525386177
+      "contribution": 0.1455172525386177,
+      "text": "Priced 48% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.11204021243724176
+      "contribution": 0.11204021243724176,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.032413587546321274
+      "contribution": 0.032413587546321274,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.48580246801575405,
-      "contribution": 0.03199290642005337
+      "contribution": 0.03199290642005337,
+      "text": "IPOs in the past month rose +49% on day one on average"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.027140198795780193
+      "contribution": -0.027140198795780193,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.7612001156935624,
-      "contribution": 0.017403859623556374
+      "contribution": 0.017403859623556374,
+      "text": "Offer price of $43.00 a share"
      }
     ],
-    "probability": 0.8290805930804823
+    "probability": 0.8290805930804822
    },
    "bucket": {
     "model": "random_forest",
@@ -805,54 +1159,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.48275862068965525,
-      "contribution": 0.20286829741713389
+      "contribution": 0.20286829741713389,
+      "text": "Priced 48% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.1421768389774789
+      "contribution": 0.1421768389774789,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.48580246801575405,
-      "contribution": 0.07566209448784197
+      "contribution": 0.07566209448784197,
+      "text": "IPOs in the past month rose +49% on day one on average"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.05556135217922326
+      "contribution": -0.05556135217922326,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.071806515156146,
-      "contribution": 0.0403141587919575
+      "contribution": 0.0403141587919575,
+      "text": "Nasdaq +7.2% over the past month"
      },
      {
       "feature": "vix_prev",
       "label": "VIX before the IPO",
       "group": "Market conditions",
       "value": 21.989999771118164,
-      "contribution": 0.03029940499821349
+      "contribution": 0.03029940499821349,
+      "text": "Market volatility (VIX) at 22"
      }
     ],
     "probabilities": {
-     "overpriced": 0.03222356751965942,
+     "overpriced": 0.03222356751965943,
      "fair": 0.059007336153747224,
-     "underpriced": 0.1832777729881385,
+     "underpriced": 0.18327777298813855,
      "heavily_underpriced": 0.7254913233384549
     },
     "predicted": "heavily_underpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "168,397 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $43.00",
+    "summary": "50,000,000 shares, raising about $2.15 billion, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$43.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "50,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "11 February 2021, provided"
+     }
+    ],
+    "quote": "date of this prospectus is February 10, 2021",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $28.00\u201330.00",
+    "summary": "First range $28.00\u201330.00 (from its S-1 filings). Priced above it, 48% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "23 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC and Citigroup Global Markets Inc."
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "3.8% of the words are negative, more than in 60% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.80%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "2.88%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 60%, more uncertain than 28%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.76%"
+     }
+    ],
+    "quote": "An investment in shares of our Class A common stock involves risks. You should carefully consider the following information about\nthese risks, together with the other information contained in this prospectus, before investing in shares of our Class A common stock. \n\nRisks\nRelated to Our Brand, Products and Operations \n\nIf we fail to retain existing users or add new users, or if our users decrease their level of\nengagement with our products or do not convert to paying users, our revenue, financial results and business may be significantly harmed. \n\nThe size of our user base and our users\u0092 level of engagement are critical to our success. Our financial performance has been and will\ncontinue to",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 22, Nasdaq +7.2% over the past month, as of 11 February 2021.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "22.0"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+2.9%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+7.2%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "24"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+48.6%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Bumble Inc.",
   "ticker": "BMBL",
@@ -868,12 +1381,14 @@
   "market": "US",
   "deal": {
    "offer_price": 38.0,
+   "expected_price": false,
    "shares_offered": 55000000.0,
    "price_range": [
     38.0,
     42.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2021-07-29",
    "underwriters": "Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Citigroup Global Markets Inc/Wells Fargo Securities, LLC/Mizuho Securities USA LLC/JMP Securities LLC/KeyBanc Capital Markets Inc/Piper Sandler & Co/Rosenblatt Securities Inc/BMO Capital Markets Corp/BTIG, LLC/Santander Investment Securities Inc/Academy Securities, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC",
    "lead_underwriter_rank": 9.001,
@@ -885,7 +1400,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves risks. You should carefully consider the risks and uncertainties described below, together with all of the other information included in this prospectus, including our consolidated financial statements and the related notes appearing at the end of this prospectus, before deciding to invest in our Class A common stock. Our business, financial condition, results of operations and prospects could be materially and adversely affected by any of these risks or uncertainties. In that case, the trading price of our Class A common stock could decline, and you could lose all or part of your investment. The risks and uncertainties described below are not the only ones we face. Additional risks and uncertainties that we are unaware of or that we currently see as immaterial may also adversely affect our business. Some statements in this prospectus, including statements in the following risk factors, constitute forward-looking statements. Please refer to \u201cSpecial Note Regarding Forward-Looking Statements.\u201d\nRisks Related to Our Business \nWe have a limited operating history, which makes it difficult to evaluate our business and prospects and increases the risks associated with an investment in our Class A common stock.\nWe began operations in 2013, publicly launched our first product in 2015, and have since continued to introduce new products and services to our platform, such as buying and selling of select cryptocurrencies in 2018, our cash man",
-   "document_chars": 1269470
+   "document_chars": 1269470,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 21.46042990292313,
@@ -942,15 +1458,6 @@
    "lm_summary_constraining": 0.005357142857142857,
    "lm_summary_fog": 19.59682826199072,
    "lm_doc_net_tone": -0.016064548146248164,
-   "fb_summary_pos": 0.3538015838712454,
-   "fb_summary_neg": 0.13209185676532798,
-   "fb_summary_net": 0.2217097271059174,
-   "fb_risk_factors_pos": 0.06951247225515544,
-   "fb_risk_factors_neg": 0.4786218104418367,
-   "fb_risk_factors_net": -0.40910933818668127,
-   "fb_use_of_proceeds_pos": 0.14624997484497726,
-   "fb_use_of_proceeds_neg": 0.015935835312120616,
-   "fb_use_of_proceeds_net": 0.13031413953285664,
    "rel_lm_doc_negative": 0.00516853921567299,
    "rel_lm_doc_uncertainty": 0.0004306780284139486,
    "rel_lm_doc_weak_modal": -0.00019556119418243263,
@@ -960,11 +1467,17 @@
    "rel_lm_risk_factors_negative": 0.0034876978128592084,
    "rel_lm_risk_factors_uncertainty": -0.003524206777105205,
    "rel_lm_risk_factors_weak_modal": -0.004173827717805601,
-   "rel_fb_risk_factors_net": -0.12733642462990247,
-   "rel_fb_summary_net": -0.01953941266401671,
-   "rel_fb_use_of_proceeds_net": 0.015457961713282287,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.3684007098129154,
    "rel_log_risk_chars": 0.6337406963804728
+  },
+  "verdict": {
+   "label": "Leaning towards a fall",
+   "tone": "negative",
+   "in_ten": 4,
+   "sentence": "About 4 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -983,42 +1496,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.050000000000000044,
-      "contribution": -0.12998629155827632
+      "contribution": -0.12998629155827632,
+      "text": "Priced 5% below the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.03800386024965169
+      "contribution": -0.03800386024965169,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": 0.1,
-      "contribution": -0.022267896071386697
+      "contribution": -0.022267896071386697,
+      "text": "Its first price range was 10% wide"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.6375861597263857,
-      "contribution": 0.016891608548620964
+      "contribution": 0.016891608548620964,
+      "text": "Offer price of $38.00 a share"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.3642291605922437,
-      "contribution": 0.016821432990282888
+      "contribution": 0.016821432990282888,
+      "text": "IPOs in the past month rose +36% on day one on average"
      },
      {
       "feature": "ipo_count_30d",
       "label": "IPOs in the past month",
       "group": "Market conditions",
       "value": 39.0,
-      "contribution": 0.012125939699520383
+      "contribution": 0.012125939699520383,
+      "text": "39 IPOs in the past 30 days"
      }
     ],
     "probability": 0.38622070087560545
@@ -1039,45 +1558,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.050000000000000044,
-      "contribution": -0.08882935417230715
+      "contribution": -0.08882935417230715,
+      "text": "Priced 5% below the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.038316206018230686
+      "contribution": -0.038316206018230686,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.3642291605922437,
-      "contribution": 0.03634503828080892
+      "contribution": 0.03634503828080892,
+      "text": "IPOs in the past month rose +36% on day one on average"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.025696658248411667
+      "contribution": 0.025696658248411667,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.0255870147956922
+      "contribution": -0.0255870147956922,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.6375861597263857,
-      "contribution": 0.017459928267326175
+      "contribution": 0.017459928267326175,
+      "text": "Offer price of $38.00 a share"
      }
     ],
-    "probability": 0.42327929431477485
+    "probability": 0.4232792943147748
    },
    "bucket": {
     "model": "random_forest",
@@ -1093,54 +1618,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.050000000000000044,
-      "contribution": 0.08541018688376911
+      "contribution": 0.08541018688376911,
+      "text": "Priced 5% below the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.030696933241108015
+      "contribution": 0.030696933241108015,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.010868211677109326
+      "contribution": -0.010868211677109326,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.01081056383008282
+      "contribution": -0.01081056383008282,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": 0.1,
-      "contribution": 0.010038077841175308
+      "contribution": 0.010038077841175308,
+      "text": "Its first price range was 10% wide"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.3642291605922437,
-      "contribution": -0.009181725385278726
+      "contribution": -0.009181725385278726,
+      "text": "IPOs in the past month rose +36% on day one on average"
      }
     ],
     "probabilities": {
-     "overpriced": 0.33049035871880295,
-     "fair": 0.32150176981218764,
-     "underpriced": 0.23043149430886162,
+     "overpriced": 0.330490358718803,
+     "fair": 0.3215017698121876,
+     "underpriced": 0.2304314943088616,
      "heavily_underpriced": 0.11757637716014771
     },
     "predicted": "overpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "197,456 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $38.00",
+    "summary": "55,000,000 shares, raising about $2.09 billion, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$38.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "55,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "29 July 2021, provided"
+     }
+    ],
+    "quote": "Prospectus dated July 28, 2021",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $38.00\u201342.00",
+    "summary": "First range $38.00\u201342.00 (from its S-1 filings). Priced within it, 5% below its middle.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "17 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC, J.P. Morgan Securities LLC, Barclays Capital Inc, Citigroup Global Markets Inc, Wells Fargo Securities, LLC, Mizuho Securities USA LLC, JMP Securities LLC, KeyBanc Capital Markets Inc, Piper Sandler & Co, Rosenblatt Securities Inc, BMO Capital Markets Corp, BTIG, LLC, Santander Investment Securities Inc, Academy Securities, Inc, Loop Capital Markets LLC, Samuel A. Ramirez & Company, Inc, Siebert Williams Shank & Co., LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.2% of the words are negative, more than in 82% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "4.17%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "2.72%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 82%, more uncertain than 12%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "2.15%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves risks. You should carefully consider the risks and uncertainties described below, together with all of the other information included in this prospectus, including our consolidated financial statements and the related notes appearing at the end of this prospectus, before deciding to invest in our Class A common stock. Our business, financial condition, results of operations and prospects could be materially and adversely affected by any of these risks or uncertainties. In that case, the trading price of our Class A common stock could decline, and you could lose all or part of your investment. The risks and uncertainties described below are not t",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 18, Nasdaq +1.8% over the past month, as of 29 July 2021.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "18.3"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+2.6%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+1.8%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "39"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+36.4%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Leaning towards a fall",
+    "summary": "About 4 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Robinhood Markets, Inc.",
   "ticker": "HOOD",
@@ -1156,12 +1840,14 @@
   "market": "US",
   "deal": {
    "offer_price": 78.0,
+   "expected_price": false,
    "shares_offered": 153000000.0,
    "price_range": [
     57.0,
     62.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2021-11-10",
    "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/Allen & Company LLC/BofA Securities, Inc/Mizuho Securities USA LLC/Wells Fargo Securities, LLC/Nomura Securities International, Inc/Piper Sandler & Co/RBC Capital Markets, LLC/Robert W. Baird & Co. Incorporated/Wedbush Securities Inc/Academy Securities, Inc/Blaylock Van, LLC/Cabrera Capital Markets LLC/C.L. King & Associates, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Siebert Williams Shank & Co., LLC/Tigress Financial Partners, LLC",
    "lead_underwriter_rank": 9.001,
@@ -1173,7 +1859,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below,\ntogether with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects could be\nharmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial also may impair\nour business operations. \n\nRisks Related to Our Business \n\nWe\nare a growth stage company with a history of losses and expect to incur significant expenses and continuing losses for the foreseeable future. \n\nWe have incurred net losses since our inception, including net losses of $426 million and $1.0 billion for the years ended December 31, 2019 and 2020,\nrespectively. We believe that we will continue to incur operating and net losses in the future while we grow, including following our initial generation of revenues from the sale of our vehicles, which began with the R1T in September 2021, to be\nfollowed by the R1S and EDV planned for December 2021, but which may occur later than we expect or not at all. We do not expect to be profitable for the foreseeable future as we invest in our business, build capacity and ramp up operations, and we\ncannot ass",
-   "document_chars": 951233
+   "document_chars": 951233,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 23.2026573060463,
@@ -1230,15 +1917,6 @@
    "lm_summary_constraining": 0.006269592476489028,
    "lm_summary_fog": 15.907136271436475,
    "lm_doc_net_tone": -0.009736171488532454,
-   "fb_summary_pos": 0.09034932112055165,
-   "fb_summary_neg": 0.01929583533533982,
-   "fb_summary_net": 0.07105348578521183,
-   "fb_risk_factors_pos": 0.058149017684627324,
-   "fb_risk_factors_neg": 0.4284011524869129,
-   "fb_risk_factors_net": -0.3702521348022856,
-   "fb_use_of_proceeds_pos": 0.13926982755462328,
-   "fb_use_of_proceeds_neg": 0.014979608822613955,
-   "fb_use_of_proceeds_net": 0.12429021873200932,
    "rel_lm_doc_negative": -0.0005693017285017428,
    "rel_lm_doc_uncertainty": 0.00010375045097808788,
    "rel_lm_doc_weak_modal": -0.0002205152657538071,
@@ -1248,11 +1926,17 @@
    "rel_lm_risk_factors_negative": 0.0005502332116790049,
    "rel_lm_risk_factors_uncertainty": 0.00012671655553612993,
    "rel_lm_risk_factors_weak_modal": -0.0007188196690395658,
-   "rel_fb_risk_factors_net": -0.09710357646690682,
-   "rel_fb_summary_net": -0.16793235214676577,
-   "rel_fb_use_of_proceeds_net": 0.00960063534335065,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.08072310893670576,
    "rel_log_risk_chars": 0.15626603575748277
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -1271,45 +1955,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.31092436974789917,
-      "contribution": 0.17167677483862814
+      "contribution": 0.17167677483862814,
+      "text": "Priced 31% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.09921679624755682
+      "contribution": 0.09921679624755682,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09666716080612558,
-      "contribution": 0.0283171615575676
+      "contribution": 0.0283171615575676,
+      "text": "Nasdaq +9.7% over the past month"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.356708826689592,
-      "contribution": 0.027724660387537948
+      "contribution": 0.027724660387537948,
+      "text": "Offer price of $78.00 a share"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02540076450923181
+      "contribution": 0.02540076450923181,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.014418043957275388
+      "contribution": -0.014418043957275388,
+      "text": "Venture-capital backing not known"
      }
     ],
-    "probability": 0.8676862538569999
+    "probability": 0.8676862538569998
    },
    "pop10": {
     "model": "random_forest",
@@ -1327,42 +2017,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.31092436974789917,
-      "contribution": 0.1536093911298072
+      "contribution": 0.1536093911298072,
+      "text": "Priced 31% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.11438074327491235
+      "contribution": 0.11438074327491235,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.032042091634494355
+      "contribution": 0.032042091634494355,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.030841981036835036
+      "contribution": -0.030841981036835036,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09666716080612558,
-      "contribution": 0.017247651613527596
+      "contribution": 0.017247651613527596,
+      "text": "Nasdaq +9.7% over the past month"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 4.356708826689592,
-      "contribution": 0.01658160633466387
+      "contribution": 0.01658160633466387,
+      "text": "Offer price of $78.00 a share"
      }
     ],
     "probability": 0.7874464531594824
@@ -1381,42 +2077,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.31092436974789917,
-      "contribution": 0.18307532088739537
+      "contribution": 0.18307532088739537,
+      "text": "Priced 31% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.12689374356085004
+      "contribution": 0.12689374356085004,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.062367777638610906
+      "contribution": -0.062367777638610906,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09666716080612558,
-      "contribution": 0.036390519603867306
+      "contribution": 0.036390519603867306,
+      "text": "Nasdaq +9.7% over the past month"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.024843184704970152
+      "contribution": 0.024843184704970152,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.12726682859535376,
-      "contribution": -0.022770349105376553
+      "contribution": -0.022770349105376553,
+      "text": "IPOs in the past month rose +13% on day one on average"
      }
     ],
     "probabilities": {
@@ -1429,6 +2131,159 @@
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "145,980 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $78.00",
+    "summary": "153,000,000 shares, raising about $11.93 billion, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$78.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "153,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "10 November 2021, provided"
+     }
+    ],
+    "quote": "Prospectus dated November 9, 2021",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $57.00\u201362.00",
+    "summary": "First range $57.00\u201362.00 (from its S-1 filings). Priced above it, 31% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "22 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Morgan Stanley & Co. LLC, Goldman Sachs & Co. LLC, J.P. Morgan Securities LLC, Barclays Capital Inc, Deutsche Bank Securities Inc, Allen & Company LLC, BofA Securities, Inc, Mizuho Securities USA LLC, Wells Fargo Securities, LLC, Nomura Securities International, Inc, Piper Sandler & Co, RBC Capital Markets, LLC, Robert W. Baird & Co. Incorporated, Wedbush Securities Inc, Academy Securities, Inc, Blaylock Van, LLC, Cabrera Capital Markets LLC, C.L. King & Associates, Inc, Loop Capital Markets LLC, Samuel A. Ramirez & Company, Inc, Siebert Williams Shank & Co., LLC, Tigress Financial Partners, LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "3.9% of the words are negative, more than in 57% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.89%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.11%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 57%, more uncertain than 52%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.63%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below,\ntogether with all of the other information in this prospectus, before making a decision to invest in our Class A common stock. If any of the risks actually occur, our business, results of operations, financial condition, and prospects could be\nharmed. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. Additional risks and uncertainties not presently known to us or that we currently deem immaterial also may impair\nour business operations. \n\nRisks Related to Our Business \n\nWe",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 18, Nasdaq +9.7% over the past month, as of 10 November 2021.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "17.8"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+7.4%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+9.7%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "31"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+12.7%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Rivian Automotive, Inc. / DE",
   "ticker": "RIVN",
@@ -1444,15 +2299,17 @@
   "market": "US",
   "deal": {
    "offer_price": 22.0,
+   "expected_price": false,
    "shares_offered": 14444444.0,
    "price_range": [
     17.0,
     19.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2023-06-15",
-   "underwriters": "J.P. Morgan Securities LLC/Jefferies LLC/Citigroup Global Markets Inc/Morgan Stanley & Co. LLC/Piper Sandler & Co/Robert W. Baird & Co. Incorporated/Stifel, Nicolaus & Company, Incorporated/William Blair & Company, L.L.C/Capital One Securities, Inc/Blaylock Van, LLC/Drexel Hamilton, LLC",
-   "lead_underwriter_rank": 9.001,
+   "underwriters": "J.P. Morgan Securities LLC and Jefferies LLC are acting as joint lead book-running managers of the offering, and J.P. Morgan Securities LLC, Jefferies LLC, and Citigroup Global Markets Inc.",
+   "lead_underwriter_rank": 8.501,
    "syndicate_size": 11,
    "exchange": "New York Stock Exchange",
    "sections_found": {
@@ -1461,7 +2318,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our common stock involves a high degree of risk. You should carefully consider all of the risks and uncertainties described below and the other information set forth in this prospectus before deciding to invest in shares of our common stock. If any of the following risks actually occurs, our business, results of operations, prospects, and financial condition may be materially adversely affected. In such case, the trading price of our common stock could decline and you may lose all or part of your investment. Some statements in this prospectus, including statements in the following risk factors, constitute forward-looking statements. See \u201cForward-Looking Statements.\u201d\nRisks Related to Our Business and Our Industry\nWe operate in a highly competitive industry. \nThe restaurant industry is highly competitive with respect to, among other things, food quality and presentation, taste preferences, price, brand reputation, digital engagement, service, value, and location. The food manufacturing industry is also highly competitive with respect to, among other things, food quality, taste, functional benefits, nutritional value and ingredients, convenience, brand loyalty and positioning, food variety, product packaging, shelf space, price, and promotional activities. We face significant competition from national, regional, and locally-owned restaurants, including limited service restaurants, particularly within the fast-casual dining and traditional fast-food categories, who o",
-   "document_chars": 789929
+   "document_chars": 789929,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 19.576862853672722,
@@ -1476,7 +2334,7 @@
    "dual_class": null,
    "internet": null,
    "rollup": null,
-   "lead_uw_rank": 9.001,
+   "lead_uw_rank": 8.501,
    "n_syndicate": 11.0,
    "vix_prev": 13.880000114440918,
    "sp500_ret_30d": 0.057131062420339385,
@@ -1518,15 +2376,6 @@
    "lm_summary_constraining": 0.0019482819695359546,
    "lm_summary_fog": 20.77216453694824,
    "lm_doc_net_tone": -0.008836336473117497,
-   "fb_summary_pos": 0.4395908211590722,
-   "fb_summary_neg": 0.013465120573528111,
-   "fb_summary_net": 0.4261257005855441,
-   "fb_risk_factors_pos": 0.15211872709915042,
-   "fb_risk_factors_neg": 0.32129509819787927,
-   "fb_risk_factors_net": -0.16917637109872885,
-   "fb_use_of_proceeds_pos": 0.14558070184042057,
-   "fb_use_of_proceeds_neg": 0.021245723124593496,
-   "fb_use_of_proceeds_net": 0.12433497871582708,
    "rel_lm_doc_negative": -0.0004364695419287398,
    "rel_lm_doc_uncertainty": -0.002518608421905315,
    "rel_lm_doc_weak_modal": -0.0012618466576610633,
@@ -1536,11 +2385,17 @@
    "rel_lm_risk_factors_negative": 0.0026497917498548088,
    "rel_lm_risk_factors_uncertainty": -0.0001937986341262153,
    "rel_lm_risk_factors_weak_modal": 0.0014666277459819237,
-   "rel_fb_risk_factors_net": 0.11637482774676755,
-   "rel_fb_summary_net": 0.29168591162306257,
-   "rel_fb_use_of_proceeds_net": 0.0430565713904798,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": -0.08292345001427925,
    "rel_log_risk_chars": -0.2027250790318682
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -1559,45 +2414,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.22222222222222232,
-      "contribution": 0.18441212353632838
+      "contribution": 0.18435870769024637,
+      "text": "Priced 22% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.10200247541949481
+      "contribution": 0.10142068777764,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.091042453358316,
-      "contribution": 0.035300898901089284
+      "contribution": 0.0353309473415121,
+      "text": "Offer price of $22.00 a share"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.10200154399293959,
-      "contribution": 0.031871879805276004
+      "contribution": 0.031951822725929876,
+      "text": "Nasdaq +10.2% over the past month"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.030282913203136745
+      "contribution": 0.030143868740966195,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 11.0,
-      "contribution": 0.020157723379946837
+      "contribution": 0.020448755371214558,
+      "text": "11 banks selling the shares"
      }
     ],
-    "probability": 0.9309778313961733
+    "probability": 0.9302268970948784
    },
    "pop10": {
     "model": "random_forest",
@@ -1615,45 +2476,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.22222222222222232,
-      "contribution": 0.16218246425869037
+      "contribution": 0.1626426804839365,
+      "text": "Priced 22% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.11665382577351766
+      "contribution": 0.1160536444501178,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.033622531039150076
+      "contribution": 0.03379723520514834,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.03180632257415665
+      "contribution": -0.03164795892571157,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.091042453358316,
-      "contribution": 0.018381421522624994
+      "contribution": 0.01850348896514319,
+      "text": "Offer price of $22.00 a share"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.10200154399293959,
-      "contribution": 0.01630774170212724
+      "contribution": 0.01672620880975499,
+      "text": "Nasdaq +10.2% over the past month"
      }
     ],
-    "probability": 0.8147676752230266
+    "probability": 0.8151539912189744
    },
    "bucket": {
     "model": "random_forest",
@@ -1669,54 +2536,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.22222222222222232,
-      "contribution": 0.18603946391666523
+      "contribution": 0.1853450011732176,
+      "text": "Priced 22% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.1270445225786736
+      "contribution": 0.12659955289505045,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.09385589319882708
+      "contribution": -0.09206666894631664,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.10200154399293959,
-      "contribution": 0.03984291577623697
+      "contribution": 0.039295349420591444,
+      "text": "Nasdaq +10.2% over the past month"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.022691986465041357
+      "contribution": 0.02298670509016714,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "sp500_ret_30d",
       "label": "S&P 500, past month",
       "group": "Market conditions",
       "value": 0.057131062420339385,
-      "contribution": 0.018704559013480122
+      "contribution": 0.019998332799329558,
+      "text": "S&P 500 +5.7% over the past month"
      }
     ],
     "probabilities": {
-     "overpriced": 0.051661536900041105,
-     "fair": 0.10336443837456727,
-     "underpriced": 0.3305000304124325,
-     "heavily_underpriced": 0.5144739943129591
+     "overpriced": 0.0518554813623587,
+     "fair": 0.10658863805445483,
+     "underpriced": 0.3233835726592956,
+     "heavily_underpriced": 0.5181723079238907
     },
     "predicted": "heavily_underpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "123,110 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $22.00",
+    "summary": "14,444,444 shares, raising about $318 million, listing on New York Stock Exchange.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$22.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "14,444,444"
+     },
+     {
+      "label": "Exchange",
+      "value": "New York Stock Exchange"
+     },
+     {
+      "label": "IPO date used",
+      "value": "15 June 2023, provided"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $17.00\u201319.00",
+    "summary": "First range $17.00\u201319.00 (from its S-1 filings). Priced above it, 22% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "11 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "J.P. Morgan Securities LLC and Jefferies LLC are acting as joint lead book-running managers of the offering, and J.P. Morgan Securities LLC, Jefferies LLC, and Citigroup Global Markets Inc."
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "3.9% of the words are negative, more than in 75% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.94%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.11%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 75%, more uncertain than 46%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.39%"
+     }
+    ],
+    "quote": "Investing in our common stock involves a high degree of risk. You should carefully consider all of the risks and uncertainties described below and the other information set forth in this prospectus before deciding to invest in shares of our common stock. If any of the following risks actually occurs, our business, results of operations, prospects, and financial condition may be materially adversely affected. In such case, the trading price of our common stock could decline and you may lose all or part of your investment. Some statements in this prospectus, including statements in the following risk factors, constitute forward-looking statements. See \u201cForward-Looking Statements.\u201d\nRisks Relate",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 14, Nasdaq +10.2% over the past month, as of 15 June 2023.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "13.9"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+5.7%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+10.2%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "2"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+11.0%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "CAVA GROUP, INC.",
   "ticker": "CAVA",
@@ -1732,15 +2758,17 @@
   "market": "US",
   "deal": {
    "offer_price": 30.0,
+   "expected_price": false,
    "shares_offered": 22000000.0,
    "price_range": [
     26.0,
     28.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2023-09-19",
-   "underwriters": "Morgan Securities LLC",
-   "lead_underwriter_rank": null,
+   "underwriters": "Goldman Sachs & Co. LLC and J.P. Morgan Securities LLC",
+   "lead_underwriter_rank": 9.001,
    "syndicate_size": 20,
    "exchange": "Nasdaq",
    "sections_found": {
@@ -1749,7 +2777,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties\ndescribed below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are\nnot the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial\ncondition, or results of operations. In such case, the trading price of our common stock could decline, and you may lose some or all of your original investment. \n\nRisks Related to Our Business and Industry \n\nWe have experienced rapid growth, operational and strategic expansion, and related impacts to margin and profitability in recent periods. Such\nhistorical trends, including growth rates, may not continue in the future. \n\nWe have grown rapidly over the last several years. Our\nGTV increased from $5,144 million for the year ended December 31, 2019 to $28,826 million for the year ended December 31, 2022, a CAGR of 78%, and our revenue increased from $214 million for the year ended December 31,\n2019 to $2,551 million for the year ended December 31, 2022, a CAGR of 128%. Our recent rapid growth has also resulted in increased costs as we expanded our operations ",
-   "document_chars": 1357931
+   "document_chars": 1357931,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 20.307750392984744,
@@ -1764,7 +2793,7 @@
    "dual_class": null,
    "internet": null,
    "rollup": null,
-   "lead_uw_rank": null,
+   "lead_uw_rank": 9.001,
    "n_syndicate": 20.0,
    "vix_prev": 14.0,
    "sp500_ret_30d": 0.01903045160508965,
@@ -1806,15 +2835,6 @@
    "lm_summary_constraining": 0.0013284283670549765,
    "lm_summary_fog": 17.1681928530672,
    "lm_doc_net_tone": -0.006266090767888678,
-   "fb_summary_pos": 0.531125767622143,
-   "fb_summary_neg": 0.04714204851188697,
-   "fb_summary_net": 0.48398371911025606,
-   "fb_risk_factors_pos": 0.10172961954958737,
-   "fb_risk_factors_neg": 0.34283670521108434,
-   "fb_risk_factors_net": -0.24110708566149697,
-   "fb_use_of_proceeds_pos": 0.10555091958779556,
-   "fb_use_of_proceeds_neg": 0.024924052306092702,
-   "fb_use_of_proceeds_net": 0.08062686728170285,
    "rel_lm_doc_negative": -0.001160058242044272,
    "rel_lm_doc_uncertainty": -0.0012448984860592878,
    "rel_lm_doc_weak_modal": -0.0011267891093129194,
@@ -1824,11 +2844,17 @@
    "rel_lm_risk_factors_negative": 0.0027932155228126768,
    "rel_lm_risk_factors_uncertainty": -0.00048217744067496904,
    "rel_lm_risk_factors_weak_modal": -0.00014922306234631602,
-   "rel_fb_risk_factors_net": 0.05189958811388351,
-   "rel_fb_summary_net": 0.2945264949084958,
-   "rel_fb_use_of_proceeds_net": 0.0026432109527035064,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.5241219589843205,
    "rel_log_risk_chars": 0.5766844806285008
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -1847,45 +2873,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.11111111111111116,
-      "contribution": 0.16580773005969673
+      "contribution": 0.1661181189940792,
+      "text": "Priced 11% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.10159856175089313
+      "contribution": 0.10004213436514454,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4011973816621555,
-      "contribution": 0.03999885595729609
+      "contribution": 0.03953951925050649,
+      "text": "Offer price of $30.00 a share"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02805573045411711
+      "contribution": 0.028467203590618842,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 20.0,
-      "contribution": 0.01611064015492681
+      "contribution": 0.016507426038584346,
+      "text": "20 banks selling the shares"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.013982186140171231
+      "contribution": -0.014181542520600474,
+      "text": "Venture-capital backing not known"
      }
     ],
-    "probability": 0.8647571853276578
+    "probability": 0.8629192218131997
    },
    "pop10": {
     "model": "random_forest",
@@ -1903,45 +2935,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.11111111111111116,
-      "contribution": 0.14696961833680222
+      "contribution": 0.15030600456676468,
+      "text": "Priced 11% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.12164938510268411
+      "contribution": 0.12380181441095295,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03389501152593796
+      "contribution": 0.03454074823133263,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.026840209292719904
+      "contribution": -0.027613263242022835,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4011973816621555,
-      "contribution": 0.01854832184726068
+      "contribution": 0.01862467922280781,
+      "text": "Offer price of $30.00 a share"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.014184794488871387
+      "contribution": -0.01484098763422915,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      }
     ],
-    "probability": 0.7837429656885161
+    "probability": 0.7808782516961528
    },
    "bucket": {
     "model": "random_forest",
@@ -1957,54 +2995,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.11111111111111116,
-      "contribution": 0.09794508199865468
+      "contribution": 0.10710794693293006,
+      "text": "Priced 11% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.026584156232721253
+      "contribution": 0.02837170809734523,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": 0.02141194365378718
+      "contribution": 0.022424848978859113,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.017344671448356025
+      "contribution": 0.018020012351853087,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 20.0,
-      "contribution": 0.01380130203147016
+      "contribution": 0.013763589543659499,
+      "text": "20 banks selling the shares"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.011421277766943889
+      "contribution": -0.01373092693635144,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      }
     ],
     "probabilities": {
-     "overpriced": 0.06311011751738532,
-     "fair": 0.14209976592741339,
-     "underpriced": 0.4781560442622653,
-     "heavily_underpriced": 0.31663407229293594
+     "overpriced": 0.06181159456757417,
+     "fair": 0.15377907770180319,
+     "underpriced": 0.48424572578542174,
+     "heavily_underpriced": 0.300163601945201
     },
     "predicted": "underpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "211,206 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $30.00",
+    "summary": "22,000,000 shares, raising about $660 million, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$30.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "22,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "19 September 2023, provided"
+     }
+    ],
+    "quote": "Prospectus dated September 18, 2023",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $26.00\u201328.00",
+    "summary": "First range $26.00\u201328.00 (from its S-1 filings). Priced above it, 11% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "20 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC and J.P. Morgan Securities LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.0% of the words are negative, more than in 74% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.99%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.07%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 74%, more uncertain than 39%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.69%"
+     }
+    ],
+    "quote": "Investing in our common stock involves a high degree of risk. You should consider and read carefully all of the risks and uncertainties\ndescribed below, as well as other information included in this prospectus, including our consolidated financial statements and related notes appearing elsewhere in this prospectus, before making an investment decision. The risks described below are\nnot the only ones we face. The occurrence of any of the following risks or additional risks and uncertainties not presently known to us or that we currently believe to be immaterial could materially and adversely affect our business, financial\ncondition, or results of operations. In such case, the trading price of",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 14, Nasdaq +3.0% over the past month, as of 19 September 2023.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "14.0"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+1.9%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+3.0%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "3"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+9.0%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Maplebear Inc.",
   "ticker": "CART",
@@ -2020,14 +3217,16 @@
   "market": "US",
   "deal": {
    "offer_price": 30.0,
+   "expected_price": false,
    "shares_offered": 19200000.0,
    "price_range": [
     25.0,
     27.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2023-09-20",
-   "underwriters": "Goldman Sachs & Co. LLC/Morgan Stanley & Co. LLC/Citigroup Global Markets Inc/Barclays Capital Inc/Mizuho Securities USA LLC/William Blair & Company, L.L.C/Piper Sandler & Co/Truist Securities, Inc/Robert W. Baird & Co. Incorporated/Canaccord Genuity LLC/Needham & Company, LLC/Cowen and Company, LLC",
+   "underwriters": "Goldman Sachs & Co. LLC, Morgan Stanley & Co. LLC and Citigroup Global Markets Inc.",
    "lead_underwriter_rank": 9.001,
    "syndicate_size": 12,
    "exchange": "New York Stock Exchange",
@@ -2037,7 +3236,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Series A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below, together with all of the other information in this prospectus, before making a decision to invest in our Series A common stock. If any of these risks actually occur, our business, results of operations, financial condition, and prospects could be materially adversely affected. In that event, the trading price of our Series A common stock could decline, and you could lose part or all of your investment. Certain statements contained in the risk factors described below are forward-looking statements. See the section titled \u201cSpecial Note Regarding Forward-Looking Statements\u201d for more information.\nRisks Relating to Our Business and Industry\nOur rapid historical revenue growth is not indicative of our future revenue growth, and we may not be able to sustain our historical revenue growth rate, in the near term and in the future. \nWe have experienced rapid revenue growth in recent periods. Our revenue was $472.7 million and $290.6 million for the years ended December 31, 2022 and 2021, respectively, representing a growth rate of 62.7%. For the six months ended June 30, 2023 and 2022, our revenue was $320.7 million and $208.3 million, respectively, representing an increase of 53.9%. Our rapid revenue growth has been driven by increases in our customer count, growth of existing customers, our expansion into international markets, our sales to",
-   "document_chars": 811835
+   "document_chars": 811835,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 20.171618218660164,
@@ -2094,15 +3294,6 @@
    "lm_summary_constraining": 0.006429096252755327,
    "lm_summary_fog": 20.260211871276642,
    "lm_doc_net_tone": -0.009246176127733229,
-   "fb_summary_pos": 0.2307017429266125,
-   "fb_summary_neg": 0.17573771957540885,
-   "fb_summary_net": 0.05496402335120365,
-   "fb_risk_factors_pos": 0.09317793103400618,
-   "fb_risk_factors_neg": 0.2950020086718723,
-   "fb_risk_factors_net": -0.20182407763786614,
-   "fb_use_of_proceeds_pos": 0.19763081377515426,
-   "fb_use_of_proceeds_neg": 0.03704189459005228,
-   "fb_use_of_proceeds_net": 0.16058891918510199,
    "rel_lm_doc_negative": -0.00010338301182581666,
    "rel_lm_doc_uncertainty": -0.0002540059654386438,
    "rel_lm_doc_weak_modal": -0.0004020884375192813,
@@ -2112,11 +3303,17 @@
    "rel_lm_risk_factors_negative": 0.003528498547834262,
    "rel_lm_risk_factors_uncertainty": -0.00025039655465059624,
    "rel_lm_risk_factors_weak_modal": -0.0002758067770144493,
-   "rel_fb_risk_factors_net": 0.08680645936692599,
-   "rel_fb_summary_net": -0.13994718412868679,
-   "rel_fb_use_of_proceeds_net": 0.08220158641537031,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.007056835546849882,
    "rel_log_risk_chars": 0.13513188262472298
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -2135,42 +3332,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.15384615384615374,
-      "contribution": 0.1699157222280251
+      "contribution": 0.1699157222280251,
+      "text": "Priced 15% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.10263681250540528
+      "contribution": 0.10263681250540528,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4011973816621555,
-      "contribution": 0.04393180162021688
+      "contribution": 0.04393180162021688,
+      "text": "Offer price of $30.00 a share"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02960181311422586
+      "contribution": 0.02960181311422586,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 12.0,
-      "contribution": 0.020794862967680555
+      "contribution": 0.020794862967680555,
+      "text": "12 banks selling the shares"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.0176800594184523
+      "contribution": -0.0176800594184523,
+      "text": "Venture-capital backing not known"
      }
     ],
     "probability": 0.8709619341328652
@@ -2191,45 +3394,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.15384615384615374,
-      "contribution": 0.15662666199275013
+      "contribution": 0.15662666199275013,
+      "text": "Priced 15% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.12228463646208954
+      "contribution": 0.12228463646208954,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03431612602100163
+      "contribution": 0.03431612602100163,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.027980308394317623
+      "contribution": -0.027980308394317623,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4011973816621555,
-      "contribution": 0.02028166545075044
+      "contribution": 0.02028166545075044,
+      "text": "Offer price of $30.00 a share"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.014911939907154143
+      "contribution": -0.014911939907154143,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      }
     ],
-    "probability": 0.7719053178406137
+    "probability": 0.7719053178406136
    },
    "bucket": {
     "model": "random_forest",
@@ -2245,54 +3454,213 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.15384615384615374,
-      "contribution": 0.0684794574191936
+      "contribution": 0.0684794574191936,
+      "text": "Priced 15% above the middle of its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": 0.02419380904309531
+      "contribution": 0.02419380904309531,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.01720908635346313
+      "contribution": 0.01720908635346313,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.01562890663154749
+      "contribution": 0.01562890663154749,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": 0.07692307692307693,
-      "contribution": -0.015379778030012784
+      "contribution": -0.015379778030012784,
+      "text": "Its first price range was 8% wide"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.01263877592666803
+      "contribution": -0.01263877592666803,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      }
     ],
     "probabilities": {
      "overpriced": 0.06748960511771807,
      "fair": 0.18298591176148218,
      "underpriced": 0.3903947522165401,
-     "heavily_underpriced": 0.3591297309042601
+     "heavily_underpriced": 0.35912973090426004
     },
     "predicted": "underpriced"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "125,931 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $30.00",
+    "summary": "19,200,000 shares, raising about $576 million, listing on New York Stock Exchange.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$30.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "19,200,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "New York Stock Exchange"
+     },
+     {
+      "label": "IPO date used",
+      "value": "20 September 2023, provided"
+     }
+    ],
+    "quote": "date of this prospectus is September 19, 2023",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $25.00\u201327.00",
+    "summary": "First range $25.00\u201327.00 (from its S-1 filings). Priced above it, 15% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "12 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC, Morgan Stanley & Co. LLC and Citigroup Global Markets Inc."
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.1% of the words are negative, more than in 81% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "4.06%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.10%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 81%, more uncertain than 44%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.79%"
+     }
+    ],
+    "quote": "Investing in our Series A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below, together with all of the other information in this prospectus, before making a decision to invest in our Series A common stock. If any of these risks actually occur, our business, results of operations, financial condition, and prospects could be materially adversely affected. In that event, the trading price of our Series A common stock could decline, and you could lose part or all of your investment. Certain statements contained in the risk factors described below are forward-looking statements. See the section titled \u201cSpecial Note Regarding Forw",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 14, Nasdaq +2.9% over the past month, as of 20 September 2023.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "14.1"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+1.7%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+2.9%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "4"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+10.1%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Klaviyo, Inc.",
   "ticker": "KVYO",
@@ -2308,12 +3676,14 @@
   "market": "US",
   "deal": {
    "offer_price": 46.0,
+   "expected_price": false,
    "shares_offered": 32258064.0,
    "price_range": [
     44.0,
     49.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2023-10-11",
    "underwriters": "Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/Morgan Stanley & Co. LLC/BofA Securities, Inc/Citigroup Global Markets Inc/Evercore Group L.L.C/Jefferies LLC/UBS Securities LLC/BNP Paribas Securities Corp/Sanford C. Bernstein & Co., LLC/HSBC Securities (USA) Inc/Robert W. Baird & Co. Incorporated/BMO Capital Markets Corp/Deutsche Bank Securities Inc/Piper Sandler & Co/Stifel, Nicolaus & Company, Incorporated/William Blair & Company, L.L.C/Telsey Advisory Group LLC/Williams Trading LLC/Academy Securities, Inc/Independence Point Securities LLC/Loop Capital Markets LLC",
    "lead_underwriter_rank": 9.001,
@@ -2325,7 +3695,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "\u0094 section. \n\nWe face intense competition from both established companies and newer entrants into the market, and our failure to compete effectively could\nhave a negative impact on our revenues and our reputation. \n\nThe footwear, skincare, accessories and sleep system industries are\nvery competitive, and we expect to continue to face intense competitive pressures. Competitive factors that affect our market position include our ability to predict and respond to changing consumer preferences and tastes in a timely manner, our\nability to continue marketing and developing new products that appeal to consumers, our ability to accurately predict customer demand and ensure product availability, the strength and recognition of the BIRKENSTOCK brand, our ability to price our\nproducts competitively, our ability to manage the impact of the rapidly changing retail environment and the expansion of our online presence, and our marketing and content distribution efforts. \n\nOur competitors may have significantly greater financial resources, more developed consumer and customer bases or more comprehensive\nproduct lines and greater distribution capabilities, and may spend substantially more on product advertising, marketing and endorsements. Our competitors may also own more recognized brands, implement more effective marketing campaigns, adopt more\naggressive pricing \n\n34 \n\nTable of Contents\n\npolicies, make more attractive offers to potential employees and distribution partners, have a larger ",
-   "document_chars": 1054021
+   "document_chars": 1054021,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 21.11792001295036,
@@ -2382,15 +3753,6 @@
    "lm_summary_constraining": 0.003489439853076217,
    "lm_summary_fog": 20.52085399449036,
    "lm_doc_net_tone": -0.0064081230926097705,
-   "fb_summary_pos": 0.4386194784892723,
-   "fb_summary_neg": 0.046541931718820706,
-   "fb_summary_net": 0.3920775467704516,
-   "fb_risk_factors_pos": 0.12595973658608273,
-   "fb_risk_factors_neg": 0.3448482649109792,
-   "fb_risk_factors_net": -0.21888852832489647,
-   "fb_use_of_proceeds_pos": 0.03269705715190087,
-   "fb_use_of_proceeds_neg": 0.23675582843965717,
-   "fb_use_of_proceeds_net": -0.2040587712877563,
    "rel_lm_doc_negative": -0.0025490675986069543,
    "rel_lm_doc_uncertainty": -0.0006578707876567658,
    "rel_lm_doc_weak_modal": -0.001087896736911705,
@@ -2400,11 +3762,17 @@
    "rel_lm_risk_factors_negative": 0.008686883241629521,
    "rel_lm_risk_factors_uncertainty": 0.0023997742524203766,
    "rel_lm_risk_factors_weak_modal": 0.00017850611443886305,
-   "rel_fb_risk_factors_net": 0.07585681563068647,
-   "rel_fb_summary_net": 0.20262032256869134,
-   "rel_fb_use_of_proceeds_net": -0.28244610405748793,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.2681273710054306,
    "rel_log_risk_chars": -0.18826363115224432
+  },
+  "verdict": {
+   "label": "Leaning towards a fall",
+   "tone": "negative",
+   "in_ten": 4,
+   "sentence": "About 4 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -2423,42 +3791,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.010752688172043001,
-      "contribution": -0.07304822275584356
+      "contribution": -0.07304822275584356,
+      "text": "Priced 1% below the middle of its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 22.0,
-      "contribution": 0.04077201383190969
+      "contribution": 0.04077201383190969,
+      "text": "22 banks selling the shares"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": -0.07364936439132269,
-      "contribution": -0.035416850979201976
+      "contribution": -0.035416850979201976,
+      "text": "IPOs in the past month rose -7% on day one on average"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.035046097625209625
+      "contribution": -0.035046097625209625,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.828641396489095,
-      "contribution": 0.017209451375129192
+      "contribution": 0.017209451375129192,
+      "text": "Offer price of $46.00 a share"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": 0.10752688172043011,
-      "contribution": -0.014750270214232085
+      "contribution": -0.014750270214232085,
+      "text": "Its first price range was 11% wide"
      }
     ],
     "probability": 0.37352343496921675
@@ -2479,45 +3853,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.010752688172043001,
-      "contribution": -0.07611061746353236
+      "contribution": -0.07611061746353236,
+      "text": "Priced 1% below the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.038899465739429845
+      "contribution": -0.038899465739429845,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.03191836538202078
+      "contribution": -0.03191836538202078,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.027854652148091404
+      "contribution": 0.027854652148091404,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.0235844732965326
+      "contribution": -0.0235844732965326,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.828641396489095,
-      "contribution": 0.0231876141863693
+      "contribution": 0.0231876141863693,
+      "text": "Offer price of $46.00 a share"
      }
     ],
-    "probability": 0.34407496235205537
+    "probability": 0.3440749623520554
    },
    "bucket": {
     "model": "random_forest",
@@ -2533,54 +3913,213 @@
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": 0.047416665764248134
+      "contribution": 0.047416665764248134,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "price_revision",
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": -0.010752688172043001,
-      "contribution": 0.03866303438375147
+      "contribution": 0.03866303438375147,
+      "text": "Priced 1% below the middle of its first price range"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": 0.02651531784195418
+      "contribution": 0.02651531784195418,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.020437768283786354
+      "contribution": 0.020437768283786354,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.0181372794984882
+      "contribution": -0.0181372794984882,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "dual_class",
       "label": "Dual-class shares",
       "group": "Firm",
       "value": null,
-      "contribution": 0.012605471198418493
+      "contribution": 0.012605471198418493,
+      "text": "Dual-class shares not known"
      }
     ],
     "probabilities": {
      "overpriced": 0.3442937431675089,
-     "fair": 0.406078345266283,
-     "underpriced": 0.19428251282960116,
+     "fair": 0.40607834526628306,
+     "underpriced": 0.1942825128296012,
      "heavily_underpriced": 0.05534539873660696
     },
     "predicted": "fair"
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "164,020 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $46.00",
+    "summary": "32,258,064 shares, raising about $1.48 billion, listing on New York Stock Exchange.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$46.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "32,258,064"
+     },
+     {
+      "label": "Exchange",
+      "value": "New York Stock Exchange"
+     },
+     {
+      "label": "IPO date used",
+      "value": "11 October 2023, provided"
+     }
+    ],
+    "quote": "date of this prospectus is October 10, 2023",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $44.00\u201349.00",
+    "summary": "First range $44.00\u201349.00 (from its S-1 filings). Priced within it, 1% below its middle.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "22 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Goldman Sachs & Co. LLC, J.P. Morgan Securities LLC, Morgan Stanley & Co. LLC, BofA Securities, Inc, Citigroup Global Markets Inc, Evercore Group L.L.C, Jefferies LLC, UBS Securities LLC, BNP Paribas Securities Corp, Sanford C. Bernstein & Co., LLC, HSBC Securities (USA) Inc, Robert W. Baird & Co. Incorporated, BMO Capital Markets Corp, Deutsche Bank Securities Inc, Piper Sandler & Co, Stifel, Nicolaus & Company, Incorporated, William Blair & Company, L.L.C, Telsey Advisory Group LLC, Williams Trading LLC, Academy Securities, Inc, Independence Point Securities LLC, Loop Capital Markets LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.6% of the words are negative, more than in 92% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "4.58%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.36%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 92%, more uncertain than 83%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.81%"
+     }
+    ],
+    "quote": "\u0094 section. \n\nWe face intense competition from both established companies and newer entrants into the market, and our failure to compete effectively could\nhave a negative impact on our revenues and our reputation. \n\nThe footwear, skincare, accessories and sleep system industries are\nvery competitive, and we expect to continue to face intense competitive pressures. Competitive factors that affect our market position include our ability to predict and respond to changing consumer preferences and tastes in a timely manner, our\nability to continue marketing and developing new products that appeal to consumers, our ability to accurately predict customer demand and ensure product availability, the",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 17, Nasdaq -2.6% over the past month, as of 11 October 2023.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "17.0"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "-2.9%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "-2.6%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "13"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "-7.4%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Leaning towards a fall",
+    "summary": "About 4 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Birkenstock Holding plc",
   "ticker": "BIRK",
@@ -2596,9 +4135,36 @@
   "market": "US",
   "deal": {
    "offer_price": 36.0,
+   "expected_price": false,
    "shares_offered": 19800000.0,
    "price_range": null,
    "price_range_source": null,
+   "range_history": [
+    {
+     "Filing": "S-1",
+     "Date": "2024-02-21",
+     "Price range": "no range yet",
+     "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm"
+    },
+    {
+     "Filing": "S-1/A",
+     "Date": "2024-03-01",
+     "Price range": "no range yet",
+     "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524056208/d285484ds1a.htm"
+    },
+    {
+     "Filing": "S-1/A",
+     "Date": "2024-03-08",
+     "Price range": "no range yet",
+     "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524062817/d285484ds1a.htm"
+    },
+    {
+     "Filing": "S-1/A",
+     "Date": "2024-03-18",
+     "Price range": "no range yet",
+     "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524069611/d285484ds1a.htm"
+    }
+   ],
    "ipo_date_used": "2024-03-20",
    "underwriters": "Morgan Stanley & Co. LLC/J.P. Morgan Securities LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/Evercore Group L.L.C/Jefferies LLC/Needham & Company, LLC/Stifel, Nicolaus & Company, Incorporated/Craig-Hallum Capital Group LLC/Roth Capital Partners, LLC/Loop Capital Markets LLC/Siebert Williams Shank & Co., LLC",
    "lead_underwriter_rank": 9.001,
@@ -2610,7 +4176,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": null,
-   "document_chars": 737003
+   "document_chars": 737003,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 20.384711434120874,
@@ -2659,12 +4226,6 @@
    "lm_summary_constraining": 0.007762211283604695,
    "lm_summary_fog": 21.085655344016207,
    "lm_doc_net_tone": -0.010524169668255649,
-   "fb_summary_pos": 0.4627477976027876,
-   "fb_summary_neg": 0.019341294333571568,
-   "fb_summary_net": 0.44340650326921605,
-   "fb_use_of_proceeds_pos": 0.05110190398991108,
-   "fb_use_of_proceeds_neg": 0.018011214677244425,
-   "fb_use_of_proceeds_net": 0.033090689312666656,
    "rel_lm_doc_negative": 0.0016431246026917604,
    "rel_lm_doc_uncertainty": 3.5387396893342415e-05,
    "rel_lm_doc_weak_modal": 0.00011429906818188028,
@@ -2675,10 +4236,16 @@
    "rel_lm_risk_factors_uncertainty": null,
    "rel_lm_risk_factors_weak_modal": null,
    "rel_fb_risk_factors_net": null,
-   "rel_fb_summary_net": 0.2533143363252748,
-   "rel_fb_use_of_proceeds_net": -0.03280965903435242,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": -0.21361540637429322,
    "rel_log_risk_chars": null
+  },
+  "verdict": {
+   "label": "Leaning towards a pop",
+   "tone": "positive",
+   "in_ten": 6,
+   "sentence": "About 6 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -2697,42 +4264,48 @@
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.58351893845611,
-      "contribution": 0.08226148852594581
+      "contribution": 0.08226148852594581,
+      "text": "Offer price of $36.00 a share"
      },
      {
       "feature": "log_proceeds",
       "label": "Deal size",
       "group": "Deal terms",
       "value": 20.384711434120874,
-      "contribution": 0.04162294491474665
+      "contribution": 0.04162294491474665,
+      "text": "Raising $713 million"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 12.0,
-      "contribution": 0.032276384323182666
+      "contribution": 0.032276384323182666,
+      "text": "12 banks selling the shares"
      },
      {
       "feature": "price_revision",
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": null,
-      "contribution": -0.031508597490521664
+      "contribution": -0.031508597490521664,
+      "text": "No price range found to compare the offer price with"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": -0.1950000047683716,
-      "contribution": -0.026039360559088467
+      "contribution": -0.026039360559088467,
+      "text": "IPOs in the past month rose -20% on day one on average"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": null,
-      "contribution": -0.023755720285104306
+      "contribution": -0.023755720285104306,
+      "text": "No price range found to compare the offer price with"
      }
     ],
     "probability": 0.6066302263103741
@@ -2753,42 +4326,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": null,
-      "contribution": -0.07761217763281297
+      "contribution": -0.07761217763281297,
+      "text": "No price range found to compare the offer price with"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": null,
-      "contribution": -0.051790096941247005
+      "contribution": -0.051790096941247005,
+      "text": "No price range found to compare the offer price with"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.04647581479073757
+      "contribution": -0.04647581479073757,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.028923141301618223
+      "contribution": -0.028923141301618223,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.58351893845611,
-      "contribution": 0.021490874617026045
+      "contribution": 0.021490874617026045,
+      "text": "Offer price of $36.00 a share"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": null,
-      "contribution": -0.0166431691442969
+      "contribution": -0.0166431691442969,
+      "text": "No price range found"
      }
     ],
     "probability": 0.2994155753124284
@@ -2807,55 +4386,239 @@
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": 0.062218068307713884
+      "contribution": 0.062218068307713884,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "price_revision",
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": null,
-      "contribution": 0.05390794506414617
+      "contribution": 0.05390794506414617,
+      "text": "No price range found to compare the offer price with"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": null,
-      "contribution": 0.035190541667091756
+      "contribution": 0.035190541667091756,
+      "text": "No price range found to compare the offer price with"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": 0.033746376529536874
+      "contribution": 0.033746376529536874,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "dual_class",
       "label": "Dual-class shares",
       "group": "Firm",
       "value": null,
-      "contribution": 0.029105220414308706
+      "contribution": 0.029105220414308706,
+      "text": "Dual-class shares not known"
      },
      {
       "feature": "log_proceeds",
       "label": "Deal size",
       "group": "Deal terms",
       "value": 20.384711434120874,
-      "contribution": 0.023867623451532365
+      "contribution": 0.023867623451532365,
+      "text": "Raising $713 million"
      }
     ],
     "probabilities": {
      "overpriced": 0.20853593173281265,
      "fair": 0.5327542891949033,
-     "underpriced": 0.15479629361622965,
-     "heavily_underpriced": 0.1039134854560544
+     "underpriced": 0.15479629361622968,
+     "heavily_underpriced": 0.10391348545605442
     },
     "predicted": "fair"
    }
   },
   "notes": [
-   "No filing price range was found, so the strongest single predictor (price revision) is missing. Enter the initial range for a better estimate."
+   "No price range was found, so the strongest predictor (price vs. range) is missing. Add the first price range under \u201cAdd details\u201d for a better estimate."
+  ],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "112,250 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $36.00",
+    "summary": "19,800,000 shares, raising about $713 million, listing on Nasdaq.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$36.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "19,800,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "Nasdaq"
+     },
+     {
+      "label": "IPO date used",
+      "value": "20 March 2024, provided"
+     }
+    ],
+    "quote": "date of this prospectus is March 19, 2024",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "warning",
+    "title": "No price range found",
+    "summary": "The strongest predictor is missing: how the offer price compares with the first price range. Add the range under \u201cAdd details\u201d for a better estimate.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": [
+     {
+      "Filing": "S-1",
+      "Date": "2024-02-21",
+      "Price range": "no range yet",
+      "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm"
+     },
+     {
+      "Filing": "S-1/A",
+      "Date": "2024-03-01",
+      "Price range": "no range yet",
+      "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524056208/d285484ds1a.htm"
+     },
+     {
+      "Filing": "S-1/A",
+      "Date": "2024-03-08",
+      "Price range": "no range yet",
+      "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524062817/d285484ds1a.htm"
+     },
+     {
+      "Filing": "S-1/A",
+      "Date": "2024-03-18",
+      "Price range": "no range yet",
+      "link": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524069611/d285484ds1a.htm"
+     }
+    ]
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "12 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Morgan Stanley & Co. LLC, J.P. Morgan Securities LLC, Barclays Capital Inc, Deutsche Bank Securities Inc, Evercore Group L.L.C, Jefferies LLC, Needham & Company, LLC, Stifel, Nicolaus & Company, Incorporated, Craig-Hallum Capital Group LLC, Roth Capital Partners, LLC, Loop Capital Markets LLC, Siebert Williams Shank & Co., LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "warning",
+    "title": "Read the Risk Factors",
+    "summary": "The Risk Factors section was not found. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "n/a"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "n/a"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "not enough IPOs to compare"
+     },
+     {
+      "label": "Litigious words",
+      "value": "n/a"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 14, Nasdaq +2.5% over the past month, as of 20 March 2024.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "13.8"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+3.5%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+2.5%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "4"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "-19.5%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Leaning towards a pop",
+    "summary": "About 6 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
   ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Astera Labs, Inc.",
@@ -2872,12 +4635,14 @@
   "market": "US",
   "deal": {
    "offer_price": 34.0,
+   "expected_price": false,
    "shares_offered": 22000000.0,
    "price_range": [
     31.0,
     34.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2024-03-21",
    "underwriters": "Morgan Stanley & Co. LLC/Goldman Sachs & Co. LLC/J.P. Morgan Securities LLC/BofA Securities, Inc/Citigroup Global Markets Inc/Deutsche Bank Securities Inc/MUFG Securities Americas Inc/Citizens JMP Securities, LLC/Needham & Company, LLC/Piper Sandler & Co/Raymond James & Associates, Inc/Academy Securities, Inc/Loop Capital Markets LLC/Samuel A. Ramirez & Company, Inc/Telsey Advisory Group LLC",
    "lead_underwriter_rank": 9.001,
@@ -2889,7 +4654,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks described below as well as the other information in this prospectus, including our consolidated financial statements and the notes thereto, and \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations,\u201d before deciding whether to invest in our Class A common stock. The occurrence of any of the events or developments described below could adversely affect our business, results of operations, financial condition, reputation, and prospects. In such an event, the market price of our Class A common stock could decline, and you may lose all or part of your investment. Additional risks and uncertainties not presently known to us or that we currently believe are not material may also impair our business, results of operations, financial condition, and prospects.\nRisks Related to Our Business\nIf we fail to increase or retain our user base, and in particular, our DAUq, or if user engagement declines, our business, results of operations, financial condition, and prospects will be harmed.\nThe size of our user base and their level of engagement are critical to our success. Our financial performance has been, and will continue to be, significantly determined by our success in growing our user base so that we add Redditors, and those Redditors become more active users\u2014more specifically, daily active uniques (\u201cDAUq\u201d). We define a user whom we can identif",
-   "document_chars": 1027681
+   "document_chars": 1027681,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 20.432913535938752,
@@ -2946,15 +4712,6 @@
    "lm_summary_constraining": 0.0033294730746960045,
    "lm_summary_fog": 18.35760192442961,
    "lm_doc_net_tone": -0.009526578878134562,
-   "fb_summary_pos": 0.23085100413300097,
-   "fb_summary_neg": 0.02782750324695371,
-   "fb_summary_net": 0.20302350088604726,
-   "fb_risk_factors_pos": 0.04180031339637935,
-   "fb_risk_factors_neg": 0.45467785419896245,
-   "fb_risk_factors_net": -0.4128775408025831,
-   "fb_use_of_proceeds_pos": 0.1508193463087082,
-   "fb_use_of_proceeds_neg": 0.023810963612049818,
-   "fb_use_of_proceeds_net": 0.12700838269665837,
    "rel_lm_doc_negative": 0.00039384295952874307,
    "rel_lm_doc_uncertainty": -0.0011573788323808107,
    "rel_lm_doc_weak_modal": -0.0006681921733936811,
@@ -2964,11 +4721,17 @@
    "rel_lm_risk_factors_negative": 0.0012319649268611385,
    "rel_lm_risk_factors_uncertainty": -0.002047444772022136,
    "rel_lm_risk_factors_weak_modal": -0.0018430465461368624,
-   "rel_fb_risk_factors_net": -0.1225083336175885,
-   "rel_fb_summary_net": 0.008112293406156823,
-   "rel_fb_use_of_proceeds_net": 0.06284415004774926,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.1554871036057417,
    "rel_log_risk_chars": 0.5282440786956286
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 8,
+   "sentence": "About 8 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -2987,42 +4750,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.04615384615384621,
-      "contribution": 0.19575532196257006
+      "contribution": 0.19575532196257006,
+      "text": "Priced 5% above the middle of its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.5263605246161616,
-      "contribution": 0.05459333337914388
+      "contribution": 0.05459333337914388,
+      "text": "Offer price of $34.00 a share"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03052610889001091
+      "contribution": 0.03052610889001091,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 15.0,
-      "contribution": 0.025697454295135095
+      "contribution": 0.025697454295135095,
+      "text": "15 banks selling the shares"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.022667616494807967
+      "contribution": -0.022667616494807967,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.04725483116589557,
-      "contribution": 0.021610313664171422
+      "contribution": 0.021610313664171422,
+      "text": "Nasdaq +4.7% over the past month"
      }
     ],
     "probability": 0.837228517742563
@@ -3043,45 +4812,51 @@
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": -0.038617543072447004
+      "contribution": -0.038617543072447004,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.03417335683173312
+      "contribution": -0.03417335683173312,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02784123652749417
+      "contribution": 0.02784123652749417,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": -0.02441293440099305
+      "contribution": -0.02441293440099305,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.5263605246161616,
-      "contribution": 0.018322625443168795
+      "contribution": 0.018322625443168795,
+      "text": "Offer price of $34.00 a share"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.11101850403679743,
-      "contribution": -0.01126599982451197
+      "contribution": -0.01126599982451197,
+      "text": "IPOs in the past month rose +11% on day one on average"
      }
     ],
-    "probability": 0.4352886718160338
+    "probability": 0.43528867181603387
    },
    "bucket": {
     "model": "random_forest",
@@ -3097,42 +4872,48 @@
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": 0.0458941638384785
+      "contribution": 0.0458941638384785,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "price_revision",
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.04615384615384621,
-      "contribution": 0.035756202309699524
+      "contribution": 0.035756202309699524,
+      "text": "Priced 5% above the middle of its first price range"
      },
      {
       "feature": "log_firm_age",
       "label": "Firm age",
       "group": "Firm",
       "value": null,
-      "contribution": 0.024459161275909972
+      "contribution": 0.024459161275909972,
+      "text": "Company age not known (add the founding year under \u201cAdd details\u201d)"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02322052958758058
+      "contribution": 0.02322052958758058,
+      "text": "Not priced above its first price range"
      },
      {
       "feature": "range_width",
       "label": "Filing range width",
       "group": "Deal terms",
       "value": 0.09230769230769231,
-      "contribution": 0.020706055314469507
+      "contribution": 0.020706055314469507,
+      "text": "Its first price range was 9% wide"
      },
      {
       "feature": "log_proceeds",
       "label": "Deal size",
       "group": "Deal terms",
       "value": 20.432913535938752,
-      "contribution": 0.018002243856669136
+      "contribution": 0.018002243856669136,
+      "text": "Raising $748 million"
      }
     ],
     "probabilities": {
@@ -3145,6 +4926,159 @@
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "161,223 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $34.00",
+    "summary": "22,000,000 shares, raising about $748 million, listing on New York Stock Exchange.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$34.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "22,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "New York Stock Exchange"
+     },
+     {
+      "label": "IPO date used",
+      "value": "21 March 2024, provided"
+     }
+    ],
+    "quote": "Prospectus dated March 20, 2024",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $31.00\u201334.00",
+    "summary": "First range $31.00\u201334.00 (from its S-1 filings). Priced within it, 5% above its middle.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "15 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "Morgan Stanley & Co. LLC, Goldman Sachs & Co. LLC, J.P. Morgan Securities LLC, BofA Securities, Inc, Citigroup Global Markets Inc, Deutsche Bank Securities Inc, MUFG Securities Americas Inc, Citizens JMP Securities, LLC, Needham & Company, LLC, Piper Sandler & Co, Raymond James & Associates, Inc, Academy Securities, Inc, Loop Capital Markets LLC, Samuel A. Ramirez & Company, Inc, Telsey Advisory Group LLC"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.0% of the words are negative, more than in 63% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "3.99%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "2.92%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 63%, more uncertain than 22%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "1.89%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks described below as well as the other information in this prospectus, including our consolidated financial statements and the notes thereto, and \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations,\u201d before deciding whether to invest in our Class A common stock. The occurrence of any of the events or developments described below could adversely affect our business, results of operations, financial condition, reputation, and prospects. In such an event, the market price of our Class A common stock could decline, and you may lose all or part of your inv",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 13, Nasdaq +4.7% over the past month, as of 21 March 2024.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "13.0"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+5.0%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+4.7%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "6"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+11.1%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 8 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Reddit, Inc.",
   "ticker": "RDDT",
@@ -3160,12 +5094,14 @@
   "market": "US",
   "deal": {
    "offer_price": 31.0,
+   "expected_price": false,
    "shares_offered": 34000000.0,
    "price_range": [
     24.0,
     26.0
    ],
-   "price_range_source": "entered",
+   "price_range_source": "from its S-1 filings",
+   "range_history": [],
    "ipo_date_used": "2025-06-05",
    "underwriters": "J.P. Morgan Securities LLC/Citigroup Global Markets Inc/Goldman Sachs & Co. LLC/Barclays Capital Inc/Deutsche Bank Securities Inc/SG Americas Securities, LLC/BNY Mellon Capital Markets, LLC/Canaccord Genuity LLC/Needham & Company, LLC/Oppenheimer & Co. Inc/Santander US Capital Markets LLC/AmeriVet Securities, Inc/Drexel Hamilton, LLC/Mischler Financial Group, Inc/Roberts & Ryan, Inc",
    "lead_underwriter_rank": 9.001,
@@ -3177,7 +5113,8 @@
     "use_of_proceeds": true
    },
    "risk_factors_excerpt": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below together with all of\nthe other information contained in this prospectus, including our consolidated financial statements and the notes thereto, before deciding to invest in our Class A common stock. The risks and uncertainties described below are not the only ones we\nface. Additional risks and uncertainties not presently known to us or that we currently believe to be immaterial may also adversely affect our business. If any of the following risks actually occurs, our business, results of operations, financial\ncondition, and prospects would likely suffer. In such case, the trading price of our Class A common stock could decline, and you may lose all or part of your investment. \n\nRisks related to our business and industry \n\nWe face intense and\nincreasing competition. \n\nWe operate in a rapidly changing and highly competitive industry, and our results of operations and future prospects depend in part\non the continued growth of the Circle stablecoin network, our ability to monetize the Circle stablecoin network, and our ability to innovate and create successful new products and services and improve existing products and services. \n\nAlthough there may be certain regulatory and other barriers to enter the markets we serve, we nonetheless expect our competition to continue to increase. We face\ncompetition from both established enterprises and",
-   "document_chars": 1197290
+   "document_chars": 1197290,
+   "preliminary": false
   },
   "features": {
    "log_proceeds": 20.77585828706558,
@@ -3234,15 +5171,6 @@
    "lm_summary_constraining": 0.006902239972217399,
    "lm_summary_fog": 20.75229477305559,
    "lm_doc_net_tone": -0.00849166820389842,
-   "fb_summary_pos": 0.12208588456269354,
-   "fb_summary_neg": 0.03792102570878342,
-   "fb_summary_net": 0.08416485885391012,
-   "fb_risk_factors_pos": 0.03172882570652291,
-   "fb_risk_factors_neg": 0.5020768562098965,
-   "fb_risk_factors_net": -0.4703480305033736,
-   "fb_use_of_proceeds_pos": 0.14401067358752093,
-   "fb_use_of_proceeds_neg": 0.022945733947886363,
-   "fb_use_of_proceeds_net": 0.12106493963963456,
    "rel_lm_doc_negative": -0.0012067997545124783,
    "rel_lm_doc_uncertainty": -0.001125317316901197,
    "rel_lm_doc_weak_modal": -0.0016026081105310367,
@@ -3252,11 +5180,17 @@
    "rel_lm_risk_factors_negative": 0.00425714146452489,
    "rel_lm_risk_factors_uncertainty": 0.00016462946615673074,
    "rel_lm_risk_factors_weak_modal": -0.0009715539887547829,
-   "rel_fb_risk_factors_net": -0.2109693718375638,
-   "rel_fb_summary_net": -0.12350752329803072,
-   "rel_fb_use_of_proceeds_net": 0.019303034767647817,
+   "rel_fb_risk_factors_net": null,
+   "rel_fb_summary_net": null,
+   "rel_fb_use_of_proceeds_net": null,
    "rel_log_doc_chars": 0.1675670409987724,
    "rel_log_risk_chars": 0.1369357033020382
+  },
+  "verdict": {
+   "label": "Likely to pop",
+   "tone": "positive",
+   "in_ten": 9,
+   "sentence": "About 9 in 10 chance its shares close above the offer price on the first day."
   },
   "predictions": {
    "pop": {
@@ -3275,42 +5209,48 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.24,
-      "contribution": 0.1764385483889036
+      "contribution": 0.1764385483889036,
+      "text": "Priced 24% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.10332025542987172
+      "contribution": 0.10332025542987172,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4339872044851463,
-      "contribution": 0.04356637139794172
+      "contribution": 0.04356637139794172,
+      "text": "Offer price of $31.00 a share"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09057544500474002,
-      "contribution": 0.029955913166682245
+      "contribution": 0.029955913166682245,
+      "text": "Nasdaq +9.1% over the past month"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.02875506631665652
+      "contribution": 0.02875506631665652,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "n_syndicate",
       "label": "Syndicate size",
       "group": "Underwriter",
       "value": 15.0,
-      "contribution": 0.01945016875113117
+      "contribution": 0.01945016875113117,
+      "text": "15 banks selling the shares"
      }
     ],
     "probability": 0.9125808013356983
@@ -3331,45 +5271,51 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.24,
-      "contribution": 0.1598324775221414
+      "contribution": 0.1598324775221414,
+      "text": "Priced 24% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.12067447741203499
+      "contribution": 0.12067447741203499,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.03358410966792423
+      "contribution": 0.03358410966792423,
+      "text": "Not priced below its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.031284585546576454
+      "contribution": -0.031284585546576454,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "log_offer_price",
       "label": "Offer price",
       "group": "Deal terms",
       "value": 3.4339872044851463,
-      "contribution": 0.018675631278781836
+      "contribution": 0.018675631278781836,
+      "text": "Offer price of $31.00 a share"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09057544500474002,
-      "contribution": 0.016351588103539545
+      "contribution": 0.016351588103539545,
+      "text": "Nasdaq +9.1% over the past month"
      }
     ],
-    "probability": 0.8034910412322334
+    "probability": 0.8034910412322331
    },
    "bucket": {
     "model": "random_forest",
@@ -3385,46 +5331,52 @@
       "label": "Price vs. filing range",
       "group": "Deal terms",
       "value": 0.24,
-      "contribution": 0.1878161721043063
+      "contribution": 0.1878161721043063,
+      "text": "Priced 24% above the middle of its first price range"
      },
      {
       "feature": "above_range",
       "label": "Priced above range",
       "group": "Deal terms",
       "value": 1.0,
-      "contribution": 0.13374464038202272
+      "contribution": 0.13374464038202272,
+      "text": "Priced above its first price range"
      },
      {
       "feature": "vc",
       "label": "VC-backed",
       "group": "Firm",
       "value": null,
-      "contribution": -0.07538028154586318
+      "contribution": -0.07538028154586318,
+      "text": "Venture-capital backing not known"
      },
      {
       "feature": "nasdaq_ret_30d",
       "label": "Nasdaq, past month",
       "group": "Market conditions",
       "value": 0.09057544500474002,
-      "contribution": 0.03763890441821595
+      "contribution": 0.03763890441821595,
+      "text": "Nasdaq +9.1% over the past month"
      },
      {
       "feature": "prior_ipo_return_30d",
       "label": "Recent IPOs' first-day returns",
       "group": "Market conditions",
       "value": 0.07199075133712207,
-      "contribution": -0.0255270349584538
+      "contribution": -0.0255270349584538,
+      "text": "IPOs in the past month rose +7% on day one on average"
      },
      {
       "feature": "below_range",
       "label": "Priced below range",
       "group": "Deal terms",
       "value": 0.0,
-      "contribution": 0.022853333715951305
+      "contribution": 0.022853333715951305,
+      "text": "Not priced below its first price range"
      }
     ],
     "probabilities": {
-     "overpriced": 0.041125597142757785,
+     "overpriced": 0.04112559714275778,
      "fair": 0.12249948239637562,
      "underpriced": 0.3014412422848377,
      "heavily_underpriced": 0.5349336781760293
@@ -3433,6 +5385,159 @@
    }
   },
   "notes": [],
+  "steps": [
+   {
+    "event": "step",
+    "id": "document",
+    "state": "done",
+    "title": "Read the prospectus",
+    "summary": "182,301 words. The final prospectus, with the offer price.",
+    "details": [
+     {
+      "label": "Type",
+      "value": "Final prospectus"
+     },
+     {
+      "label": "Sections found",
+      "value": "Summary, Risk Factors, Use of Proceeds"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "deal",
+    "state": "done",
+    "title": "Offer price $31.00",
+    "summary": "34,000,000 shares, raising about $1.05 billion, listing on NYSE.",
+    "details": [
+     {
+      "label": "Offer price",
+      "value": "$31.00"
+     },
+     {
+      "label": "Shares offered",
+      "value": "34,000,000"
+     },
+     {
+      "label": "Exchange",
+      "value": "NYSE"
+     },
+     {
+      "label": "IPO date used",
+      "value": "5 June 2025, provided"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "range",
+    "state": "done",
+    "title": "First price range $24.00\u201326.00",
+    "summary": "First range $24.00\u201326.00 (from its S-1 filings). Priced above it, 24% above its middle. Pricing above the range usually means strong demand.",
+    "details": [],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "underwriters",
+    "state": "done",
+    "title": "15 banks selling the shares",
+    "summary": "The most prestigious bank involved rates 9 out of 9 on the Carter-Manaster scale.",
+    "details": [
+     {
+      "label": "Banks",
+      "value": "J.P. Morgan Securities LLC, Citigroup Global Markets Inc, Goldman Sachs & Co. LLC, Barclays Capital Inc, Deutsche Bank Securities Inc, SG Americas Securities, LLC, BNY Mellon Capital Markets, LLC, Canaccord Genuity LLC, Needham & Company, LLC, Oppenheimer & Co. Inc, Santander US Capital Markets LLC, AmeriVet Securities, Inc, Drexel Hamilton, LLC, Mischler Financial Group, Inc, Roberts & Ryan, Inc"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "tone",
+    "state": "done",
+    "title": "Read the Risk Factors",
+    "summary": "4.1% of the words are negative, more than in 76% of IPOs in the year before. Shown for context: tone did not improve the models' accuracy, so it does not change the score.",
+    "details": [
+     {
+      "label": "Negative words",
+      "value": "4.07%"
+     },
+     {
+      "label": "Uncertain words",
+      "value": "3.12%"
+     },
+     {
+      "label": "Compared with the year's IPOs",
+      "value": "more negative than 76%, more uncertain than 52%"
+     },
+     {
+      "label": "Litigious words",
+      "value": "2.56%"
+     }
+    ],
+    "quote": "Investing in our Class A common stock involves a high degree of risk. You should carefully consider the risks and uncertainties described below together with all of\nthe other information contained in this prospectus, including our consolidated financial statements and the notes thereto, before deciding to invest in our Class A common stock. The risks and uncertainties described below are not the only ones we\nface. Additional risks and uncertainties not presently known to us or that we currently believe to be immaterial may also adversely affect our business. If any of the following risks actually occurs, our business, results of operations, financial\ncondition, and prospects would likely suf",
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "market",
+    "state": "done",
+    "title": "Checked market conditions",
+    "summary": "VIX 18, Nasdaq +9.1% over the past month, as of 5 June 2025.",
+    "details": [
+     {
+      "label": "Volatility (VIX)",
+      "value": "17.6"
+     },
+     {
+      "label": "S&P 500, past month",
+      "value": "+5.7%"
+     },
+     {
+      "label": "Nasdaq, past month",
+      "value": "+9.1%"
+     },
+     {
+      "label": "IPOs in the past 30 days",
+      "value": "7"
+     },
+     {
+      "label": "Their mean day-one return",
+      "value": "+7.2%"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   },
+   {
+    "event": "step",
+    "id": "model",
+    "state": "done",
+    "title": "Likely to pop",
+    "summary": "About 9 in 10 chance its shares close above the offer price on the first day.",
+    "details": [
+     {
+      "label": "Model",
+      "value": "random forest, test AUC 0.77 on 2021\u20132025 IPOs"
+     }
+    ],
+    "quote": null,
+    "link": null,
+    "rows": null
+   }
+  ],
   "disclaimer": "Research demo from a data science course project. Not investment advice.",
   "company": "Circle Internet Group, Inc.",
   "ticker": "CRCL",

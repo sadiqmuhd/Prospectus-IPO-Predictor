@@ -21,6 +21,13 @@
   --b4: #0d366b;
   --warning-bg: #fff6e0;
   --warning-ink: #6b4a00;
+  /* status badges: priced (success), upcoming (info), withdrawn (warning), other (neutral) */
+  --success-bg: #e3f4ea;
+  --success-ink: #14633a;
+  --info-bg: #e6f0fc;
+  --info-ink: #1c5cab;
+  --danger-bg: #fdecec;
+  --danger-ink: #a12a29;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +50,12 @@
     --b4: #86b6ef;
     --warning-bg: #3a2f12;
     --warning-ink: #f5d9a0;
+    --success-bg: #163324;
+    --success-ink: #9fdcb7;
+    --info-bg: #182b45;
+    --info-ink: #a9cbf3;
+    --danger-bg: #3d1c1c;
+    --danger-ink: #f3b0b0;
   }
 }
 
@@ -65,6 +78,12 @@
   --b4: #86b6ef;
   --warning-bg: #3a2f12;
   --warning-ink: #f5d9a0;
+  --success-bg: #163324;
+  --success-ink: #9fdcb7;
+  --info-bg: #182b45;
+  --info-ink: #a9cbf3;
+  --danger-bg: #3d1c1c;
+  --danger-ink: #f3b0b0;
 }
 
 @theme inline {
@@ -84,4 +103,18 @@ body {
   background: var(--surface);
   color: var(--text);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation-duration: 2.5s;
+  }
 }
